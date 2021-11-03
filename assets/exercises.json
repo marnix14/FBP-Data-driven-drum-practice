@@ -1,0 +1,12 @@
+[
+    {   "name": "name",
+    "accent": "beat",
+    "structure": [
+    ["paradiddlediddle", 3, 2, true],
+    ["paradiddle",3,1, true],
+    ["paradiddlediddle", 3, 2, false],
+    ["paradiddle", 3,1, false]
+    ]
+
+    }
+]
