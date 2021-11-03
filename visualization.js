@@ -12,6 +12,7 @@ class Visualization {
     spacing;
     sw;
     shape;
+    size;
 
 
 
@@ -31,6 +32,7 @@ class Visualization {
         this.setOpacity(255);
         this.setStrokeWeight(3);
         this.setShape('circle');
+        this.setSize(0.2);
 
 
 
@@ -75,13 +77,13 @@ class Visualization {
         }
 
         //draw center line
-        strokeWeight(2);
-        line(width / 2, this.startY, width / 2, this.endY);
+        //strokeWeight(2);
+        //line(width / 2, this.startY, width / 2, this.endY);
 
         //draw strokes
         for (let i = 0; i < this.exercise.numberOfStrokes; i++) {
             let y = this.startY + ((positionFractionSum - offset + 1) % 1) * lineLength;
-            this.exercise.strokes[i].display(width / 2, y, this.shape, this.spacing, this.opacity, this.sw);
+            this.exercise.strokes[i].display(width / 2, y, this.shape, this.size, this.spacing, this.opacity, this.sw);
             positionFractionSum += this.exercise.strokes[i].subdivision / this.exercise.exerciseLength;
         }
         //draw hit indication line
@@ -102,36 +104,7 @@ class Visualization {
     setShape(shape) {
         this.shape = shape;
     }
+    setSize(size){
+        this.size = size;
+    }
 }
-
-
-
-
-
-// drawLargeCircle() {
-//     strokeWeight(10);
-//     stroke(255);
-//     noFill();
-//     ellipse(width / 2, height / 2, 2 * this.radius, 2 * this.radius);
-// }
-
-// drawArc() {
-//     let angle = this.metronome.getOffset() * 2 * PI % (2 * PI);
-//     strokeWeight(10);
-//     stroke(255);
-//     noFill();
-//     arc(width / 2, height / 2, 2 * this.radius - 20, 2 * this.radius - 20, PI * 1.5, angle);
-// }
-
-// drawBeats() {
-//     stroke(255);
-//     strokeWeight(5);
-//     noFill();
-
-//     for (let i = 0; i < metronome.beatsPerBar; i++) {
-//         let angle = 2 * PI / metronome.beatsPerBar * i;
-//         let x = width / 2 + cos(angle) * this.radius;
-//         let y = height / 2 + sin(angle) * this.radius;
-//         ellipse(x, y, 50, 50);
-//     }
-// }
