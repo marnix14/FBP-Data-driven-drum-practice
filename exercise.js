@@ -3,32 +3,21 @@ class Exercise {
     sticking;
     strokes = [];
     subdivision;
-    numberOfStrokes;
-    exerciseLength;
 
-
-    constructor(name, sticking, subdivision, exerciseLength) {
-        this.exerciseLength=exerciseLength;
+    constructor(name, sticking, subdivision) {
         this.name = name;
         this.sticking = sticking;
         this.subdivision = subdivision;
-        this.numberOfStrokes = this.sticking.length;
-        console.log(this.sticking);
         this.fillStrokeArray();
+    }
+    static fromRudimentJSON(rudimentJson) {
+        return new Exercise(rudimentJson.name, rudimentJson.sticking, rudimentJson.subdivision);
     }
 
     fillStrokeArray() {
-
-        for (let i = 0; i < this.numberOfStrokes; i++) {
-            let hit = this.sticking.substring(i, i + 1);
-            this.strokes.push(new Stroke(hit, this.subdivision));
+        for (let i = 0; i < this.name.length; i++) {
+            const stickingChar = this.sticking.substring(i, i + 1);
+            this.strokes.push(Stroke.fromStickingChar(stickingChar));
         }
-        console.log('strokes', this.strokes);
-
     }
-
-
 }
-
-
-

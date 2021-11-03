@@ -1,35 +1,29 @@
-let metronome = new Metronome();
-let exercise = new Exercise('paradiddle', 'RlrrLrll', 1/2, 4);
-let visualization = new Visualization(metronome, exercise);
-
+view = new PracticeView();
+let rudiments;
 function preload() {
-    console.log('main');
-    metronome.preLoadSound();
+    Metronome.preload();
+    loadRudiments();
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    UIelements();
-    visualization.setup();
+    frameRate(240);
+    view.setup();
 }
 
 function draw() {
+    update();
     background(50);
-    metronome.update();
-    visualization.display();
+    view.draw();
 }
 
-function UIelements() {
-    tempoSlider = createSlider(40, 250, 100);
-    tempoSlider.class('slider');
-    tempoSlider.input(() => metronome.setTempo(tempoSlider.value()));
-    playButton = createButton("play");
-    playButton.mousePressed(() => {
-        metronome.togglePlaying();
-        playButton.html(metronome.playing ? "stop" : "play");
+function update() {
+    view.update();
+}
+
+function loadRudiments() {
+    loadJSON("assets/rudiments.json", (jsonFile) => {
+        rudiments = jsonFile;
+        view.setExercise(Exercise.fromRudimentJSON(rudiments.Paradiddle[0]));
     });
-   // let inp = createInput('');
-    //inp.position(0,0);
-
-
 }

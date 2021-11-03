@@ -1,68 +1,85 @@
 class Metronome {
-    tick;
-    nextTick = 0;
-    currentBeat;
-    beatsPerBar = 4;
-    playing = false;
-    bpm = 100;
-    startMillis;
+    beatsPerMinute = 400;
+    beatsPerBar = 3;
 
-    constructor() {
-        console.log('metronome created');
+    isPlaying = false;
+    prevBarPosition = 0;
+    barPosition = 0;
 
+    static tickSound;
+
+    static preload() {
+        Metronome.tickSound = loadSound("assets/tick.wav");
+        Metronome.tickSound.playMode("restart");
     }
 
-    preLoadSound() {
-        this.tick = loadSound('assets/tick.wav');
-        this.tick.playMode('restart');
+    constructor() {
+        console.log("Metronome created");
     }
 
     update() {
-        if (this.playing) {
+        if (this.isPlaying) {
+            const barsPerSecond = this.beatsPerMinute / 60 / this.beatsPerBar;
+            const deltaTimeInSeconds = deltaTime / 1000;
+            const deltaBarPosition = barsPerSecond * deltaTimeInSeconds;
 
-            let nextBeat = int(this.getOffset() * this.beatsPerBar);
-            if (nextBeat !== this.currentBeat) {
-                if (nextBeat == 0) {
-                    this.tick.play(0, 1);
-                } else {
-
-                    this.tick.play(0, 0.8);
-                }
-                this.currentBeat = nextBeat;
-                console.log(this.currentBeat);
-            }
-            noStroke();
-            fill(255);
-            text(this.currentBeat+1,width/2-200,height/2);
+            this.checkForTick(() => {
+                this.barPosition += deltaBarPosition;
+            });
         }
     }
-    getOffset() {
-        let offset;
-        if (this.playing) {
-            let beatMillis = 60000 / this.bpm;
-            let barMillis = beatMillis * this.beatsPerBar;
-            let offsetMillis = millis() - this.startMillis;
-            offset = offsetMillis % barMillis / barMillis;
-        }
-        else {
-            offset = 0;
-        }
-        return offset;
-    }
-    setTempo(tempo) {
-        this.bpm = tempo;
+
+    setBeatsPerMinute(beatsPerMinute) {
+        this.beatsPerMinute = beatsPerMinute;
     }
 
-    togglePlaying() {
-        if (this.playing == true) {
-            this.playing = false;
-            this.currentBeat = 0;
-        }
-        else {
-            this.playing = true;
-            this.startMillis = millis();
-        }
-        console.log("playing " + this.playing);
+    play() {
+        this.isPlaying = true;
     }
 
+    play(beatOffset) {
+        this.barPosition = (this.barPosition + (this.beatsPerBar + beatOffset) / this.beatsPerBar) % 1;
+        this.isPlaying = true;
+    }
+
+    pause() {
+        this.isPlaying = false;
+    }
+
+    reset() {
+        this.barPosition = 0;
+        this.prevBarPosition = 0;
+    }
+
+    checkForTick(updateBarPosition) {
+        this.prevBarPosition = this.getWrappedBarPosition(this.barPosition);
+        const prevBeatPosition = this.getWrappedBeatPosition(this.prevBarPosition);
+
+        updateBarPosition();
+
+        const switchedBar =
+            (this.prevBarPosition % 1 == 0 && this.prevBarPosition < this.getWrappedBarPosition()) ||
+            this.prevBarPosition > this.getWrappedBarPosition();
+        const switchedBeat =
+            (prevBeatPosition % 1 == 0 && prevBeatPosition < this.getWrappedBeatPosition()) ||
+            prevBeatPosition > this.getWrappedBeatPosition();
+
+        if (switchedBar) {
+            this.tick(1, 1);
+        } else if (switchedBeat) {
+            this.tick(0.8, 0.8);
+        }
+    }
+
+    tick(rate, amp) {
+        Metronome.tickSound.play(0, rate, amp);
+    }
+
+    getWrappedBeatPosition(barPosition = this.barPosition) {
+        return (barPosition * this.beatsPerBar) % 1;
+    }
+
+    getWrappedBarPosition(barPosition = this.barPosition) {
+        return barPosition % 1;
+    }
 }

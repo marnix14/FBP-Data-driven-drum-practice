@@ -1,0 +1,11 @@
+{
+    "Roll": [{ "name": "Single Stroke Roll", "sticking": "RL", "subdivisions": 16 }],
+    "Paradiddle": [
+        { "name": "Paradiddle", "sticking": "RlrrLrll", "subdivisions": 16 },
+        { "name": "Double Paradiddle", "sticking": "RlrlrrLrlrll", "subdivisions": 16 },
+        { "name": "Triple Paradiddle", "sticking": "RlrlrlrrLrlrlrll", "subdivisions": 16 },
+        { "name": "Paradiddle-diddle", "sticking": "RlrrllRlrrllLrllrrLrllrr", "subdivisions": 16 }
+    ],
+    "Flam": [],
+    "Drag": []
+}
