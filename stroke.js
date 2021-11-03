@@ -7,7 +7,7 @@ class Stroke {
     x;
     y;
     shape;
-lineSize =100;
+    lineSize = 100;
     opacity;
 
 
@@ -40,15 +40,14 @@ lineSize =100;
                 ellipse(x + this.getDextSign() * (this.radius + spacing), y, this.radius * 2, this.radius * 2);
                 break;
             case 'line':
-                line(x + this.getDextSign()*spacing,y,x+this.getDextSign()*(spacing+this.lineSize), y);
-                
+                line(x + this.getDextSign() * spacing, y, x + this.getDextSign() * (spacing + this.lineSize), y);
                 break;
         }
 
     }
 
 
-   
+
     getDextSign() {
         if (this.dexterity == 'l') {
             return -1;

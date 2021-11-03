@@ -33,7 +33,6 @@ shapePicker = createSelect()
     shapePicker.selected('circle');
     shapePicker.changed(() => visualization.setShape(shapePicker.value()));
 
-
     opacitySlider = createSlider(20, 255, 180);
     opacitySlider.class('slider');
     opacitySlider.position(10,300);
