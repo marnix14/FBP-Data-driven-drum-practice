@@ -37,6 +37,7 @@ class Stroke {
             noFill();
             strokeWeight(3);
             stroke(255, 255, 255, opacity);
+            s = size/2;
             
         }
         switch (shape) {
