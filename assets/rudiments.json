@@ -1,10 +1,34 @@
 {
-    "Roll": [{ "name": "Single Stroke Roll", "sticking": "RL", "subdivisions": 16 }],
+    "Roll": [
+        {
+            "name": "Single Stroke Roll",
+            "pattern": [
+                ["r", ""],
+                ["l", ""]
+            ]
+        }
+    ],
     "Paradiddle": [
-        { "name": "Paradiddle", "sticking": "RlrrLrll", "subdivisions": 16 },
-        { "name": "Double Paradiddle", "sticking": "RlrlrrLrlrll", "subdivisions": 16 },
-        { "name": "Triple Paradiddle", "sticking": "RlrlrlrrLrlrlrll", "subdivisions": 16 },
-        { "name": "Paradiddle-diddle", "sticking": "RlrrllRlrrllLrllrrLrllrr", "subdivisions": 16 }
+        {
+            "name": "Paradiddle",
+            "pattern": [
+                ["r", ""],
+                ["l", ""],
+                ["r", ""],
+                ["r", ""]
+            ]
+        },
+        {
+            "name": "Double Paradiddle",
+            "pattern": [
+                ["r", ""],
+                ["l", ""],
+                ["r", ""],
+                ["l", ""],
+                ["r", ""],
+                ["r", ""]
+            ]
+        }
     ],
     "Flam": [],
     "Drag": []

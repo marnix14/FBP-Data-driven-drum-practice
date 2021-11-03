@@ -5,6 +5,11 @@ class PracticeView extends ExerciseBasedView {
         super();
     }
 
+    setExercise(exercise) {
+        super.setExercise(exercise);
+        this.drumScroll.setExercise(exercise);
+    }
+
     setup() {
         this.playButton = createButton("play");
         this.playButton.mousePressed(() => {

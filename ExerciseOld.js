@@ -6,9 +6,8 @@ class Exercise {
     numberOfStrokes;
     exerciseLength;
 
-
     constructor(name, sticking, subdivision, exerciseLength) {
-        this.exerciseLength=exerciseLength;
+        this.exerciseLength = exerciseLength;
         this.name = name;
         this.sticking = sticking;
         this.subdivision = subdivision;
@@ -18,17 +17,10 @@ class Exercise {
     }
 
     fillStrokeArray() {
-
         for (let i = 0; i < this.numberOfStrokes; i++) {
             let hit = this.sticking.substring(i, i + 1);
-            this.strokes.push(new Stroke(hit, this.subdivision));
+            this.strokes.push(new Hit(hit, this.subdivision));
         }
-        console.log('strokes', this.strokes);
-
+        console.log("strokes", this.strokes);
     }
-
-
 }
-
-
-

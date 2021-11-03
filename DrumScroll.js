@@ -1,7 +1,7 @@
 class DrumScroll extends Metronome {
     exercise;
 
-    DrumScroll(exercise) {
+    setExercise(exercise) {
         this.exercise = exercise;
     }
 
@@ -26,9 +26,21 @@ class DrumScroll extends Metronome {
         textSize(50);
         text(this.beatsPerMinute, 20, 100);
 
-        /*for (const stroke of this.exercise.strokes) {
-        }*/
+        if (this.exercise) {
+            this.drawExercise();
+        }
     }
 
-    drawStroke() {}
+    drawExercise() {
+        for (const hit of this.exercise.hits) {
+            this.drawHit(hit);
+        }
+    }
+
+    drawHit(stroke) {
+        strokeWeight(10);
+        stroke(255);
+        noFill();
+        circle(30, 30, 20);
+    }
 }

@@ -24,6 +24,6 @@ function update() {
 function loadRudiments() {
     loadJSON("assets/rudiments.json", (jsonFile) => {
         rudiments = jsonFile;
-        view.setExercise(Exercise.fromRudimentJSON(rudiments.Paradiddle[0]));
+        //view.setExercise();
     });
 }

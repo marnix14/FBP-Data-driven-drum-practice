@@ -1,7 +1,7 @@
 const standardVelocity = 0.5;
 const accentVelocity = 1;
 
-class Stroke {
+class Hit {
     #isLeftHand;
     velocity;
 
@@ -28,6 +28,6 @@ class Stroke {
         const isLowercase = stickingChar === lowerCaseStickingChar;
         const isLeftHand = lowerCaseStickingChar === "l";
         const velocity = isLowercase ? standardVelocity : accentVelocity;
-        return new Stroke(isLeftHand, velocity);
+        return new Hit(isLeftHand, velocity);
     }
 }

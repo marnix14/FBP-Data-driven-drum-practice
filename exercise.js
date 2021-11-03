@@ -1,7 +1,6 @@
 class Exercise {
     name;
     sticking;
-    strokes = [];
     subdivision;
 
     constructor(name, sticking, subdivision) {
@@ -17,7 +16,7 @@ class Exercise {
     fillStrokeArray() {
         for (let i = 0; i < this.name.length; i++) {
             const stickingChar = this.sticking.substring(i, i + 1);
-            this.strokes.push(Stroke.fromStickingChar(stickingChar));
+            this.hits.push(Hit.fromStickingChar(stickingChar));
         }
     }
 }
