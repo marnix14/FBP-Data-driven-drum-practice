@@ -4,6 +4,28 @@
             "name": "Single Stroke Roll",
             "pattern": [
                 ["r", ""],
+                ["l", ""],
+                ["r", ""],
+                ["l", ""]
+            ]
+        },
+        {
+            "name": "Double Stroke Roll",
+            "pattern": [
+                ["r", ""],
+                ["r", ""],
+                ["l", ""],
+                ["l", ""]
+            ]
+        },
+        {
+            "name": "Triple Stroke Roll",
+            "pattern": [
+                ["r", ""],
+                ["r", ""],
+                ["r", ""],
+                ["l", ""],
+                ["l", ""],
                 ["l", ""]
             ]
         }
@@ -28,8 +50,41 @@
                 ["r", ""],
                 ["r", ""]
             ]
+        },
+        {
+            "name": "Paradiddle Diddle",
+            "pattern": [
+                ["r", ""],
+                ["l", ""],
+                ["r", ""],
+                ["r", ""],
+                ["l", ""],
+                ["l", ""]
+            ]
         }
     ],
-    "Flam": [],
+    "Flam": [
+        {
+            "name": "Flam",
+            "pattern": [
+                ["r", "f"]
+            ]
+        },
+        {
+            "name": "Flam Tap",
+            "pattern": [
+                ["r", "f"],
+                ["r", ""]
+            ]
+        },
+        {"name": "Flam Accent",
+            "pattern": [
+                ["r", "f"],
+                ["l", ""],
+                ["r", ""]
+            ]             
+        }
+
+    ],
     "Drag": []
 }
