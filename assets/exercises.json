@@ -5,8 +5,8 @@
         "beatsPerBar": 4,
         "accentPlacement": "beat",
         "structure": [
-            ["pdd", 3, 2, true],
-            ["pdd", 3, 2, false]
+            ["pdd", 3, 2, false],
+            ["pdd", 3, 2, true]
         ]
     },
     {
@@ -15,10 +15,10 @@
         "beatsPerBar": 4,
         "accentPlacement": "rudiment",
         "structure": [
-            ["pdd", 4, 2, true],
-            ["pd", 4, 1, true],
             ["pdd", 4, 2, false],
-            ["pd", 4, 1, false]
+            ["pd", 4, 1, false],
+            ["pdd", 4, 2, true],
+            ["pd", 4, 1, true]
         ]
     }
 ]

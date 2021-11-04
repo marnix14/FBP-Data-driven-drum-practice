@@ -4,7 +4,6 @@ class ExerciseSession {
     exerciseRepeats;
     startTimestamp;
     beatsPerMinute;
-    recording;
 
     constructor(exercise) {
         this.exercise = exercise;

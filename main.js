@@ -13,6 +13,7 @@ function setup() {
     canvas.parent("sketch");
     frameRate(240);
     view.setup();
+    view.setExercise(Exercises.exercises[0]);
 }
 
 function draw() {

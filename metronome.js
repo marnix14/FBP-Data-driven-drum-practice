@@ -1,6 +1,6 @@
 class Metronome {
-    beatsPerMinute = 400;
-    beatsPerBar = 3;
+    beatsPerMinute = 100;
+    beatsPerBar = 4;
 
     isPlaying = false;
     prevBarPosition = 0;
@@ -38,7 +38,8 @@ class Metronome {
     }
 
     play(beatOffset) {
-        this.barPosition = (this.barPosition + (this.beatsPerBar + beatOffset) / this.beatsPerBar) % 1;
+        if (this.isPlaying) return;
+        this.barPosition = this.barPosition + beatOffset / this.beatsPerBar;
         this.isPlaying = true;
     }
 
@@ -76,10 +77,11 @@ class Metronome {
     }
 
     getWrappedBeatPosition(barPosition = this.barPosition) {
-        return (barPosition * this.beatsPerBar) % 1;
+        const beatPosition = barPosition * this.beatsPerBar;
+        return (beatPosition - floor(beatPosition)) % 1;
     }
 
     getWrappedBarPosition(barPosition = this.barPosition) {
-        return barPosition % 1;
+        return (barPosition - floor(barPosition)) % 1;
     }
 }

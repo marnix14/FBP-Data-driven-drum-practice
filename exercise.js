@@ -23,33 +23,42 @@ class Exercise {
         exercise.structure = exerciseJSON.structure;
 
         for (const structureNotatedRudiment of exerciseJSON.structure) {
-            exercise.hitNotes.push(...this.transformedRudiment(structureNotatedRudiment));
+            exercise.hitNotes.push(...Exercise.transformedRudiment(structureNotatedRudiment));
         }
 
+        exercise.processHitNotes();
+
         // Calculate number of beats and bars
-        const beats = this.countBeats(exercise.hitNotes);
+        const beats = Exercise.countBeats(exercise.hitNotes);
         exercise.beats = beats;
         exercise.bars = beats / exercise.beatsPerBar;
 
-        // Set accent placement
-        for (let i = 0; i < exercise.hitNotes.length; i++) {
-            if (exercise.accentPlacement === "beat") {
-                const beatsSoFar = this.countBeats(exercise.hitNotes.slice(0, i));
-                const isAccent = beatsSoFar % 1 === 0;
-                exercise.hitNotes[i].setAccent(isAccent);
-            }
-            if (exercise.accentPlacement === "none") {
-                exercise.hitNotes[i].setAccent(false);
-            }
-        }
-
         return exercise;
+    }
+
+    processHitNotes() {
+        for (let i = 0; i < this.hitNotes.length; i++) {
+            const beatPosition = Exercise.countBeats(this.hitNotes.slice(0, i));
+            const barPosition = beatPosition / this.beatsPerBar;
+            this.hitNotes[i] = TimedHitNote.fromHitNote(this.hitNotes[i], beatPosition, barPosition);
+            this.placeAccents(i, beatPosition);
+        }
+    }
+
+    placeAccents(i, beatPosition) {
+        if (this.accentPlacement === "beat") {
+            this.hitNotes[i].setAccent(beatPosition % 1 === 0);
+        }
+        if (this.accentPlacement === "none") {
+            this.hitNotes[i].setAccent(false);
+        }
     }
 
     static countBeats(hitNotes, floatingPointErrorOrder = 5) {
         const errorMultiplier = Math.pow(10, floatingPointErrorOrder);
         let beats = 0;
-        for (const hitNote of hitNotes) {
+        for (const i in hitNotes) {
+            const hitNote = hitNotes[i];
             beats += 1 / hitNote.beatDivision;
             let correctedBeats = round(beats * errorMultiplier) / errorMultiplier;
             if (correctedBeats === round(beats)) {
