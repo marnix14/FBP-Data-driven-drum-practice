@@ -1,12 +1,24 @@
 [
-    {   "name": "name",
-    "accent": "beat",
-    "structure": [
-    ["paradiddlediddle", 3, 2, true],
-    ["paradiddle",3,1, true],
-    ["paradiddlediddle", 3, 2, false],
-    ["paradiddle", 3,1, false]
-    ]
-
+    {
+        "name": "Paradiddle diddle",
+        "description": "Twice right and twice left paradiddle diddle.",
+        "beatsPerBar": 4,
+        "accentPlacement": "beat",
+        "structure": [
+            ["pdd", 3, 2, true],
+            ["pdd", 3, 2, false]
+        ]
+    },
+    {
+        "name": "Paradiddle diddle intnermediate",
+        "description": "Marnix gaat dit nog invullen.",
+        "beatsPerBar": 4,
+        "accentPlacement": "rudiment",
+        "structure": [
+            ["pdd", 4, 2, true],
+            ["pd", 4, 1, true],
+            ["pdd", 4, 2, false],
+            ["pd", 4, 1, false]
+        ]
     }
 ]

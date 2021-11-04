@@ -1,4 +1,4 @@
-class AnalysisView extends ExerciseBasedView {
+class AnalysisView {
     update() {
         // TODO
     }

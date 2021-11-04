@@ -1,19 +1,23 @@
-view = new PracticeView();
-let rudiments;
+view = new ExerciseView();
+
+// TODO: save and load exercise history;
+exerciseHistory = new ExerciseSessionHistory();
+
 function preload() {
+    loadData();
     Metronome.preload();
-    loadRudiments();
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent("sketch");
     frameRate(240);
     view.setup();
 }
 
 function draw() {
     update();
-    background(50);
+    background(22);
     view.draw();
 }
 
@@ -21,9 +25,11 @@ function update() {
     view.update();
 }
 
-function loadRudiments() {
+function loadData() {
     loadJSON("assets/rudiments.json", (jsonFile) => {
-        rudiments = jsonFile;
-        //view.setExercise();
+        Rudiments.loadJSON(jsonFile);
+        loadJSON("assets/exercises.json", (jsonFile) => {
+            Exercises.loadJSON(jsonFile);
+        });
     });
 }

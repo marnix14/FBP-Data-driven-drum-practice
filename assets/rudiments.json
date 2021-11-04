@@ -2,6 +2,7 @@
     "Roll": [
         {
             "name": "Single Stroke Roll",
+            "abbr": "ssr",
             "pattern": [
                 ["r", ""],
                 ["l", ""],
@@ -11,6 +12,7 @@
         },
         {
             "name": "Double Stroke Roll",
+            "abbr": "dsr",
             "pattern": [
                 ["r", ""],
                 ["r", ""],
@@ -20,6 +22,7 @@
         },
         {
             "name": "Triple Stroke Roll",
+            "abbr": "tsr",
             "pattern": [
                 ["r", ""],
                 ["r", ""],
@@ -33,6 +36,7 @@
     "Paradiddle": [
         {
             "name": "Paradiddle",
+            "abbr": "pd",
             "pattern": [
                 ["r", ""],
                 ["l", ""],
@@ -42,6 +46,7 @@
         },
         {
             "name": "Double Paradiddle",
+            "abbr": "dpd",
             "pattern": [
                 ["r", ""],
                 ["l", ""],
@@ -53,6 +58,7 @@
         },
         {
             "name": "Paradiddle Diddle",
+            "abbr": "pdd",
             "pattern": [
                 ["r", ""],
                 ["l", ""],
@@ -66,25 +72,26 @@
     "Flam": [
         {
             "name": "Flam",
-            "pattern": [
-                ["r", "f"]
-            ]
+            "abbr": "f",
+            "pattern": [["r", "f"]]
         },
         {
             "name": "Flam Tap",
+            "abbr": "ft",
             "pattern": [
                 ["r", "f"],
                 ["r", ""]
             ]
         },
-        {"name": "Flam Accent",
+        {
+            "name": "Flam Accent",
+            "abbr": "fa",
             "pattern": [
                 ["r", "f"],
                 ["l", ""],
                 ["r", ""]
-            ]             
+            ]
         }
-
     ],
     "Drag": []
 }

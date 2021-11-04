@@ -1,30 +1,31 @@
-class DrumScroll extends Metronome {
-    exercise;
+class DrumScroll {
+    metronome = new Metronome();
+    exerciseSession;
 
-    setExercise(exercise) {
-        this.exercise = exercise;
+    constructor(exerciseSession) {
+        this.exerciseSession = exerciseSession;
     }
 
     play(beatOffset) {
-        super.play(beatOffset);
+        this.metronome.play(beatOffset);
     }
 
     pause() {
-        super.pause();
+        this.metronome.pause();
     }
 
     reset() {
-        super.reset();
+        this.metronome.reset();
     }
 
     update() {
-        super.update();
+        this.metronome.update();
     }
 
     draw() {
         fill(255);
         textSize(50);
-        text(this.beatsPerMinute, 20, 100);
+        text(this.metronome.beatsPerMinute, 20, 100);
 
         if (this.exercise) {
             this.drawExercise();

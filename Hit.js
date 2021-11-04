@@ -1,33 +1,64 @@
-const standardVelocity = 0.5;
-const accentVelocity = 1;
-
 class Hit {
-    #isLeftHand;
+    static standardVelocity = 0.5;
+    static accentVelocity = 1;
+
+    dexterity;
     velocity;
 
-    constructor(isLeftHand, velocity) {
-        this.#isLeftHand = isLeftHand;
+    constructor(dexterity, velocity) {
+        this.dexterity = dexterity;
         this.velocity = velocity;
     }
 
     isLeftHand() {
-        return this.#isLeftHand;
+        return this.dexterity === "l";
     }
     isRightHand() {
-        return !this.#isLeftHand;
+        return !this.dexterity === "r";
     }
     getDexterityString() {
-        return this.#isLeftHand ? "left" : "right";
+        switch (this.dexterity) {
+            case "l":
+                return "left";
+            case "r":
+                return "right";
+            case "b":
+                return "both";
+            default:
+                return "rest";
+        }
     }
-    getDexterityLetter() {
-        return this.#isLeftHand ? "l" : "r";
+    getDexterity() {
+        return this.dexterity;
+    }
+
+    setAccent(isAccent) {
+        this.velocity = Hit.accentToVelocity(isAccent);
+    }
+
+    isAccent(accentThreshold = 0.75) {
+        return this.velocity >= accentThreshold;
     }
 
     static fromStickingChar(stickingChar) {
         const lowerCaseStickingChar = stickingChar.toLowerCase();
         const isLowercase = stickingChar === lowerCaseStickingChar;
-        const isLeftHand = lowerCaseStickingChar === "l";
         const velocity = isLowercase ? standardVelocity : accentVelocity;
-        return new Hit(isLeftHand, velocity);
+        return new Hit(lowerCaseStickingChar, velocity);
+    }
+
+    static invertDexterity(dexterity) {
+        switch (dexterity) {
+            case "l":
+                return "r";
+            case "r":
+                return "l";
+            default:
+                return dexterity;
+        }
+    }
+
+    static accentToVelocity(isAccent) {
+        return isAccent ? this.accentVelocity : this.standardVelocity;
     }
 }
