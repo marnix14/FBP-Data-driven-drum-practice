@@ -5,7 +5,17 @@ class ExerciseSession {
     startTimestamp;
     beatsPerMinute;
 
+    isRecording = false;
+
     constructor(exercise) {
         this.exercise = exercise;
+    }
+
+    startRecording() {
+        console.log("Recording");
+        this.isRecording = true;
+    }
+    stopRecording() {
+        this.isRecording = false;
     }
 }

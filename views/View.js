@@ -6,4 +6,8 @@ class View {
     draw() {
         console.warn("draw method of current view not defined");
     }
+
+    keyPressed() {
+        console.warn("keyPressed method of current view not defined");
+    }
 }

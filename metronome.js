@@ -33,11 +33,7 @@ class Metronome {
         this.beatsPerMinute = beatsPerMinute;
     }
 
-    play() {
-        this.isPlaying = true;
-    }
-
-    play(beatOffset) {
+    play(beatOffset = 0) {
         if (this.isPlaying) return;
         this.barPosition = this.barPosition + beatOffset / this.beatsPerBar;
         this.isPlaying = true;
@@ -45,6 +41,13 @@ class Metronome {
 
     pause() {
         this.isPlaying = false;
+    }
+    togglePlay() {
+        if (this.isPlaying) {
+            this.pause();
+        } else {
+            this.play();
+        }
     }
 
     reset() {
@@ -66,14 +69,18 @@ class Metronome {
             prevBeatPosition > this.getWrappedBeatPosition();
 
         if (switchedBar) {
-            this.tick(1, 1);
+            this.tick();
         } else if (switchedBeat) {
-            this.tick(0.8, 0.8);
+            this.tock();
         }
     }
 
-    tick(rate, amp) {
-        Metronome.tickSound.play(0, rate, amp);
+    tick() {
+        Metronome.tickSound.play(0, 1, Settings.getMetronomeVolume());
+    }
+
+    tock() {
+        Metronome.tickSound.play(0, 0.8, Settings.getMetronomeVolume() * 0.8);
     }
 
     getWrappedBeatPosition(barPosition = this.barPosition) {
@@ -83,5 +90,9 @@ class Metronome {
 
     getWrappedBarPosition(barPosition = this.barPosition) {
         return (barPosition - floor(barPosition)) % 1;
+    }
+
+    getBeatPosition() {
+        return this.barPosition * this.beatsPerBar;
     }
 }

@@ -48,7 +48,7 @@ canvas {
     display: inline-block;
     padding: 0.3em 1.2em;
     margin: 0 0.1em 0.1em 0;
-    border: 0.16em solid rgba(255, 255, 255, 0);
+    border: 0.16em solid #07f;
     border-radius: 2em;
     box-sizing: border-box;
     text-decoration: none;
@@ -58,14 +58,82 @@ canvas {
     color: #ffffff;
     /*text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);*/
     text-align: center;
-    transition: all 0.1s;
+    transition: border-color 0.1s;
 }
 .button4:hover {
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.7);
 }
 @media all and (max-width: 30em) {
      .button4 {
         display: block;
         margin: 0.2em auto;
     }
+}
+
+.recordButton {
+    width: 25px;
+    height: 25px;
+    font-family: "Roboto";
+    font-size: 14pt;
+    font-weight: 300;
+    border-radius: 50%;
+    border: 3px solid #c53;
+    padding: -4px;
+    box-shadow: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #a31;
+    transition: border-radius 0.3s, box-shadow 0.1s, background-color 0.1s;
+}
+
+.emitLightRecording {
+    box-shadow: 0 0 25px #c53;
+    border: 3px solid #c53;
+}
+.fillRecording {
+    background-color: #c53;
+}
+.fillRecording:hover {
+    border-radius: 10%;
+}
+
+.recordButton:hover {
+    background-color: #c53;
+    color: lightgray;
+}
+
+.playPauseButton {
+    filter: invert(0.8);
+    background: transparent;
+    background-image: url("assets/play.png");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: 60%;
+    background-position: 50%;
+    width: 50px;
+    height: 50px;
+    font-family: "Roboto";
+    font-size: 20pt;
+    font-weight: 300;
+    border-radius: 50%;
+    border: 0px solid #000;
+    padding: 0px 0px;
+    box-shadow: none;
+    outline: none;
+    transition: filter 0.1s, background-image 0.1s, opacity 0.5s;
+}
+
+.playPauseButton:hover {
+    filter: invert(1);
+}
+
+.play {
+    background-image: url("assets/play.png");
+}
+.pause {
+    background-image: url("assets/pause.png");
+}
+
+.disabled {
+    opacity: 0;
 }

@@ -12,6 +12,7 @@ function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent("sketch");
     frameRate(240);
+    textFont("Roboto");
     view.setup();
     view.setExercise(Exercises.exercises[0]);
 }
@@ -33,4 +34,8 @@ function loadData() {
             Exercises.loadJSON(jsonFile);
         });
     });
+}
+
+function keyPressed() {
+    view.keyPressed();
 }
