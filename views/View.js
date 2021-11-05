@@ -1,4 +1,8 @@
 class View {
+    app;
+    constructor(app) {
+        this.app = app;
+    }
     update() {
         console.warn("update method of current view not defined");
     }
@@ -14,4 +18,10 @@ class View {
     destroy() {
         console.warn("destroy method of current view not defined");
     }
+
+    padInput(hit) {
+        console.warn("padInput method of current view not defined");
+    }
+
+    switchTo() {}
 }

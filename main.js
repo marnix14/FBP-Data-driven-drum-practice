@@ -31,6 +31,11 @@ function update() {
     view.update();
 }
 
+function changeView(newView) {
+    view.destroy();
+    this.view = newView;
+}
+
 function loadData() {
     loadJSON("assets/data/rudiments.json", (jsonFile) => {
         Rudiments.loadJSON(jsonFile);
@@ -42,13 +47,12 @@ function loadData() {
 
 function keyPressed() {
     switch (keyCode) {
-        case 65: {
-            if (view instanceof ExerciseView) {
-                analysis = view.getAnalysisView();
-                view.destroy();
-                view = analysis;
-            }
-        }
+        case LEFT_ARROW:
+            view.padInput(new Hit("l", 0.75));
+            break;
+        case RIGHT_ARROW:
+            view.padInput(new Hit("r", 0.75));
+            break;
     }
     view.keyPressed();
 }

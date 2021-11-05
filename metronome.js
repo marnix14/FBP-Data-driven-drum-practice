@@ -95,4 +95,7 @@ class Metronome {
     getBeatPosition() {
         return this.barPosition * this.beatsPerBar;
     }
+    getBarPosition() {
+        return this.barPosition;
+    }
 }

@@ -1,9 +1,10 @@
-class ExerciseView {
+class ExerciseView extends View {
     drumScroll;
     exercise;
     exerciseSession;
 
     constructor() {
+        super();
         this.setExercise(Exercise.EMPTY);
     }
 
@@ -67,6 +68,9 @@ class ExerciseView {
         this.tempoSlider.position(80, 50);
 
         this.drumScroll.addEventCallback((e) => {
+            if (e === "stoppedRecording") {
+                changeView(new AnalysisView(this.exerciseSession));
+            }
             this.updateButtons();
         });
     }
@@ -105,7 +109,7 @@ class ExerciseView {
             case 32: // spacebar
                 this.playPauseButton.toggle();
                 break;
-            case LEFT_ARROW:
+            case 36: // home
                 this.drumScroll.reset();
                 break;
             case ESCAPE:
@@ -116,6 +120,10 @@ class ExerciseView {
                 this.recordButton.toggle();
                 break;
         }
+    }
+
+    padInput(hit) {
+        this.exerciseSession.padInput(TimedHit.fromHitAndMetronome(hit, this.drumScroll.metronome));
     }
 
     getAnalysisView() {

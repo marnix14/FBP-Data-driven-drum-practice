@@ -65,7 +65,10 @@ class DrumScroll extends Bounds {
     }
 
     stop() {
-        if (this.exerciseSession.isRecording) this.exerciseSession.stopRecording();
+        if (this.exerciseSession.isRecording) {
+            this.exerciseSession.stopRecording();
+            this.callEventCallbacks("stoppedRecording");
+        }
         this.pause();
         this.reset();
     }
@@ -73,7 +76,8 @@ class DrumScroll extends Bounds {
     startRecording() {
         if (this.exerciseSession.isRecording) return;
         this.stop();
-        this.exerciseSession.startRecording();
+        const timestamp = Date.now();
+        this.exerciseSession.startRecording(timestamp, this.metronome.beatsPerMinute);
         this.play(-this.recordingCountdownInBars * this.metronome.beatsPerBar);
     }
 

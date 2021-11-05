@@ -9,6 +9,6 @@ class Exercises {
         for (const exerciseJSON of this.data) {
             this.exercises.push(Exercise.fromJSON(exerciseJSON));
         }
-        console.log(this.exercises);
+        console.log("Converted to TimedHitNote Array", this.exercises);
     }
 }
