@@ -10,4 +10,8 @@ class View {
     keyPressed() {
         console.warn("keyPressed method of current view not defined");
     }
+
+    destroy() {
+        console.warn("destroy method of current view not defined");
+    }
 }

@@ -24,21 +24,41 @@ class ExerciseView {
         const scrollY = height / 2 - scrollHeight / 2;
         this.drumScroll.setBounds(scrollX, scrollY, scrollWidth, scrollHeight);
 
-        this.resetButton = createButton("");
-        this.resetButton.mousePressed(() => {
-            this.drumScroll.reset();
+        this.resetButton = new IconButton({
+            x: this.drumScroll.centerX - this.drumScroll.width / 2 - 50,
+            y: this.drumScroll.bottom - 20,
+            icon: "reset",
+            startDisabled: true,
+            clicked: () => {
+                this.drumScroll.reset();
+            },
         });
-        this.resetButton.position(
-            this.drumScroll.centerX - this.drumScroll.width / 2 - 45,
-            this.drumScroll.bottom - 18
-        );
-        this.resetButton.class("resetButton disabled");
 
-        this.playPause = createButton("");
-        this.playPause.class("playPauseButton play");
-        this.playPause.position(this.drumScroll.centerX - this.drumScroll.width / 2 - 10, this.drumScroll.bottom - 20);
-        this.playPause.mousePressed(() => {
-            this.togglePlayButton();
+        this.playPauseButton = new ToggleButton({
+            x: this.drumScroll.centerX - this.drumScroll.width / 2 - 10,
+            y: this.drumScroll.bottom - 20,
+            iconOn: "pause",
+            iconOff: "play",
+            clickedOn: () => {
+                this.drumScroll.play();
+            },
+            clickedOff: () => {
+                this.drumScroll.pause();
+            },
+        });
+
+        this.recordButton = new ToggleButton({
+            x: this.drumScroll.centerX + this.drumScroll.width / 2 - 25,
+            y: this.drumScroll.bottom - 13,
+            class: "recordButton",
+            classOn: "recordOn",
+            classOff: "recordOff",
+            clickedOn: () => {
+                this.drumScroll.startRecording();
+            },
+            clickedOff: () => {
+                this.drumScroll.stop();
+            },
         });
 
         this.tempoSlider = createSlider(30, 200, 100);
@@ -46,63 +66,27 @@ class ExerciseView {
         this.tempoSlider.input(() => this.drumScroll.metronome.setBeatsPerMinute(this.tempoSlider.value()));
         this.tempoSlider.position(80, 50);
 
-        this.recordButton = createButton("");
-        this.recordButton.class("recordButton");
-        this.recordButton.position(
-            this.drumScroll.centerX + this.drumScroll.width / 2 - 25,
-            this.drumScroll.bottom - 13
-        );
-        this.recordButton.mousePressed(() => {
-            this.toggleRecordButton();
-        });
-
         this.drumScroll.addEventCallback((e) => {
-            this.updatePlayPauseResetButton();
-            this.updateRecordButton();
+            this.updateButtons();
         });
     }
 
-    toggleRecordButton() {
-        if (this.drumScroll.exerciseSession.isRecording) {
-            this.drumScroll.stop();
-        } else {
-            this.drumScroll.startRecording();
-        }
-        this.updateRecordButton();
-        this.updatePlayPauseResetButton();
-    }
-
-    updateRecordButton() {
-        if (this.drumScroll.exerciseSession.isRecording) {
-            this.recordButton.class("recordButton fillRecording emitLightRecording");
-        } else {
-            this.recordButton.class("recordButton");
-        }
-    }
-
-    togglePlayButton() {
-        this.drumScroll.togglePlay();
-        this.updatePlayPauseResetButton();
-        this.updateRecordButton();
-    }
-
-    updatePlayPauseResetButton() {
-        if (this.drumScroll.exerciseSession.isRecording) {
-            this.resetButton.addClass("disabled");
-            this.playPause.addClass("disabled");
-        } else {
-            this.playPause.removeClass("disabled");
-        }
+    updateButtons() {
         if (this.drumScroll.metronome.isPlaying) {
-            this.playPause.removeClass("play");
-            this.playPause.addClass("pause");
-        } else {
-            this.playPause.removeClass("pause");
-            this.playPause.addClass("play");
-            if (this.drumScroll.metronome.barPosition > 0) {
-                this.resetButton.removeClass("disabled");
+            this.playPauseButton.setOn();
+            this.resetButton.disable();
+            if (this.drumScroll.exerciseSession.isRecording) {
+                this.playPauseButton.disable();
             } else {
-                this.resetButton.addClass("disabled");
+                this.playPauseButton.enable();
+            }
+        } else {
+            this.playPauseButton.enable();
+            this.playPauseButton.setOff();
+            if (this.drumScroll.metronome.barPosition > 0) {
+                this.resetButton.enable();
+            } else {
+                this.resetButton.disable();
             }
         }
     }
@@ -119,7 +103,7 @@ class ExerciseView {
     keyPressed() {
         switch (keyCode) {
             case 32: // spacebar
-                this.togglePlayButton();
+                this.playPauseButton.toggle();
                 break;
             case LEFT_ARROW:
                 this.drumScroll.reset();
@@ -129,8 +113,19 @@ class ExerciseView {
                 this.drumScroll.stop();
                 break;
             case ENTER:
-                this.toggleRecordButton();
+                this.recordButton.toggle();
                 break;
         }
+    }
+
+    getAnalysisView() {
+        return new AnalysisView(this.exerciseSession);
+    }
+
+    destroy() {
+        this.tempoSlider.remove();
+        this.resetButton.remove();
+        this.playPauseButton.remove();
+        this.recordButton.remove();
     }
 }

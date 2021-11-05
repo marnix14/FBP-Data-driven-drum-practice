@@ -41,5 +41,14 @@ function loadData() {
 }
 
 function keyPressed() {
+    switch (keyCode) {
+        case 65: {
+            if (view instanceof ExerciseView) {
+                analysis = view.getAnalysisView();
+                view.destroy();
+                view = analysis;
+            }
+        }
+    }
     view.keyPressed();
 }
