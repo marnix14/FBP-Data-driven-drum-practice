@@ -66,8 +66,8 @@ class DrumScroll extends Bounds {
 
     stop() {
         if (this.exerciseSession.isRecording) this.exerciseSession.stopRecording();
-        this.metronome.pause();
-        this.metronome.reset();
+        this.pause();
+        this.reset();
     }
 
     startRecording() {
@@ -180,7 +180,7 @@ class DrumScroll extends Bounds {
         strokeWeight(0);
         fill(255, pow(min(1, abs(this.metronome.getBeatPosition() / 2)), 2) * 255);
         textSize(100);
-        text(abs(floor(this.metronome.getBeatPosition())), this.centerX - 20, this.bottom - 50);
+        text(abs(floor(this.metronome.getBeatPosition())), this.centerX - 25, this.bottom + 100);
     }
 
     // value between 0 (start) and 1 (exercise done)

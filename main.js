@@ -17,6 +17,10 @@ function setup() {
     view.setExercise(Exercises.exercises[0]);
 }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
     update();
     background(22);
@@ -28,9 +32,9 @@ function update() {
 }
 
 function loadData() {
-    loadJSON("assets/rudiments.json", (jsonFile) => {
+    loadJSON("assets/data/rudiments.json", (jsonFile) => {
         Rudiments.loadJSON(jsonFile);
-        loadJSON("assets/exercises.json", (jsonFile) => {
+        loadJSON("assets/data/exercises.json", (jsonFile) => {
             Exercises.loadJSON(jsonFile);
         });
     });

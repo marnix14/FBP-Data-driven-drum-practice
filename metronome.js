@@ -9,7 +9,7 @@ class Metronome {
     static tickSound;
 
     static preload() {
-        Metronome.tickSound = loadSound("assets/tick.wav");
+        Metronome.tickSound = loadSound("assets/sounds/tick.wav");
         Metronome.tickSound.playMode("restart");
     }
 

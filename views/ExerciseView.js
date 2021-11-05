@@ -24,12 +24,22 @@ class ExerciseView {
         const scrollY = height / 2 - scrollHeight / 2;
         this.drumScroll.setBounds(scrollX, scrollY, scrollWidth, scrollHeight);
 
-        this.resetButton = createButton("reset");
+        this.resetButton = createButton("");
         this.resetButton.mousePressed(() => {
             this.drumScroll.reset();
         });
-        this.resetButton.position(20, 10);
-        this.resetButton.class("button4");
+        this.resetButton.position(
+            this.drumScroll.centerX - this.drumScroll.width / 2 - 45,
+            this.drumScroll.bottom - 18
+        );
+        this.resetButton.class("resetButton disabled");
+
+        this.playPause = createButton("");
+        this.playPause.class("playPauseButton play");
+        this.playPause.position(this.drumScroll.centerX - this.drumScroll.width / 2 - 10, this.drumScroll.bottom - 20);
+        this.playPause.mousePressed(() => {
+            this.togglePlayButton();
+        });
 
         this.tempoSlider = createSlider(30, 200, 100);
         this.tempoSlider.class("slider");
@@ -46,16 +56,8 @@ class ExerciseView {
             this.toggleRecordButton();
         });
 
-        this.playPause = createButton("");
-        this.playPause.class("playPauseButton play");
-        this.playPause.position(this.drumScroll.centerX - this.drumScroll.width / 2 + 2, this.drumScroll.bottom - 23);
-        this.playPause.mousePressed(() => {
-            this.togglePlayButton();
-        });
-
         this.drumScroll.addEventCallback((e) => {
-            console.log(e);
-            this.updatePlayPauseButton();
+            this.updatePlayPauseResetButton();
             this.updateRecordButton();
         });
     }
@@ -67,7 +69,7 @@ class ExerciseView {
             this.drumScroll.startRecording();
         }
         this.updateRecordButton();
-        this.updatePlayPauseButton();
+        this.updatePlayPauseResetButton();
     }
 
     updateRecordButton() {
@@ -80,12 +82,13 @@ class ExerciseView {
 
     togglePlayButton() {
         this.drumScroll.togglePlay();
-        this.updatePlayPauseButton();
+        this.updatePlayPauseResetButton();
         this.updateRecordButton();
     }
 
-    updatePlayPauseButton() {
+    updatePlayPauseResetButton() {
         if (this.drumScroll.exerciseSession.isRecording) {
+            this.resetButton.addClass("disabled");
             this.playPause.addClass("disabled");
         } else {
             this.playPause.removeClass("disabled");
@@ -96,6 +99,11 @@ class ExerciseView {
         } else {
             this.playPause.removeClass("pause");
             this.playPause.addClass("play");
+            if (this.drumScroll.metronome.barPosition > 0) {
+                this.resetButton.removeClass("disabled");
+            } else {
+                this.resetButton.addClass("disabled");
+            }
         }
     }
 
@@ -109,12 +117,10 @@ class ExerciseView {
     }
 
     keyPressed() {
-        console.log(keyCode);
-        // spacebar
         switch (keyCode) {
-            case 32:
+            case 32: // spacebar
                 this.togglePlayButton();
-                break; // spacebar
+                break;
             case LEFT_ARROW:
                 this.drumScroll.reset();
                 break;

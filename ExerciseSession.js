@@ -12,10 +12,11 @@ class ExerciseSession {
     }
 
     startRecording() {
-        console.log("Recording");
+        console.log("Recording session started");
         this.isRecording = true;
     }
     stopRecording() {
+        console.log("Recording session stopped");
         this.isRecording = false;
     }
 }
