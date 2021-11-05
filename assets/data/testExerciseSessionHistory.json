@@ -1,0 +1,1372 @@
+[
+  {
+    "exercise": {
+      "name": "Paradiddle diddle",
+      "description": "Twice right and twice left paradiddle diddle.",
+      "structure": [
+        [
+          "pdd",
+          3,
+          2,
+          false
+        ],
+        [
+          "pdd",
+          3,
+          2,
+          true
+        ]
+      ],
+      "hitNotes": [
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 0,
+          "barPosition": 0
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 0.3333333333333333,
+          "barPosition": 0.08333333333333333
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 0.6666666666666666,
+          "barPosition": 0.16666666666666666
+        },
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 1,
+          "barPosition": 0.25
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 1.3333333333333333,
+          "barPosition": 0.3333333333333333
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 1.6666666666666665,
+          "barPosition": 0.41666666666666663
+        },
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 2,
+          "barPosition": 0.5
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 2.3333333333333335,
+          "barPosition": 0.5833333333333334
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 2.666666666666667,
+          "barPosition": 0.6666666666666667
+        },
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 3,
+          "barPosition": 0.75
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 3.3333333333333335,
+          "barPosition": 0.8333333333333334
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 3.666666666666667,
+          "barPosition": 0.9166666666666667
+        },
+        {
+          "dexterity": "l",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 4,
+          "barPosition": 1
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 4.333333333333333,
+          "barPosition": 1.0833333333333333
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 4.666666666666666,
+          "barPosition": 1.1666666666666665
+        },
+        {
+          "dexterity": "l",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 5,
+          "barPosition": 1.25
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 5.333333333333333,
+          "barPosition": 1.3333333333333333
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 5.666666666666666,
+          "barPosition": 1.4166666666666665
+        },
+        {
+          "dexterity": "l",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 6,
+          "barPosition": 1.5
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 6.333333333333333,
+          "barPosition": 1.5833333333333333
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 6.666666666666666,
+          "barPosition": 1.6666666666666665
+        },
+        {
+          "dexterity": "l",
+          "velocity": 1,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 7,
+          "barPosition": 1.75
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 7.333333333333333,
+          "barPosition": 1.8333333333333333
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 3,
+          "flag": "",
+          "beatPosition": 7.666666666666666,
+          "barPosition": 1.9166666666666665
+        }
+      ],
+      "accentPlacement": "beat",
+      "beatsPerBar": 4,
+      "beats": 8,
+      "bars": 2
+    },
+    "startTimestamp": 1636152965304,
+    "beatsPerMinute": 100,
+    "recording": [
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 0.28116666667162715,
+        "barPosition": 0.07029166666790679
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 0.5593333333358104,
+        "barPosition": 0.1398333333339526
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 0.837333333343261,
+        "barPosition": 0.20933333333581525
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 1.2265000000099278,
+        "barPosition": 0.30662500000248194
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 1.5599999999999934,
+        "barPosition": 0.38999999999999835
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 1.8936666666716269,
+        "barPosition": 0.4734166666679067
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 2.2270000000049595,
+        "barPosition": 0.5567500000012399
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 2.533166666676592,
+        "barPosition": 0.633291666669148
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 2.9223333333432575,
+        "barPosition": 0.7305833333358144
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 3.2560000000024725,
+        "barPosition": 0.8140000000006181
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 3.561500000009922,
+        "barPosition": 0.8903750000024805
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 3.895333333338287,
+        "barPosition": 0.9738333333345718
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 4.312333333343253,
+        "barPosition": 1.0780833333358133
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 4.645833333333318,
+        "barPosition": 1.1614583333333295
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 4.8961666666716175,
+        "barPosition": 1.2240416666679044
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 5.313166666676583,
+        "barPosition": 1.3282916666691458
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 5.674500000004948,
+        "barPosition": 1.418625000001237
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 6.036000000002463,
+        "barPosition": 1.5090000000006158
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 6.341833333335796,
+        "barPosition": 1.585458333333949
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 6.647666666669128,
+        "barPosition": 1.661916666667282
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 6.925666666676578,
+        "barPosition": 1.7314166666691444
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 7.314833333343243,
+        "barPosition": 1.8287083333358107
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 7.676166666671608,
+        "barPosition": 1.919041666667902
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 7.98200000000494,
+        "barPosition": 1.995500000001235
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 8.315666666676577,
+        "barPosition": 2.0789166666691443
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 8.621500000009913,
+        "barPosition": 2.1553750000024783
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 8.92733333334325,
+        "barPosition": 2.2318333333358127
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 9.344333333335804,
+        "barPosition": 2.336083333333951
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 9.67800000000744,
+        "barPosition": 2.41950000000186
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 10.011333333340776,
+        "barPosition": 2.502833333335194
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 10.345166666669146,
+        "barPosition": 2.5862916666672864
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 10.651000000002481,
+        "barPosition": 2.6627500000006203
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 10.984500000004967,
+        "barPosition": 2.746125000001242
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 11.345833333333337,
+        "barPosition": 2.836458333333334
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 11.62400000000994,
+        "barPosition": 2.906000000002485
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 11.985333333338309,
+        "barPosition": 2.996333333334577
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 12.319166666666678,
+        "barPosition": 3.0797916666666696
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 12.652666666669164,
+        "barPosition": 3.163166666667291
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 12.930666666676617,
+        "barPosition": 3.232666666669154
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 13.292166666674136,
+        "barPosition": 3.323041666668534
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 13.625666666676622,
+        "barPosition": 3.4064166666691555
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 13.959166666666691,
+        "barPosition": 3.489791666666673
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 14.292833333338328,
+        "barPosition": 3.573208333334582
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 14.571000000002513,
+        "barPosition": 3.6427500000006283
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 14.904500000005,
+        "barPosition": 3.72612500000125
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 15.26583333333337,
+        "barPosition": 3.8164583333333426
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 15.599500000005007,
+        "barPosition": 3.8998750000012516
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 15.960666666676643,
+        "barPosition": 3.9901666666691606
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 16.322500000000048,
+        "barPosition": 4.080625000000012
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 16.5726666666692,
+        "barPosition": 4.1431666666673
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 16.961666666666723,
+        "barPosition": 4.240416666666681
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 17.35100000000254,
+        "barPosition": 4.337750000000635
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 17.656666666666727,
+        "barPosition": 4.414166666666682
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 17.990333333338366,
+        "barPosition": 4.497583333334592
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 18.296000000002554,
+        "barPosition": 4.574000000000638
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 18.6296666666742,
+        "barPosition": 4.65741666666855
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 18.935666666676692,
+        "barPosition": 4.733916666669173
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 19.297000000005063,
+        "barPosition": 4.824250000001266
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 19.63083333333343,
+        "barPosition": 4.907708333333358
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 20.075333333338406,
+        "barPosition": 5.018833333334602
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 20.40916666666677,
+        "barPosition": 5.102291666666693
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 20.63133333334089,
+        "barPosition": 5.157833333335223
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 20.96500000000011,
+        "barPosition": 5.2412500000000275
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 21.409666666674237,
+        "barPosition": 5.352416666668559
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 21.743500000002605,
+        "barPosition": 5.435875000000651
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 22.049333333335944,
+        "barPosition": 5.512333333333986
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 22.41050000000758,
+        "barPosition": 5.602625000001895
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 22.578333333333468,
+        "barPosition": 5.644583333333367
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 23.18983333334341,
+        "barPosition": 5.797458333335853
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 23.88400000001009,
+        "barPosition": 5.9710000000025225
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 24.217833333338458,
+        "barPosition": 6.0544583333346145
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 24.60700000000513,
+        "barPosition": 6.151750000001282
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 24.91283333333847,
+        "barPosition": 6.228208333334617
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 25.32966666667429,
+        "barPosition": 6.332416666668572
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 25.66333333333351,
+        "barPosition": 6.415833333333378
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 25.997166666674307,
+        "barPosition": 6.499291666668577
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 26.302833333338498,
+        "barPosition": 6.5757083333346245
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 26.414000000010134,
+        "barPosition": 6.6035000000025335
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 26.831166666671844,
+        "barPosition": 6.707791666667961
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 27.025666666676813,
+        "barPosition": 6.756416666669203
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 27.442500000000216,
+        "barPosition": 6.860625000000054
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 27.776000000002707,
+        "barPosition": 6.944000000000677
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 28.0820000000052,
+        "barPosition": 7.0205000000013
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 28.415833333333566,
+        "barPosition": 7.1039583333333916
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 28.693666666671866,
+        "barPosition": 7.173416666667967
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 28.971666666666906,
+        "barPosition": 7.242916666666726
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 29.38883333334103,
+        "barPosition": 7.347208333335257
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 29.69416666666692,
+        "barPosition": 7.42354166666673
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 30.055666666676863,
+        "barPosition": 7.513916666669216
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 30.389500000005235,
+        "barPosition": 7.597375000001309
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 30.778833333341048,
+        "barPosition": 7.694708333335262
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 31.056500000010203,
+        "barPosition": 7.764125000002551
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 31.14016666666942,
+        "barPosition": 7.785041666667355
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 31.529166666666946,
+        "barPosition": 7.882291666666736
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 31.779500000005246,
+        "barPosition": 7.9448750000013115
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 32.05750000000029,
+        "barPosition": 8.014375000000072
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 32.446833333336095,
+        "barPosition": 8.111708333334024
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 32.75216666667439,
+        "barPosition": 8.188041666668598
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 33.00250000000027,
+        "barPosition": 8.250625000000067
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 33.36416666666694,
+        "barPosition": 8.341041666666735
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 33.66983333334355,
+        "barPosition": 8.417458333335887
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 34.03133333334105,
+        "barPosition": 8.507833333335263
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 34.30933333333608,
+        "barPosition": 8.57733333333402
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 34.61500000000027,
+        "barPosition": 8.653750000000068
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 34.9486666666719,
+        "barPosition": 8.737166666667974
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 35.33800000000771,
+        "barPosition": 8.834500000001928
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 35.588166666676855,
+        "barPosition": 8.897041666669214
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 35.949666666674375,
+        "barPosition": 8.987416666668594
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 36.36650000001019,
+        "barPosition": 9.091625000002548
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 36.64450000000522,
+        "barPosition": 9.161125000001306
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 36.9501666666694,
+        "barPosition": 9.23754166666735
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 37.33966666667437,
+        "barPosition": 9.334916666668592
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 37.700833333333584,
+        "barPosition": 9.425208333333396
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 38.062333333343524,
+        "barPosition": 9.515583333335881
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 38.312333333343524,
+        "barPosition": 9.578083333335881
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 38.646166666671874,
+        "barPosition": 9.661541666667969
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 38.89616666667186,
+        "barPosition": 9.724041666667965
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 39.31333333333356,
+        "barPosition": 9.82833333333339
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 39.67483333334349,
+        "barPosition": 9.918708333335873
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 39.98066666667681,
+        "barPosition": 9.995166666669203
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 40.34216666667432,
+        "barPosition": 10.08554166666858
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 40.6478333333385,
+        "barPosition": 10.161958333334624
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 40.953833333340974,
+        "barPosition": 10.238458333335243
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 41.34300000000764,
+        "barPosition": 10.33575000000191
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 41.64866666667183,
+        "barPosition": 10.412166666667957
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 41.98216666667431,
+        "barPosition": 10.495541666668577
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 42.28800000000764,
+        "barPosition": 10.57200000000191
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 42.62183333333599,
+        "barPosition": 10.655458333333998
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 42.92766666666933,
+        "barPosition": 10.731916666667333
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 43.149833333343445,
+        "barPosition": 10.787458333335861
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 43.53933333333598,
+        "barPosition": 10.884833333333995
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 44.01166666666681,
+        "barPosition": 11.002916666666703
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 44.37316666667675,
+        "barPosition": 11.093291666669188
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 44.678833333340926,
+        "barPosition": 11.169708333335231
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 44.98466666667426,
+        "barPosition": 11.246166666668564
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 45.37416666666681,
+        "barPosition": 11.343541666666702
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 45.652166666674255,
+        "barPosition": 11.413041666668564
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 46.01366666667176,
+        "barPosition": 11.50341666666794
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 46.319166666666796,
+        "barPosition": 11.579791666666699
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 46.625000000000135,
+        "barPosition": 11.656250000000034
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 46.93083333333346,
+        "barPosition": 11.732708333333365
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 47.34783333333842,
+        "barPosition": 11.836958333334605
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 47.65333333333346,
+        "barPosition": 11.913333333333364
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 47.98750000000012,
+        "barPosition": 11.99687500000003
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 48.34866666667175,
+        "barPosition": 12.087166666667937
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 48.62683333333593,
+        "barPosition": 12.156708333333983
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 48.93233333334338,
+        "barPosition": 12.233083333335845
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 49.34950000000508,
+        "barPosition": 12.33737500000127
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 49.655166666669246,
+        "barPosition": 12.413791666667311
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 49.989666666674204,
+        "barPosition": 12.497416666668551
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 50.23916666666675,
+        "barPosition": 12.559791666666687
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 50.60050000000753,
+        "barPosition": 12.650125000001882
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 50.96200000000503,
+        "barPosition": 12.740500000001257
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 51.32316666667666,
+        "barPosition": 12.830791666669166
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 51.62916666666671,
+        "barPosition": 12.907291666666678
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 51.96283333333834,
+        "barPosition": 12.990708333334585
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 52.35216666667415,
+        "barPosition": 13.088041666668538
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 52.657666666669186,
+        "barPosition": 13.164416666667297
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 53.019333333335844,
+        "barPosition": 13.254833333333961
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 53.4085000000025,
+        "barPosition": 13.352125000000624
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 53.547333333343275,
+        "barPosition": 13.386833333335819
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 54.35366666667163,
+        "barPosition": 13.588416666667907
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 54.659500000004954,
+        "barPosition": 13.664875000001238
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 54.9928333333383,
+        "barPosition": 13.748208333334574
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 55.4378333333383,
+        "barPosition": 13.859458333334574
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 55.77166666666667,
+        "barPosition": 13.942916666666667
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 56.13300000000745,
+        "barPosition": 14.033250000001862
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 56.439500000004955,
+        "barPosition": 14.109875000001239
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 56.74433333333581,
+        "barPosition": 14.186083333333952
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 57.02249999999999,
+        "barPosition": 14.255624999999997
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 57.35583333333332,
+        "barPosition": 14.33895833333333
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 57.689833333343266,
+        "barPosition": 14.422458333335817
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 57.995666666676605,
+        "barPosition": 14.498916666669151
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 58.2456666666766,
+        "barPosition": 14.56141666666915
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 58.66283333333828,
+        "barPosition": 14.66570833333457
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 58.996000000002454,
+        "barPosition": 14.749000000000613
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 59.30183333333578,
+        "barPosition": 14.825458333333945
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 59.60800000000741,
+        "barPosition": 14.902000000001852
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 59.969500000004906,
+        "barPosition": 14.992375000001227
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 60.359666666674045,
+        "barPosition": 15.089916666668511
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 60.664166666666596,
+        "barPosition": 15.166041666666649
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 60.942499999999924,
+        "barPosition": 15.235624999999981
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 61.3316666666666,
+        "barPosition": 15.33291666666665
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 61.66533333333823,
+        "barPosition": 15.416333333334558
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 61.99900000000986,
+        "barPosition": 15.499750000002464
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 62.22133333334071,
+        "barPosition": 15.555333333335177
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 62.63833333333325,
+        "barPosition": 15.659583333333313
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 62.88966666667403,
+        "barPosition": 15.722416666668508
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.75,
+        "beatPosition": 63.30550000000737,
+        "barPosition": 15.826375000001843
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 63.583500000002395,
+        "barPosition": 15.895875000000599
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.75,
+        "beatPosition": 63.94499999999991,
+        "barPosition": 15.986249999999977
+      }
+    ],
+    "analysis": {},
+    "isRecording": false
+  }
+]

@@ -34,6 +34,7 @@ class ExerciseSession {
         console.log(this.recording);
         this.isRecording = false;
         this.analyse();
+        this.save();
     }
 
     analyse() {
@@ -44,6 +45,10 @@ class ExerciseSession {
         }
     }
 
+    save() {
+        ExerciseSessionHistory.addNewSession(this);
+    }
+
     padInput(timedHit) {
         console.log(timedHit);
 
@@ -51,6 +56,4 @@ class ExerciseSession {
             this.recording.push(timedHit);
         }
     }
-
-    store() {}
 }

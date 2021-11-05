@@ -16,6 +16,8 @@ class DrumScroll extends Bounds {
 
     recordingCountdownInBars = 1;
 
+    audioLatency = 100;
+
     constructor(exerciseSession) {
         super();
         this.setExerciseSession(exerciseSession);
@@ -84,7 +86,7 @@ class DrumScroll extends Bounds {
     update() {
         this.metronome.update();
 
-        this.currentRepeat = this.metronome.barPosition / this.exerciseSession.exercise.bars;
+        this.currentRepeat = this.metronome.getBarPosition(this.audioLatency) / this.exerciseSession.exercise.bars;
         if (this.currentRepeat >= this.maxRepeats) this.stop();
         //this.metronome.setBeatsPerMinute(60 + int(5 * this.currentRepeat));
     }
@@ -112,7 +114,10 @@ class DrumScroll extends Bounds {
             }
         }
 
-        if (this.metronome.barPosition < 0) {
+        if (
+            this.metronome.getBarPosition() < 0 &&
+            this.metronome.getBarPosition(this.audioLatency) > -this.recordingCountdownInBars
+        ) {
             this.drawCountDown();
         }
     }
@@ -142,13 +147,11 @@ class DrumScroll extends Bounds {
     drawMovingRules(subdivisions = 2) {
         // calculate on the level of beats
         for (let i = 0; i < this.metronome.beatsPerBar; i++) {
-            const yNorm = (i + this.metronome.getWrappedBeatPosition()) / this.metronome.beatsPerBar;
+            const yNorm = (i + this.metronome.getWrappedBeatPosition(this.audioLatency)) / this.metronome.beatsPerBar;
             this.drawSubdivisions(yNorm, subdivisions);
             this.drawBeat(yNorm);
-            if (yNorm == this.metronome.getWrappedBarPosition()) {
-                this.drawBar(yNorm);
-            }
         }
+        this.drawBar(this.metronome.getWrappedBarPosition(this.audioLatency));
     }
 
     drawRule(y, w, color = 255, thickness = 2) {
@@ -158,15 +161,15 @@ class DrumScroll extends Bounds {
     }
 
     drawHitNote(hitNote, globalBarPosition) {
-        let y = this.y + this.h * (this.metronome.barPosition + 1 - globalBarPosition);
+        let y = this.y + this.h * (this.metronome.getBarPosition(this.audioLatency) + 1 - globalBarPosition);
         const maxSize = this.noteSizeRatio * this.w;
         let size = sqrt(hitNote.velocity) * maxSize;
         if (y < -size || y > height + size) return;
 
         const dexterityWidth = this.dexterityWidthRatio * this.w;
         let xOffset = hitNote.isLeftHand() ? -dexterityWidth / 2 : dexterityWidth / 2;
-        const notePassed = this.metronome.barPosition > globalBarPosition;
-        const distanceFromMetronomeInBars = abs(this.metronome.barPosition - globalBarPosition);
+        const notePassed = this.metronome.getBarPosition(this.audioLatency) > globalBarPosition;
+        const distanceFromMetronomeInBars = abs(this.metronome.getBarPosition(this.audioLatency) - globalBarPosition);
         if (!notePassed) {
             const fade = 1 - min(1, distanceFromMetronomeInBars);
             fill(22 + hitNote.velocity * fade * 233);
@@ -184,11 +187,11 @@ class DrumScroll extends Bounds {
         strokeWeight(0);
         fill(255, pow(min(1, abs(this.metronome.getBeatPosition() / 2)), 2) * 255);
         textSize(100);
-        text(abs(floor(this.metronome.getBeatPosition())), this.centerX - 25, this.bottom + 100);
+        text(abs(floor(this.metronome.getBeatPosition(this.audioLatency))), this.centerX - 25, this.bottom + 100);
     }
 
     // value between 0 (start) and 1 (exercise done)
     getExercisePosition() {
-        return (this.metronome.barPosition / this.exerciseSession.exercise.bars) % 1;
+        return (this.metronome.getBarPosition(this.audioLatency) / this.exerciseSession.exercise.bars) % 1;
     }
 }

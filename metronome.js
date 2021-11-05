@@ -8,8 +8,8 @@ class Metronome {
 
     static tickSound;
 
-    static preload() {
-        Metronome.tickSound = loadSound("assets/sounds/tick.wav");
+    static async preload() {
+        Metronome.tickSound = loadSound("/assets/sounds/tick.mp3");
         Metronome.tickSound.playMode("restart");
     }
 
@@ -56,8 +56,8 @@ class Metronome {
     }
 
     checkForTick(updateBarPosition) {
-        this.prevBarPosition = this.getWrappedBarPosition(this.barPosition);
-        const prevBeatPosition = this.getWrappedBeatPosition(this.prevBarPosition);
+        this.prevBarPosition = this.getWrappedBarPositionOf(this.barPosition);
+        const prevBeatPosition = this.getWrappedBeatPositionOf(this.prevBarPosition);
 
         updateBarPosition();
 
@@ -83,19 +83,32 @@ class Metronome {
         Metronome.tickSound.play(0, 0.8, Settings.getMetronomeVolume() * 0.8);
     }
 
-    getWrappedBeatPosition(barPosition = this.barPosition) {
+    getWrappedBeatPositionOf(barPosition = this.barPosition) {
         const beatPosition = barPosition * this.beatsPerBar;
         return (beatPosition - floor(beatPosition)) % 1;
     }
 
-    getWrappedBarPosition(barPosition = this.barPosition) {
+    getWrappedBarPositionOf(barPosition = this.barPosition) {
         return (barPosition - floor(barPosition)) % 1;
     }
 
-    getBeatPosition() {
-        return this.barPosition * this.beatsPerBar;
+    getWrappedBeatPosition(latency = 0) {
+        const beatPosition = this.getBarPosition(latency) * this.beatsPerBar;
+        return (beatPosition - floor(beatPosition)) % 1;
     }
-    getBarPosition() {
-        return this.barPosition;
+
+    getWrappedBarPosition(latency = 0) {
+        return (this.getBarPosition(latency) - floor(this.getBarPosition(latency))) % 1;
+    }
+
+    getBeatPosition(latency = 0) {
+        return this.getBarPosition(latency) * this.beatsPerBar;
+    }
+    getBarPosition(latency = 0) {
+        return this.barPosition - this.millisecondsToBars(latency);
+    }
+
+    millisecondsToBars(ms) {
+        return ((ms / 1000 / 60) * this.beatsPerMinute) / this.beatsPerBar;
     }
 }

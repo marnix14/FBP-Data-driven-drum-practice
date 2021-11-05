@@ -87,7 +87,7 @@ class ExerciseView extends View {
         } else {
             this.playPauseButton.enable();
             this.playPauseButton.setOff();
-            if (this.drumScroll.metronome.barPosition > 0) {
+            if (this.drumScroll.metronome.getBarPosition() > 0) {
                 this.resetButton.enable();
             } else {
                 this.resetButton.disable();

@@ -6,6 +6,7 @@ exerciseHistory = new ExerciseSessionHistory();
 function preload() {
     loadData();
     Metronome.preload();
+    ExerciseSessionHistory.preload();
 }
 
 function setup() {
@@ -53,6 +54,8 @@ function keyPressed() {
         case RIGHT_ARROW:
             view.padInput(new Hit("r", 0.75));
             break;
+        case 65: // a
+            changeView(new AnalysisView(ExerciseSessionHistory.testExerciseSession));
     }
     view.keyPressed();
 }
