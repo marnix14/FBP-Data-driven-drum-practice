@@ -3,9 +3,10 @@ class ExerciseView extends View {
     exercise;
     exerciseSession;
 
-    constructor() {
+    constructor(exercise = Exercise.EMPTY) {
         super();
-        this.setExercise(Exercise.EMPTY);
+        this.setExercise(exercise);
+        this.initUI();
     }
 
     setExercise(exercise) {
@@ -18,11 +19,11 @@ class ExerciseView extends View {
         }
     }
 
-    setup() {
+    initUI() {
         const scrollHeight = height * 0.6;
         const scrollWidth = scrollHeight / 2;
         const scrollX = width / 2 - scrollWidth / 2;
-        const scrollY = height / 2 - scrollHeight / 2;
+        const scrollY = height * 0.1;
         this.drumScroll.setBounds(scrollX, scrollY, scrollWidth, scrollHeight);
 
         this.resetButton = new IconButton({
@@ -51,6 +52,7 @@ class ExerciseView extends View {
         this.recordButton = new ToggleButton({
             x: this.drumScroll.centerX + this.drumScroll.width / 2 - 25,
             y: this.drumScroll.bottom - 13,
+            size: 25,
             class: "recordButton",
             classOn: "recordOn",
             classOff: "recordOff",
@@ -62,10 +64,34 @@ class ExerciseView extends View {
             },
         });
 
-        this.tempoSlider = createSlider(30, 1000, 100);
+        this.tempoSlider = createSlider(30, 250, 100);
         this.tempoSlider.class("slider");
         this.tempoSlider.input(() => this.drumScroll.metronome.setBeatsPerMinute(this.tempoSlider.value()));
         this.tempoSlider.position(80, 50);
+
+        this.exerciseSoundButton = new ToggleButton({
+            x: this.drumScroll.centerX - 20,
+            y: height - 70,
+            iconOn: "snare",
+            iconOff: "snare_mute",
+            size: 47,
+            clickedOn: () => {
+                this.drumScroll.exerciseSoundPlayer.unmute();
+            },
+            clickedOff: () => {
+                this.drumScroll.exerciseSoundPlayer.mute();
+            },
+        });
+
+        this.focusSlider = createSlider(-1, 1, 0, 0);
+        this.focusSlider.class("slider");
+        this.focusSlider.style("width", `${this.drumScroll.width / 2}px`);
+        this.focusSlider.input(() => this.drumScroll.exerciseSoundPlayer.setFocus(this.focusSlider.value()));
+        this.focusSlider.position(this.drumScroll.centerX - this.drumScroll.width / 4, height - 100);
+        this.focusSlider.doubleClicked(() => {
+            this.focusSlider.value(0);
+            this.drumScroll.exerciseSoundPlayer.setFocus(this.focusSlider.value());
+        });
 
         this.drumScroll.addEventCallback((e) => {
             if (e === "stoppedRecording") {

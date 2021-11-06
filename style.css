@@ -34,6 +34,31 @@ canvas {
     visibility: hidden;
 }
 
+.slider {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    height: 6px;
+    background-color: #555;
+    border-radius: 6px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    border-radius: 5px;
+    height: 35px;
+    background: #bbb;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    border-radius: 5px;
+    width: 10px;
+    height: 35px;
+    background: #bbb;
+    cursor: pointer;
+}
+
 .textButton {
     display: inline-block;
     padding: 0.3em 1.2em;
@@ -123,4 +148,13 @@ canvas {
 }
 .pause_icon {
     background-image: url("assets/icons/pause.png");
+}
+.snare_icon {
+    background-image: url("assets/icons/snare.png");
+}
+.snare_stick_icon {
+    background-image: url("assets/icons/snare_stick.png");
+}
+.snare_mute_icon {
+    background-image: url("assets/icons/snare_mute.png");
 }

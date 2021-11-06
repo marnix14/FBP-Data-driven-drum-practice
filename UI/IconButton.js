@@ -4,6 +4,7 @@ class IconButton {
     y;
     text;
     icon;
+    size;
     class;
     clicked;
     disabled;
@@ -13,6 +14,7 @@ class IconButton {
      * @param {Object} options
      * @param {number} options.x
      * @param {number} options.y
+     * @param {number} options.size the width and height in pixels
      * @param {string} options.text text inside the button
      * @param {string} options.icon icon inside the button (filename in assets/icons)
      * @param {boolean} options.startDisabled whether the button should be disabled by default
@@ -22,6 +24,7 @@ class IconButton {
     constructor(options) {
         this.x = options.x ?? 0;
         this.y = options.y ?? 0;
+        this.size = options.size ?? 40;
         this.text = options.text ?? "";
         this.icon = options.icon;
         this.disabled = options.startDisabled ?? false;
@@ -41,6 +44,7 @@ class IconButton {
 
         this.element.mousePressed(this.clicked);
         this.element.position(this.x, this.y);
+        this.element.size(this.size, this.size);
     }
 
     applyDisabled() {

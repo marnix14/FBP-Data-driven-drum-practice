@@ -1,7 +1,7 @@
 class DrumScroll extends Bounds {
     metronome = new Metronome();
     exerciseSession;
-    exercisePlayer;
+    exerciseSoundPlayer;
 
     maxRepeats = 8;
     currentRepeat = 0;
@@ -37,7 +37,7 @@ class DrumScroll extends Bounds {
 
     setExerciseSession(exerciseSession) {
         if (exerciseSession) {
-            this.exercisePlayer = new ExerciseSoundPlayer(exerciseSession.exercise, this.metronome);
+            this.exerciseSoundPlayer = new ExerciseSoundPlayer(exerciseSession.exercise, this.metronome);
             this.exerciseSession = exerciseSession;
             this.metronome.beatsPerBar = this.exerciseSession.exercise.beatsPerBar;
         } else {
@@ -89,7 +89,7 @@ class DrumScroll extends Bounds {
 
     update() {
         this.metronome.update();
-        this.exercisePlayer.update();
+        this.exerciseSoundPlayer.update();
 
         this.currentRepeat = this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars;
         if (this.currentRepeat >= this.maxRepeats) this.stop();

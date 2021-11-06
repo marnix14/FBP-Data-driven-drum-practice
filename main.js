@@ -1,5 +1,4 @@
-view = new ExerciseView();
-
+view = null;
 // TODO: save and load exercise history;
 exerciseHistory = new ExerciseSessionHistory();
 
@@ -21,8 +20,7 @@ function setup() {
     hideOverlay(1000);
     frameRate(240);
     textFont("Roboto");
-    view.setup();
-    view.setExercise(Exercises.exercises[0]);
+    view = new ExerciseView(Exercises.exercises[0]);
 }
 
 function windowResized() {
@@ -60,8 +58,8 @@ function keyPressed() {
     switch (keyCode) {
         case 66:
             //Metronome.tickSound.play(0, 1.2, 1);
-            Metronome.tickSound.play();
             ExerciseSoundPlayer.padSounds["default"][2][0].play();
+            break;
 
         case LEFT_ARROW:
             view.padInput(new Hit("l", 0.75));
@@ -71,6 +69,14 @@ function keyPressed() {
             break;
         case 65: // a
             changeView(new AnalysisView(ExerciseSessionHistory.testExerciseSession));
+            break;
+        case 80: // p
+            changeView(new ProgressView());
+            break;
+        case 69: // e
+            changeView(new ExerciseView(Exercises.exercises[0]));
+
+            break;
     }
     view.keyPressed();
 }
