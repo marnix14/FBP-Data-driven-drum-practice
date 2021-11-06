@@ -14,7 +14,7 @@ class Hit {
         return this.dexterity === "l";
     }
     isRightHand() {
-        return !this.dexterity === "r";
+        return this.dexterity === "r";
     }
     getDexterityString() {
         switch (this.dexterity) {
@@ -28,6 +28,11 @@ class Hit {
                 return "rest";
         }
     }
+
+    getDexteritySign() {
+        return this.isRightHand() ? 1 : -1;
+    }
+
     getDexterity() {
         return this.dexterity;
     }

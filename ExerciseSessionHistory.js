@@ -6,7 +6,7 @@ class ExerciseSessionHistory {
 
     static preload() {
         loadJSON("assets/data/testExerciseSessionHistory.json", (result) => {
-            ExerciseSessionHistory.testExerciseSession = result[0];
+            ExerciseSessionHistory.testExerciseSession = ExerciseSession.fromJSON(result[0]);
         });
     }
 

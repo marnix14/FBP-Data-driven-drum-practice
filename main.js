@@ -3,15 +3,21 @@ view = new ExerciseView();
 // TODO: save and load exercise history;
 exerciseHistory = new ExerciseSessionHistory();
 
+const transitionTimeMs = 200;
+window.audioCTX = new (AudioContext || webkitAudioContext)({ latencyHint: 0 });
+
 function preload() {
     loadData();
     Metronome.preload();
     ExerciseSessionHistory.preload();
+    ExerciseSoundPlayer.preload();
 }
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent("sketch");
+    this.overlay = select(".overlay");
+    hideOverlay(1000);
     frameRate(240);
     textFont("Roboto");
     view.setup();
@@ -33,8 +39,11 @@ function update() {
 }
 
 function changeView(newView) {
-    view.destroy();
-    this.view = newView;
+    showOverlay(transitionTimeMs).then(() => {
+        this.view.destroy();
+        this.view = newView;
+        hideOverlay(transitionTimeMs);
+    });
 }
 
 function loadData() {
@@ -48,6 +57,11 @@ function loadData() {
 
 function keyPressed() {
     switch (keyCode) {
+        case 66:
+            //Metronome.tickSound.play(0, 1.2, 1);
+            Metronome.tickSound.play();
+            ExerciseSoundPlayer.padSounds["default"][2][0].play();
+
         case LEFT_ARROW:
             view.padInput(new Hit("l", 0.75));
             break;
@@ -58,4 +72,24 @@ function keyPressed() {
             changeView(new AnalysisView(ExerciseSessionHistory.testExerciseSession));
     }
     view.keyPressed();
+}
+
+async function showOverlay(ms) {
+    this.overlay.style("transition", `opacity ${ms}ms`);
+    select(".overlay").removeClass("hide");
+    this.overlay.style("opacity", 1);
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, ms);
+    });
+}
+
+async function hideOverlay(ms) {
+    this.overlay.style("transition", `opacity ${ms}ms`);
+    this.overlay.style("opacity", 0);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            select(".overlay").addClass("hide");
+            resolve();
+        }, ms);
+    });
 }

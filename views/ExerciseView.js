@@ -62,7 +62,7 @@ class ExerciseView extends View {
             },
         });
 
-        this.tempoSlider = createSlider(30, 200, 100);
+        this.tempoSlider = createSlider(30, 1000, 100);
         this.tempoSlider.class("slider");
         this.tempoSlider.input(() => this.drumScroll.metronome.setBeatsPerMinute(this.tempoSlider.value()));
         this.tempoSlider.position(80, 50);

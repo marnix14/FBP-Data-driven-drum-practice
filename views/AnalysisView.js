@@ -14,22 +14,34 @@ class AnalysisView extends View {
     draw() {
         textSize(50);
         fill(255);
-        textAlign(CENTER, TOP);
-        text("AMAZING, here is your analysis:", width / 2, 40);
+        stroke(0);
+        textAlign(LEFT, TOP);
+        text("Analysis", 40, 40);
 
         this.drawWrappedHitGraph();
     }
 
     drawWrappedHitGraph() {
+        for (const timedHitNote of this.exerciseSession.exercise.hitNotes) {
+            this.drawExerciseNote(timedHitNote);
+        }
+
         for (const timedHit of this.exerciseSession.recording) {
-            this.drawHit(timedHit);
+            this.drawUserHit(timedHit);
         }
     }
+    drawExerciseNote(note) {
+        const x = ((note.barPosition / this.exerciseSession.exercise.bars) % 1) * width * 0.8;
+        const y = note.getDexteritySign() * note.velocity * 200;
+        strokeWeight(4);
+        stroke(255, 0, 0);
+        line(width * 0.1 + x, height / 2, width * 0.1 + x, height / 2 - y);
+    }
 
-    drawHit(hit) {
-        const x = (hit.barPosition % 1) * width * 0.8;
-        const y = hit.velocity * 200;
-        strokeWeight(2);
+    drawUserHit(hit) {
+        const x = ((hit.barPosition / this.exerciseSession.exercise.bars) % 1) * width * 0.8;
+        const y = hit.getDexteritySign() * hit.velocity * 200;
+        strokeWeight(4);
         stroke(255, 50);
         line(width * 0.1 + x, height / 2, width * 0.1 + x, height / 2 - y);
     }

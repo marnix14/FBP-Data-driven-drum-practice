@@ -17,7 +17,7 @@ class Exercise {
         this.beatsPerBar = beatsPerBar;
     }
 
-    static fromJSON(exerciseJSON) {
+    static fromTransformedRudimentJSON(exerciseJSON) {
         let exercise = new Exercise(exerciseJSON.name, exerciseJSON.description, exerciseJSON.beatsPerBar);
         exercise.accentPlacement = exerciseJSON.accentPlacement;
         exercise.structure = exerciseJSON.structure;
@@ -34,6 +34,10 @@ class Exercise {
         exercise.bars = beats / exercise.beatsPerBar;
 
         return exercise;
+    }
+
+    static fromJSON(json) {
+        console.log(json);
     }
 
     processHitNotes() {

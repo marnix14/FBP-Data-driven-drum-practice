@@ -7,8 +7,6 @@ class ExerciseSession {
 
     recording = [];
 
-    analysis = {};
-
     isRecording = false;
 
     constructor(exercise) {
@@ -55,5 +53,14 @@ class ExerciseSession {
         if (this.isRecording) {
             this.recording.push(timedHit);
         }
+    }
+
+    static fromJSON(exerciseSessionJSON) {
+        let exerciseSession = Object.assign(new ExerciseSession(), exerciseSessionJSON);
+        for (let i = 0; i < exerciseSession.recording.length; i++) {
+            exerciseSession.recording[i] = Object.assign(new TimedHitNote(), exerciseSession.recording[i]);
+        }
+        exerciseSession.exercise = Exercise.fromTransformedRudimentJSON(exerciseSession.exercise);
+        return exerciseSession;
     }
 }

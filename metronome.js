@@ -8,9 +8,12 @@ class Metronome {
 
     static tickSound;
 
+    static bufferedTickSound;
+
+    static myArrayBuffer;
+
     static async preload() {
-        Metronome.tickSound = loadSound("/assets/sounds/tick.mp3");
-        Metronome.tickSound.playMode("restart");
+        Metronome.tickSound = new Sound("/assets/sounds/tick.mp3");
     }
 
     constructor() {
@@ -56,17 +59,18 @@ class Metronome {
     }
 
     checkForTick(updateBarPosition) {
-        this.prevBarPosition = this.getWrappedBarPositionOf(this.barPosition);
-        const prevBeatPosition = this.getWrappedBeatPositionOf(this.prevBarPosition);
+        this.prevBarPosition = this.barPosition;
+        const prevWrappedBeatPosition = this.getWrappedBeatPositionOf(this.prevBarPosition);
+        const prevWrappedBarPosition = this.getWrappedBarPositionOf(this.barPosition);
 
         updateBarPosition();
 
         const switchedBar =
-            (this.prevBarPosition % 1 == 0 && this.prevBarPosition < this.getWrappedBarPosition()) ||
-            this.prevBarPosition > this.getWrappedBarPosition();
+            (prevWrappedBarPosition % 1 == 0 && prevWrappedBarPosition < this.getWrappedBarPosition()) ||
+            prevWrappedBarPosition > this.getWrappedBarPosition();
         const switchedBeat =
-            (prevBeatPosition % 1 == 0 && prevBeatPosition < this.getWrappedBeatPosition()) ||
-            prevBeatPosition > this.getWrappedBeatPosition();
+            (prevWrappedBeatPosition % 1 == 0 && prevWrappedBeatPosition < this.getWrappedBeatPosition()) ||
+            prevWrappedBeatPosition > this.getWrappedBeatPosition();
 
         if (switchedBar) {
             this.tick();
@@ -76,11 +80,11 @@ class Metronome {
     }
 
     tick() {
-        Metronome.tickSound.play(0, 1, Settings.getMetronomeVolume());
+        Metronome.tickSound.play(Settings.getMetronomeVolume(), 1, 0);
     }
 
     tock() {
-        Metronome.tickSound.play(0, 0.8, Settings.getMetronomeVolume() * 0.8);
+        Metronome.tickSound.play(Settings.getMetronomeVolume() * 0.8, 0.8, 0);
     }
 
     getWrappedBeatPositionOf(barPosition = this.barPosition) {
@@ -106,6 +110,9 @@ class Metronome {
     }
     getBarPosition(latency = 0) {
         return this.barPosition - this.millisecondsToBars(latency);
+    }
+    getPreviousBarPosition(latency = 0) {
+        return this.prevBarPosition - this.millisecondsToBars(latency);
     }
 
     millisecondsToBars(ms) {

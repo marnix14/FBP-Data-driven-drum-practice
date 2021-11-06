@@ -1,0 +1,1 @@
+class CalibrationView extends View {}
