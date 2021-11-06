@@ -14,6 +14,7 @@ function preload() {
 }
 
 function setup() {
+    console.log("Setting up...");
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent("sketch");
     this.overlay = select(".overlay");

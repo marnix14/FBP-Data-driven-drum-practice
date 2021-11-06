@@ -3,6 +3,7 @@ class Sound {
 
     constructor(file) {
         const request = new XMLHttpRequest();
+        console.log("Openening", file);
 
         request.open("GET", file, true);
         request.responseType = "arraybuffer";
@@ -10,12 +11,16 @@ class Sound {
         request.onload = () => {
             window.audioCTX.decodeAudioData(request.response, (decodedBuffer) => {
                 this.buffer = decodedBuffer;
+                console.log("Decoded", file);
             });
         };
-        request.send();
+        request.send().then(() => {
+            console.log("Sent", file);
+        });
     }
 
     play(volume = 1, rate = 1, pan = 0) {
+        if (!this.buffer) throw Error("Tried to play an audio file which wasn't loaded");
         const panner = new StereoPannerNode(window.audioCTX, { pan: pan });
         const gainNode = window.audioCTX.createGain();
         gainNode.gain.value = volume;
