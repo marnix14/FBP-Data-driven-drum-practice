@@ -51,30 +51,33 @@ class ExerciseSoundPlayer {
     }
 
     playHitSound(hit) {
-        const velocityNumber = hit.velocity * ExerciseSoundPlayer.velocityDivisions;
+        let focusGain = 1;
+        if (hit.isRightHand()) {
+            focusGain = min(1, this.focus + 1);
+        } else {
+            focusGain = -max(-1, this.focus - 1);
+        }
+        ExerciseSoundPlayer.playHit(hit.velocity, hit.getDexteritySign(), focusGain);
+    }
+
+    static playHit(vel, dext = 0, gain = 1) {
+        if (vel == 0) return;
+        const velocityNumber = min(1, vel) * ExerciseSoundPlayer.velocityDivisions;
         const soundNumber = ceil(velocityNumber) - 1;
 
         let velocity = 1;
-        const velocityRemainder = hit.velocity % ExerciseSoundPlayer.velocityDivisions;
+        const velocityRemainder = vel % ExerciseSoundPlayer.velocityDivisions;
         if (velocityRemainder > 0) {
             velocity =
                 (ExerciseSoundPlayer.velocityDivisions - 1 + velocityRemainder) / ExerciseSoundPlayer.velocityDivisions;
         }
-        velocity += (random(1) - 0.5) * 0.3;
 
         const randomSelection = int(random(2));
+        const sound = ExerciseSoundPlayer.padSounds["default"][soundNumber][randomSelection];
+        const pan = dext * ExerciseSoundPlayer.panningAmount;
+        const pitchChange = 1 + 0.05 * dext;
 
-        const sound = ExerciseSoundPlayer.padSounds[this.selectedSound][soundNumber][randomSelection];
-        const pan = hit.getDexteritySign() * ExerciseSoundPlayer.panningAmount;
-        const pitchChange = 1 + 0.05 * hit.getDexteritySign();
-
-        if (hit.isRightHand()) {
-            velocity *= min(1, this.focus + 1);
-        } else {
-            velocity *= -max(-1, this.focus - 1);
-        }
-
-        sound.play(velocity, pitchChange, pan);
+        sound.play(velocity * gain, pitchChange, pan);
     }
 
     setFocus(focus) {

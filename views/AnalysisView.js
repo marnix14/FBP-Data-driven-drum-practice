@@ -15,6 +15,7 @@ class AnalysisView extends View {
         textSize(50);
         fill(255);
         stroke(0);
+        strokeWeight(0);
         textAlign(LEFT, TOP);
         text("Analysis", 40, 40);
 

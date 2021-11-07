@@ -1,4 +1,6 @@
 view = null;
+
+input = new Input();
 // TODO: save and load exercise history;
 exerciseHistory = new ExerciseSessionHistory();
 
@@ -20,6 +22,7 @@ function setup() {
     hideOverlay(1000);
     frameRate(240);
     textFont("Roboto");
+    input.setup();
     view = new ExerciseView(Exercises.exercises[0], 8);
 }
 
@@ -56,11 +59,6 @@ function loadData() {
 
 function keyPressed() {
     switch (keyCode) {
-        case 66:
-            //Metronome.tickSound.play(0, 1.2, 1);
-            ExerciseSoundPlayer.padSounds["default"][2][0].play();
-            break;
-
         case LEFT_ARROW:
             view.padInput(new Hit("l", 0.75));
             break;
