@@ -67,7 +67,7 @@ class ExerciseView extends View {
             },
         });
 
-        this.focusSlider = new Slider({
+        this.tempoSlider = new Slider({
             x: 80,
             y: 50,
             min: 30,
