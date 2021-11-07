@@ -1,10 +1,6 @@
 class DrumScroll extends Bounds {
-    metronome = new Metronome();
+    metronome;
     exerciseSession;
-    exerciseSoundPlayer;
-
-    maxRepeats = 8;
-    currentRepeat = 0;
 
     // ratio to width (this.w) of bounding box
     currentTimeRuleWidthRatio = 0.5;
@@ -15,29 +11,21 @@ class DrumScroll extends Bounds {
     dexterityWidthRatio = 0.2;
     noteSizeRatio = 0.1;
 
-    recordingCountdownInBars = 1;
+    subdivisions = 0;
 
-    constructor(exerciseSession) {
+    constructor(exerciseSession, metronome) {
         super();
+        this.metronome = metronome;
         this.setExerciseSession(exerciseSession);
         console.log("DrumScroll created with Exercise Session", exerciseSession);
     }
 
-    eventCallbacks = [];
-
-    addEventCallback(callback) {
-        this.eventCallbacks.push(callback);
-    }
-
-    callEventCallbacks(event) {
-        for (const callback of this.eventCallbacks) {
-            callback(event);
-        }
+    setSubDivisions(subdivisions) {
+        this.subdivisions = subdivisions;
     }
 
     setExerciseSession(exerciseSession) {
         if (exerciseSession) {
-            this.exerciseSoundPlayer = new ExerciseSoundPlayer(exerciseSession.exercise, this.metronome);
             this.exerciseSession = exerciseSession;
             this.metronome.beatsPerBar = this.exerciseSession.exercise.beatsPerBar;
         } else {
@@ -45,85 +33,26 @@ class DrumScroll extends Bounds {
         }
     }
 
-    play(beatOffset) {
-        this.metronome.play(beatOffset);
-        this.callEventCallbacks("play");
-    }
-
-    pause() {
-        if (this.exerciseSession.isRecording) return;
-        this.metronome.pause();
-        this.callEventCallbacks("pause");
-    }
-
-    togglePlay() {
-        if (this.metronome.isPlaying) {
-            this.pause();
-        } else {
-            this.play();
-        }
-    }
-
-    reset() {
-        if (this.exerciseSession.isRecording) return;
-        this.metronome.reset();
-        this.callEventCallbacks("reset");
-    }
-
-    stop() {
-        if (this.exerciseSession.isRecording) {
-            this.exerciseSession.stopRecording();
-            this.callEventCallbacks("stoppedRecording");
-        }
-        this.pause();
-        this.reset();
-    }
-
-    startRecording() {
-        if (this.exerciseSession.isRecording) return;
-        this.stop();
-        const timestamp = Date.now();
-        this.exerciseSession.startRecording(timestamp, this.metronome.beatsPerMinute);
-        this.play(-this.recordingCountdownInBars * this.metronome.beatsPerBar);
-    }
-
-    update() {
-        this.metronome.update();
-        this.exerciseSoundPlayer.update();
-
-        this.currentRepeat = this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars;
-        if (this.currentRepeat >= this.maxRepeats) this.stop();
-        //this.metronome.setBeatsPerMinute(60 + int(5 * this.currentRepeat));
-    }
+    update() {}
 
     draw() {
-        strokeWeight(0);
-        fill(255);
-        textSize(20);
-        text(this.metronome.beatsPerMinute, 20, 70);
-        textSize(20);
-        text(`Repeats: ${int(this.currentRepeat)}`, 20, 100);
         this.drawExercise();
     }
 
     drawExercise() {
-        const subdivisions = 3;
-        this.drawMovingRules(subdivisions);
-
+        const currentRepeat = this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars;
+        this.drawMovingRules(this.subdivisions);
         const currentTimeRuleWidth = this.width * this.currentTimeRuleWidthRatio;
         this.drawRule(this.bottom, currentTimeRuleWidth, 150, 6);
-        for (let r = max(0, int(this.currentRepeat) - 1); r < min(int(this.currentRepeat) + 2, this.maxRepeats); r++) {
+        for (
+            let r = max(0, int(currentRepeat) - 1);
+            r < min(int(currentRepeat) + 2, this.exerciseSession.repeats);
+            r++
+        ) {
             for (const hitNote of this.exerciseSession.exercise.hitNotes) {
                 const globalNoteBarPosition = hitNote.barPosition + r * this.exerciseSession.exercise.bars;
                 this.drawHitNote(hitNote, globalNoteBarPosition);
             }
-        }
-
-        if (
-            this.metronome.getBarPosition() < 0 &&
-            this.metronome.getBarPosition(Settings.audioLatency) > -this.recordingCountdownInBars
-        ) {
-            this.drawCountDown();
         }
     }
 
@@ -189,17 +118,5 @@ class DrumScroll extends Bounds {
         strokeWeight(0);
         circle(this.centerX + xOffset, y, size);
         return true;
-    }
-
-    drawCountDown() {
-        strokeWeight(0);
-        fill(255, pow(min(1, abs(this.metronome.getBeatPosition() / 2)), 2) * 255);
-        textSize(100);
-        text(abs(floor(this.metronome.getBeatPosition(Settings.audioLatency))), this.centerX - 25, this.bottom + 100);
-    }
-
-    // value between 0 (start) and 1 (exercise done)
-    getExercisePosition() {
-        return (this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars) % 1;
     }
 }

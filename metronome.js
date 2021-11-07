@@ -20,6 +20,18 @@ class Metronome {
         console.log("Metronome created");
     }
 
+    eventCallbacks = [];
+
+    addEventCallback(callback) {
+        this.eventCallbacks.push(callback);
+    }
+
+    callEventCallbacks(event) {
+        for (const callback of this.eventCallbacks) {
+            callback(event);
+        }
+    }
+
     update() {
         if (this.isPlaying) {
             const barsPerSecond = this.beatsPerMinute / 60 / this.beatsPerBar;
@@ -40,10 +52,12 @@ class Metronome {
         if (this.isPlaying) return;
         this.barPosition = this.barPosition + beatOffset / this.beatsPerBar;
         this.isPlaying = true;
+        this.callEventCallbacks("play");
     }
 
     pause() {
         this.isPlaying = false;
+        this.callEventCallbacks("pause");
     }
     togglePlay() {
         if (this.isPlaying) {
@@ -56,6 +70,7 @@ class Metronome {
     reset() {
         this.barPosition = 0;
         this.prevBarPosition = 0;
+        this.callEventCallbacks("reset");
     }
 
     checkForTick(updateBarPosition) {
@@ -72,6 +87,9 @@ class Metronome {
             (prevWrappedBeatPosition % 1 == 0 && prevWrappedBeatPosition < this.getWrappedBeatPosition()) ||
             prevWrappedBeatPosition > this.getWrappedBeatPosition();
 
+        if (switchedBeat) {
+            this.callEventCallbacks("beat");
+        }
         if (switchedBar) {
             this.tick();
         } else if (switchedBeat) {
@@ -81,10 +99,16 @@ class Metronome {
 
     tick() {
         Metronome.tickSound.play(Settings.getMetronomeVolume(), 1, 0);
+        this.callEventCallbacks("tick");
     }
 
     tock() {
         Metronome.tickSound.play(Settings.getMetronomeVolume() * 0.8, 0.8, 0);
+        this.callEventCallbacks("tock");
+    }
+
+    isCountingDown(latency = 0) {
+        return this.getBarPosition() < 0 && this.getBarPosition(latency) > -Settings.recordingCountdownInBars;
     }
 
     getWrappedBeatPositionOf(barPosition = this.barPosition) {

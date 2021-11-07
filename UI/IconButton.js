@@ -1,13 +1,7 @@
-class IconButton {
-    element;
-    x;
-    y;
+class IconButton extends UIElement {
     text;
     icon;
     size;
-    class;
-    clicked;
-    disabled;
 
     /**
      * Pass options for button creation
@@ -22,51 +16,17 @@ class IconButton {
      * @param {string} options.class the css class applied to the button
      */
     constructor(options) {
-        this.x = options.x ?? 0;
-        this.y = options.y ?? 0;
+        super(options);
         this.size = options.size ?? 40;
         this.text = options.text ?? "";
         this.icon = options.icon;
-        this.disabled = options.startDisabled ?? false;
         this.class = options.class ?? "button";
-        this.clicked = options.clicked;
 
         this.element = createButton(this.text);
-        if (this.disabled) {
-            this.element.style("visibility", "hidden");
-        }
-        this.applyDisabled();
-
-        this.element.class(this.class);
+        this.applyCoreStyle();
         if (this.icon) {
             this.element.addClass(this.icon + "_icon");
         }
-
-        this.element.mousePressed(this.clicked);
-        this.element.position(this.x, this.y);
         this.element.size(this.size, this.size);
-    }
-
-    applyDisabled() {
-        if (this.disabled) {
-            this.element.attribute("disabled", "");
-        } else {
-            this.element.style("visibility", "visible");
-
-            this.element.removeAttribute("disabled");
-        }
-    }
-    remove() {
-        this.element.remove();
-    }
-
-    disable() {
-        this.disabled = true;
-        this.applyDisabled();
-    }
-
-    enable() {
-        this.disabled = false;
-        this.applyDisabled();
     }
 }

@@ -1,7 +1,7 @@
 // holds an exercise and a practice session recording
 class ExerciseSession {
     exercise;
-    exerciseRepeats;
+    repeats;
     startTimestamp;
     beatsPerMinute;
 
@@ -9,8 +9,16 @@ class ExerciseSession {
 
     isRecording = false;
 
-    constructor(exercise) {
+    constructor(exercise, repeats) {
         this.exercise = exercise;
+        this.repeats = repeats;
+    }
+
+    resetRecording() {
+        console.log("Recording session reset");
+        this.startTimestamp = null;
+        this.recording = [];
+        this.isRecording = false;
     }
 
     startRecording(startTimestamp, beatsPerMinute) {
@@ -28,11 +36,14 @@ class ExerciseSession {
         this.isRecording = true;
     }
     stopRecording() {
-        console.log("Recording session stopped");
-        console.log(this.recording);
         this.isRecording = false;
-        this.analyse();
-        this.save();
+        console.log("Recording session stopped");
+        if (this.recording.length > 0) {
+            this.analyse();
+            this.save();
+        } else {
+            this.resetRecording();
+        }
     }
 
     analyse() {
@@ -62,5 +73,9 @@ class ExerciseSession {
         }
         exerciseSession.exercise = Exercise.fromTransformedRudimentJSON(exerciseSession.exercise);
         return exerciseSession;
+    }
+
+    hasRecorded() {
+        return this.recording.length > 0;
     }
 }

@@ -1,22 +1,25 @@
 class ExerciseView extends View {
     drumScroll;
+    metronome;
     exercise;
     exerciseSession;
+    exerciseSoundPlayer;
 
-    constructor(exercise = Exercise.EMPTY) {
+    currentRepeat = 0;
+
+    constructor(exercise = Exercise.EMPTY, repeats) {
         super();
-        this.setExercise(exercise);
+        this.setExercise(exercise, repeats);
         this.initUI();
     }
 
-    setExercise(exercise) {
+    setExercise(exercise, repeats = 0) {
         this.exercise = exercise;
-        this.exerciseSession = new ExerciseSession(exercise);
-        if (this.drumScroll) {
-            this.drumScroll.setExerciseSession(this.exerciseSession);
-        } else {
-            this.drumScroll = new DrumScroll(this.exerciseSession);
-        }
+        this.exerciseSession = new ExerciseSession(exercise, repeats);
+        this.metronome = new Metronome();
+        this.drumScroll = new DrumScroll(this.exerciseSession, this.metronome);
+        this.drumScroll.setSubDivisions(this.exercise.hitNotes[0].beatDivision);
+        this.exerciseSoundPlayer = new ExerciseSoundPlayer(this.exercise, this.metronome);
     }
 
     initUI() {
@@ -32,7 +35,7 @@ class ExerciseView extends View {
             icon: "reset",
             startDisabled: true,
             clicked: () => {
-                this.drumScroll.reset();
+                this.metronome.reset();
             },
         });
 
@@ -42,10 +45,10 @@ class ExerciseView extends View {
             iconOn: "pause",
             iconOff: "play",
             clickedOn: () => {
-                this.drumScroll.play();
+                this.metronome.play();
             },
             clickedOff: () => {
-                this.drumScroll.pause();
+                this.metronome.pause();
             },
         });
 
@@ -57,17 +60,25 @@ class ExerciseView extends View {
             classOn: "recordOn",
             classOff: "recordOff",
             clickedOn: () => {
-                this.drumScroll.startRecording();
+                this.startRecording();
             },
             clickedOff: () => {
-                this.drumScroll.stop();
+                this.stopRecording();
             },
         });
 
-        this.tempoSlider = createSlider(30, 250, 100);
-        this.tempoSlider.class("slider");
-        this.tempoSlider.input(() => this.drumScroll.metronome.setBeatsPerMinute(this.tempoSlider.value()));
-        this.tempoSlider.position(80, 50);
+        this.focusSlider = new Slider({
+            x: 80,
+            y: 50,
+            min: 30,
+            max: 250,
+            val: 100,
+            step: 1,
+            size: 200,
+            input: (val) => {
+                this.metronome.setBeatsPerMinute(val);
+            },
+        });
 
         this.exerciseSoundButton = new ToggleButton({
             x: this.drumScroll.centerX - 20,
@@ -76,44 +87,73 @@ class ExerciseView extends View {
             iconOff: "snare_mute",
             size: 47,
             clickedOn: () => {
-                this.drumScroll.exerciseSoundPlayer.unmute();
+                this.exerciseSoundPlayer.unmute();
             },
             clickedOff: () => {
-                this.drumScroll.exerciseSoundPlayer.mute();
+                this.exerciseSoundPlayer.mute();
             },
         });
 
-        this.focusSlider = createSlider(-1, 1, 0, 0);
-        this.focusSlider.class("slider");
-        this.focusSlider.style("width", `${this.drumScroll.width / 2}px`);
-        this.focusSlider.input(() => this.drumScroll.exerciseSoundPlayer.setFocus(this.focusSlider.value()));
-        this.focusSlider.position(this.drumScroll.centerX - this.drumScroll.width / 4, height - 100);
-        this.focusSlider.doubleClicked(() => {
-            this.focusSlider.value(0);
-            this.drumScroll.exerciseSoundPlayer.setFocus(this.focusSlider.value());
+        this.focusSlider = new Slider({
+            x: this.drumScroll.centerX - this.drumScroll.width / 4,
+            y: height - 100,
+            min: -1,
+            max: 1,
+            val: 0,
+            step: 0,
+            size: this.drumScroll.width / 2,
+            input: (val) => {
+                this.exerciseSoundPlayer.setFocus(val);
+            },
         });
 
-        this.drumScroll.addEventCallback((e) => {
-            if (e === "stoppedRecording") {
-                changeView(new AnalysisView(this.exerciseSession));
-            }
+        this.metronome.addEventCallback((event) => {
+            //console.log("Metronome event: ", event);
             this.updateButtons();
         });
     }
 
+    startRecording() {
+        if (this.exerciseSession.isRecording) return;
+        this.metronome.pause();
+        this.metronome.reset();
+        const timestamp = Date.now();
+        this.exerciseSession.startRecording(timestamp, this.metronome.beatsPerMinute);
+        this.metronome.play(-Settings.recordingCountdownInBars * this.metronome.beatsPerBar);
+    }
+
+    stopRecording() {
+        this.exerciseSession.stopRecording();
+        if (this.exerciseSession.recording.length > 0) {
+            changeView(new AnalysisView(this.exerciseSession));
+        } else {
+            this.metronome.pause();
+            this.metronome.reset();
+        }
+    }
+
     updateButtons() {
-        if (this.drumScroll.metronome.isPlaying) {
+        if (this.exerciseSession.hasRecorded()) return;
+        if (this.metronome.isPlaying) {
             this.playPauseButton.setOn();
             this.resetButton.disable();
-            if (this.drumScroll.exerciseSession.isRecording) {
+            if (this.exerciseSession.isRecording) {
+                this.focusSlider.disable();
+                this.exerciseSoundButton.disable();
+                this.exerciseSoundButton.setOff();
                 this.playPauseButton.disable();
             } else {
+                this.focusSlider.enable();
+                this.exerciseSoundButton.enable();
                 this.playPauseButton.enable();
             }
         } else {
+            this.focusSlider.enable();
+            this.exerciseSoundButton.enable();
+
             this.playPauseButton.enable();
             this.playPauseButton.setOff();
-            if (this.drumScroll.metronome.getBarPosition() > 0) {
+            if (this.metronome.getBarPosition() > 0) {
                 this.resetButton.enable();
             } else {
                 this.resetButton.disable();
@@ -122,12 +162,40 @@ class ExerciseView extends View {
     }
 
     update() {
-        // TODO
+        this.metronome.update();
         this.drumScroll.update();
+        this.exerciseSoundPlayer.update();
+
+        this.currentRepeat = this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars;
+        if (this.currentRepeat >= this.exerciseSession.repeats) {
+            this.metronome.pause();
+            this.metronome.reset();
+            changeView(new AnalysisView(this.exerciseSession));
+        }
     }
 
     draw() {
+        strokeWeight(0);
+        fill(255);
+        textSize(20);
+        text(this.metronome.beatsPerMinute, 20, 70);
+        textSize(20);
+        text(`Repeats: ${int(this.currentRepeat)}`, 20, 100);
         this.drumScroll.draw();
+        if (this.metronome.isCountingDown(Settings.audioLatency)) {
+            this.drawCountDown();
+        }
+    }
+
+    drawCountDown() {
+        strokeWeight(0);
+        fill(255, pow(min(1, abs(this.metronome.getBeatPosition() / 2)), 2) * 255);
+        textSize(100);
+        text(
+            abs(floor(this.metronome.getBeatPosition(Settings.audioLatency))),
+            this.drumScroll.centerX - 25,
+            this.drumScroll.bottom + 100
+        );
     }
 
     keyPressed() {
@@ -136,11 +204,9 @@ class ExerciseView extends View {
                 this.playPauseButton.toggle();
                 break;
             case 36: // home
-                this.drumScroll.reset();
-                break;
             case ESCAPE:
             case BACKSPACE:
-                this.drumScroll.stop();
+                this.resetButton.clicked();
                 break;
             case ENTER:
                 this.recordButton.toggle();
@@ -149,11 +215,16 @@ class ExerciseView extends View {
     }
 
     padInput(hit) {
-        this.exerciseSession.padInput(TimedHit.fromHitAndMetronome(hit, this.drumScroll.metronome));
+        this.exerciseSession.padInput(TimedHit.fromHitAndMetronome(hit, this.metronome));
     }
 
     getAnalysisView() {
         return new AnalysisView(this.exerciseSession);
+    }
+
+    // value between 0 (start) and 1 (exercise done)
+    getExercisePosition() {
+        return (this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars) % 1;
     }
 
     destroy() {
@@ -161,5 +232,7 @@ class ExerciseView extends View {
         this.resetButton.remove();
         this.playPauseButton.remove();
         this.recordButton.remove();
+        this.focusSlider.remove();
+        this.exerciseSoundButton.remove();
     }
 }

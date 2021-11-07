@@ -10,6 +10,7 @@ class Sound {
         request.onload = () => {
             window.audioCTX.decodeAudioData(request.response, (decodedBuffer) => {
                 this.buffer = decodedBuffer;
+                console.log(this.buffer);
             });
         };
         request.send();

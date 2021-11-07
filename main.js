@@ -20,7 +20,7 @@ function setup() {
     hideOverlay(1000);
     frameRate(240);
     textFont("Roboto");
-    view = new ExerciseView(Exercises.exercises[0]);
+    view = new ExerciseView(Exercises.exercises[0], 8);
 }
 
 function windowResized() {

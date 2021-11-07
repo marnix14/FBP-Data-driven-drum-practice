@@ -22,10 +22,8 @@ class ToggleButton extends IconButton {
 
     toggle() {
         if (this.isOn) {
-            this.clickedOff();
             this.setOff();
         } else {
-            this.clickedOn();
             this.setOn();
         }
     }
@@ -63,13 +61,15 @@ class ToggleButton extends IconButton {
     setOn() {
         if (!this.isOn) {
             this.isOn = true;
+            this.clickedOn();
+            this.applyStateChange();
         }
-        this.applyStateChange();
     }
     setOff() {
         if (this.isOn) {
             this.isOn = false;
+            this.clickedOff();
+            this.applyStateChange();
         }
-        this.applyStateChange();
     }
 }
