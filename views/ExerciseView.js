@@ -81,16 +81,38 @@ class ExerciseView extends View {
         });
 
         this.exerciseSoundButton = new ToggleButton({
-            x: this.drumScroll.centerX - 20,
-            y: height - 70,
-            iconOn: "snare",
-            iconOff: "snare_mute",
-            size: 47,
+            x: this.drumScroll.centerX - 28,
+            y: height - 75,
+            iconOn: `${this.exerciseSoundPlayer.getSelectedSoundName()}`,
+            iconOff: `${this.exerciseSoundPlayer.getSelectedSoundName()}_mute`,
+            size: 60,
             clickedOn: () => {
                 this.exerciseSoundPlayer.unmute();
             },
             clickedOff: () => {
                 this.exerciseSoundPlayer.mute();
+            },
+        });
+        this.prevSoundButtton = new IconButton({
+            x: this.drumScroll.centerX - 58,
+            y: height - 62,
+            size: 35,
+            icon: "back",
+            clicked: () => {
+                this.exerciseSoundPlayer.selectPreviousSound();
+                this.exerciseSoundButton.setIconOn(`${this.exerciseSoundPlayer.getSelectedSoundName()}`);
+                this.exerciseSoundButton.setIconOff(`${this.exerciseSoundPlayer.getSelectedSoundName()}_mute`);
+            },
+        });
+        this.nextSoundButtton = new IconButton({
+            x: this.drumScroll.centerX + 26,
+            y: height - 62,
+            size: 35,
+            icon: "forward",
+            clicked: () => {
+                this.exerciseSoundPlayer.selectNextSound();
+                this.exerciseSoundButton.setIconOn(`${this.exerciseSoundPlayer.getSelectedSoundName()}`);
+                this.exerciseSoundButton.setIconOff(`${this.exerciseSoundPlayer.getSelectedSoundName()}_mute`);
             },
         });
 
@@ -138,19 +160,14 @@ class ExerciseView extends View {
             this.playPauseButton.setOn();
             this.resetButton.disable();
             if (this.exerciseSession.isRecording) {
-                this.focusSlider.disable();
-                this.exerciseSoundButton.disable();
-                this.exerciseSoundButton.setOff();
+                this.disableExerciseSoundGroup();
                 this.playPauseButton.disable();
             } else {
-                this.focusSlider.enable();
-                this.exerciseSoundButton.enable();
+                this.enableExerciseSoundGroup();
                 this.playPauseButton.enable();
             }
         } else {
-            this.focusSlider.enable();
-            this.exerciseSoundButton.enable();
-
+            this.enableExerciseSoundGroup();
             this.playPauseButton.enable();
             this.playPauseButton.setOff();
             if (this.metronome.getBarPosition() > 0) {
@@ -159,6 +176,20 @@ class ExerciseView extends View {
                 this.resetButton.disable();
             }
         }
+    }
+
+    enableExerciseSoundGroup() {
+        this.focusSlider.enable();
+        this.exerciseSoundButton.enable();
+        this.nextSoundButtton.enable();
+        this.prevSoundButtton.enable();
+    }
+    disableExerciseSoundGroup() {
+        this.focusSlider.disable();
+        this.nextSoundButtton.disable();
+        this.prevSoundButtton.disable();
+        this.exerciseSoundButton.disable();
+        this.exerciseSoundButton.setOff();
     }
 
     update() {
@@ -234,5 +265,7 @@ class ExerciseView extends View {
         this.recordButton.remove();
         this.focusSlider.remove();
         this.exerciseSoundButton.remove();
+        this.nextSoundButtton.remove();
+        this.prevSoundButtton.remove();
     }
 }

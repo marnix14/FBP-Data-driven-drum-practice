@@ -6,14 +6,20 @@ class Metronome {
     prevBarPosition = 0;
     barPosition = 0;
 
-    static tickSound;
+    static soundNames = ["wood", "beep", "click"];
+    static selectedSound = "wood";
+    static sounds = {};
 
     static bufferedTickSound;
 
     static myArrayBuffer;
 
     static async preload() {
-        Metronome.tickSound = new Sound("/assets/sounds/tick.mp3");
+        for (const name of Metronome.soundNames) {
+            Metronome.sounds[name] = [];
+            Metronome.sounds[name][0] = new Sound(`/assets/sounds/metronome/tick_${name}.ogg`);
+            Metronome.sounds[name][1] = new Sound(`/assets/sounds/metronome/tock_${name}.ogg`);
+        }
     }
 
     constructor() {
@@ -98,13 +104,21 @@ class Metronome {
     }
 
     tick() {
-        Metronome.tickSound.play(Settings.getMetronomeVolume(), 1, 0);
+        this.playTickSound();
         this.callEventCallbacks("tick");
     }
 
     tock() {
-        Metronome.tickSound.play(Settings.getMetronomeVolume() * 0.8, 0.8, 0);
+        this.playTockSound();
         this.callEventCallbacks("tock");
+    }
+
+    playTickSound() {
+        Metronome.sounds[Metronome.selectedSound][0].play(Settings.getMetronomeVolume(), 1, 0);
+    }
+
+    playTockSound() {
+        Metronome.sounds[Metronome.selectedSound][1].play(Settings.getMetronomeVolume(), 1, 0);
     }
 
     isCountingDown(latency = 0) {

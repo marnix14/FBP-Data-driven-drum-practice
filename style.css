@@ -2,6 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #container {
@@ -14,10 +15,13 @@ body {
 }
 
 #sketch {
+    display: block;
+
     position: relative;
 }
 canvas {
     display: block;
+    margin: auto;
 }
 .overlay {
     background-color: #161616;
@@ -140,6 +144,9 @@ canvas {
 .back_icon {
     background-image: url("assets/icons/back.png");
 }
+.forward_icon {
+    background-image: url("assets/icons/forward.png");
+}
 .reset_icon {
     background-image: url("assets/icons/reset.png");
 }
@@ -157,4 +164,22 @@ canvas {
 }
 .snare_mute_icon {
     background-image: url("assets/icons/snare_mute.png");
+}
+.hat_icon {
+    background-image: url("assets/icons/hat.png");
+}
+.hat_mute_icon {
+    background-image: url("assets/icons/hat_mute.png");
+}
+.conga_icon {
+    background-image: url("assets/icons/conga.png");
+}
+.conga_mute_icon {
+    background-image: url("assets/icons/conga_mute.png");
+}
+.tom_icon {
+    background-image: url("assets/icons/tom.png");
+}
+.tom_mute_icon {
+    background-image: url("assets/icons/tom_mute.png");
 }

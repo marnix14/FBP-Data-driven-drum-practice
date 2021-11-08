@@ -58,6 +58,24 @@ class ToggleButton extends IconButton {
         }
     }
 
+    setIconOn(newIcon) {
+        this.element.removeClass(this.iconOn + "_icon");
+        this.iconOn = newIcon;
+        if (this.isOn) {
+            this.element.addClass(this.iconOn + "_icon");
+        }
+
+        this.applyStateChange();
+    }
+    setIconOff(newIcon) {
+        this.element.removeClass(this.iconOff + "_icon");
+        this.iconOff = newIcon;
+        if (this.isOff) {
+            this.element.addClass(this.iconOff + "_icon");
+        }
+        this.applyStateChange();
+    }
+
     setOn() {
         if (!this.isOn) {
             this.isOn = true;

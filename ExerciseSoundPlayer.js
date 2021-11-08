@@ -11,25 +11,23 @@ class ExerciseSoundPlayer {
 
     isMuted = true;
 
-    static padSounds = {};
+    static hitSoundNames = ["snare", "hat", "tom", "conga"];
+    static hitSounds = {};
+    selectedSound = 0;
 
-    constructor(exercise, metronome, selectedSound = "default") {
+    constructor(exercise, metronome) {
         this.exercise = exercise;
         this.metronome = metronome;
-        this.selectedSound = selectedSound;
     }
 
     static preload() {
-        ExerciseSoundPlayer.padSounds["default"] = [];
-        for (let i = 0; i < ExerciseSoundPlayer.velocityDivisions; i++) {
-            const velocityPercentage = ((i + 1) * 100) / ExerciseSoundPlayer.velocityDivisions;
-            ExerciseSoundPlayer.padSounds["default"].push([]);
-            ExerciseSoundPlayer.padSounds["default"][i].push(
-                new Sound(`/assets/sounds/pad/snare${velocityPercentage}a.mp3`)
-            );
-            ExerciseSoundPlayer.padSounds["default"][i].push(
-                new Sound(`/assets/sounds/pad/snare${velocityPercentage}b.mp3`)
-            );
+        for (const name of ExerciseSoundPlayer.hitSoundNames) {
+            ExerciseSoundPlayer.hitSounds[name] = [];
+            for (let i = 0; i < ExerciseSoundPlayer.velocityDivisions; i++) {
+                ExerciseSoundPlayer.hitSounds[name][i] = [];
+                ExerciseSoundPlayer.hitSounds[name][i][0] = new Sound(`/assets/sounds/hit/${name}_${i}a.ogg`);
+                ExerciseSoundPlayer.hitSounds[name][i][1] = new Sound(`/assets/sounds/hit/${name}_${i}b.ogg`);
+            }
         }
     }
 
@@ -57,31 +55,54 @@ class ExerciseSoundPlayer {
         } else {
             focusGain = -max(-1, this.focus - 1);
         }
-        ExerciseSoundPlayer.playHit(hit.velocity, hit.getDexteritySign(), focusGain);
+        ExerciseSoundPlayer.playHit(hit.velocity, hit.getDexteritySign(), focusGain, this.getSelectedSoundName());
     }
 
-    static playHit(vel, dext = 0, gain = 1) {
+    static playHit(vel, dext = 0, gain = 1, soundName = "snare") {
         if (vel == 0) return;
+        let rate = 1;
+
         const velocityNumber = min(1, vel) * ExerciseSoundPlayer.velocityDivisions;
         const soundNumber = ceil(velocityNumber) - 1;
 
         let velocity = 1;
-        const velocityRemainder = vel % ExerciseSoundPlayer.velocityDivisions;
+
+        const velocityRemainder = velocityNumber % 1;
         if (velocityRemainder > 0) {
-            velocity =
-                (ExerciseSoundPlayer.velocityDivisions - 1 + velocityRemainder) / ExerciseSoundPlayer.velocityDivisions;
+            const velocitySplitBase = soundNumber / ExerciseSoundPlayer.velocityDivisions;
+            const velocitySplitRest =
+                (ExerciseSoundPlayer.velocityDivisions - soundNumber) / ExerciseSoundPlayer.velocityDivisions;
+            velocity = velocitySplitBase + velocitySplitRest * velocityRemainder;
         }
 
-        const randomSelection = int(random(2));
-        const sound = ExerciseSoundPlayer.padSounds["default"][soundNumber][randomSelection];
+        const randomABSelection = int(random(2));
+        const dexterityABSeleciton = int(dext / 2 + 0.5);
+        const randomGain = 1 + (random() - 0.5) * 0.4;
+        const randomPitch = 1 + (random() - 0.5) * 0.01;
+        gain *= randomGain;
+        rate *= randomPitch;
+        const sound = ExerciseSoundPlayer.hitSounds[soundName][soundNumber][dexterityABSeleciton];
         const pan = dext * ExerciseSoundPlayer.panningAmount;
-        const pitchChange = 1 + 0.05 * dext;
-
-        sound.play(velocity * gain, pitchChange, pan);
+        sound.play(vel * gain * Settings.hitVolume, rate, pan);
     }
 
     setFocus(focus) {
         this.focus = focus;
+    }
+
+    getSelectedSound() {
+        return ExerciseSoundPlayer.hitSounds[ExerciseSoundPlayer.hitSoundNames[this.selectedSound]];
+    }
+    getSelectedSoundName() {
+        return ExerciseSoundPlayer.hitSoundNames[this.selectedSound];
+    }
+    selectPreviousSound() {
+        this.selectedSound =
+            (ExerciseSoundPlayer.hitSoundNames.length + this.selectedSound - 1) %
+            ExerciseSoundPlayer.hitSoundNames.length;
+    }
+    selectNextSound() {
+        this.selectedSound = (this.selectedSound + 1) % ExerciseSoundPlayer.hitSoundNames.length;
     }
 
     mute() {
