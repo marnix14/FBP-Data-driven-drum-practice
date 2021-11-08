@@ -1,4 +1,21 @@
 {
+    "Single hits": [
+        {
+            "name": "Single hit Right",
+            "abbr": "r",
+            "pattern": [
+                ["r", ""]
+            ]
+        },
+        {
+            "name": "Single hit Left",
+            "abbr": "l",
+            "pattern": [
+                ["l", ""]
+            ]
+        }
+    ],
+    
     "Roll": [
         {
             "name": "Single Stroke Roll",
