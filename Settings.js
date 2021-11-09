@@ -6,4 +6,7 @@ class Settings {
     static audioLatency = 22;
 
     static recordingCountdownInBars = 1;
+
+    static maxErrorInBeats = 0.2;
+    static maxErrorInVelocity = 0.5;
 }
