@@ -1,6 +1,5 @@
-{
-    "Singles": [
-        {
+[
+    {      
             "name": "Single stroke roll",
             "description": "",
             "beatsPerBar": 4,
@@ -38,9 +37,9 @@
                 ["r", 2, 4, true]
                 
             ]
-        }
-    ],
-    "Doubles": [
+        },
+    
+   
         {
             "name": "Double stroke roll",
             "description": "",
@@ -58,10 +57,10 @@
                 ["r", 1, 1, false],
                 ["dsr", 4, 2, true],
                 ["r", 1, 1, true]
-            ]
-        }
-    ],
-    "Diddles": [
+                ]
+        },
+    
+   
         {
             "name": "Single paradiddle",
             "description": "Single paradiddle",
@@ -109,5 +108,5 @@
             ]
         }
     ]
-}
+
 
