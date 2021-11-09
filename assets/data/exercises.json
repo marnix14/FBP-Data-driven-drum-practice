@@ -60,5 +60,36 @@
             ["ssr", 5, 5, false],
             ["ssr", 6, 6, false]
         ]
+    },
+    {
+        "name": "Paradiddle triplets",
+        "description": "Accented paradiddles in triplets",
+        "beatsPerBar": 4,
+        "accentPlacement": "rudiment",
+        "structure": [
+            ["pd",3,1, false],
+            ["pd",3,1, true],
+            ["pd",3,1, false],
+            ["pd",3,1, true],
+            ["pd",3,1, false],
+            ["pd",3,1, true]
+        ]
+    },
+    {
+        "name": "Practical singles exercise",
+        "description": "develop single stroke speed & control for practical use on the drum kit",
+        "beatsPerBar":4,
+        "accentPlacement":"beat",
+        "structure":[
+            ["r", 2, 4, false],
+            ["l", 2, 4, false],
+            ["ssr", 4, 2, false],
+            ["r", 2, 4, false],
+            ["r", 2, 4, true],
+            ["l", 2, 4, true],
+            ["ssr", 4, 2, true],
+            ["r", 2, 4, true]
+            
+        ]
     }
 ]

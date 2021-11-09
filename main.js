@@ -23,7 +23,7 @@ function setup() {
     frameRate(240);
     textFont("Roboto");
     input.setup();
-    view = new ExerciseView(Exercises.exercises[1], 8);
+    view = new ExerciseView(Exercises.exercises[7], 20);
 }
 
 function windowResized() {
