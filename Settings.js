@@ -6,8 +6,4 @@ class Settings {
     static audioLatency = 22;
 
     static recordingCountdownInBars = 1;
-
-    static getMetronomeVolume() {
-        return this.audioVolume * this.metronomeVolume;
-    }
 }

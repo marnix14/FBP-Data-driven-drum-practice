@@ -27,19 +27,14 @@
         "description": "",
         "beatsPerBar": 4,
         "accentPlacement": "rudiment",
-        "structure": [
-            ["ssr", 4,4,false]
-        ]
-
+        "structure": [["ssr", 4, 4, false]]
     },
     {
         "name": "Double stroke roll",
         "description": "",
         "beatsPerBar": 4,
         "accentPlacement": "rudiment",
-        "structure": [
-            ["dsr", 4,4,false]
-        ]
+        "structure": [["dsr", 4, 4, false]]
     },
     {
         "name": "Double 9 + left hand lead",
@@ -47,22 +42,23 @@
         "beatsPerBar": 4,
         "accentPlacement": "rudiment",
         "structure": [
-            ["dsr", 4,3,false],
-            ["r", 1,1,false],
-            ["dsr", 4,3,true],
-            ["r", 1,1,true]
+            ["dsr", 4, 3, false],
+            ["r", 1, 1, false],
+            ["dsr", 4, 3, true],
+            ["r", 1, 1, true]
         ]
     },
-    {"name": "Pyramid singles",
+    {
+        "name": "Pyramid singles",
         "description": "Single strokes, cycling through subdivisions",
         "beatsPerBar": 4,
         "accentPlacement": "beat",
         "structure": [
-            ["ssr", 2,2, false],
-            ["ssr", 3,3, false],
-            ["ssr", 4,4, false],
-            ["ssr", 5,5, false],
-            ["ssr", 6,6, false]
+            ["ssr", 2, 2, false],
+            ["ssr", 3, 3, false],
+            ["ssr", 4, 4, false],
+            ["ssr", 5, 5, false],
+            ["ssr", 6, 6, false]
         ]
     }
 ]

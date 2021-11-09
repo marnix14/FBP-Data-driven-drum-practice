@@ -13,11 +13,14 @@ class ExerciseSoundPlayer {
 
     static hitSoundNames = ["snare", "hat", "tom", "conga"];
     static hitSounds = {};
-    selectedSound = 0;
+    selectedSound = 1;
 
-    constructor(exercise, metronome) {
-        this.exercise = exercise;
+    constructor(metronome) {
         this.metronome = metronome;
+    }
+
+    setExercise(exercise) {
+        this.exercise = exercise;
     }
 
     static preload() {

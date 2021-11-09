@@ -3,6 +3,10 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 #container {
@@ -36,6 +40,61 @@ canvas {
 
 .hide {
     visibility: hidden;
+}
+
+.selectionList {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20pt;
+    padding-top: 7px;
+    width: 230px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    left: -100px;
+}
+
+.selectionListTitle {
+    font-weight: 500;
+    padding: 10px;
+    color: #ddd;
+}
+
+.selectionListItem {
+    font-size: medium;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding-left: 0px;
+    background-color: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.selectionListItemTitle {
+    font-size: 14pt;
+    font-weight: 500;
+    text-align: left;
+    color: #aaa;
+    padding: 10px;
+}
+.selectionListItemDescription {
+    font-size: 12pt;
+    text-align: left;
+    color: #999;
+    padding: 10px;
+    left: -7px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.selectionListItem:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.selectedText {
+    color: white;
+}
+.selected {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .slider {

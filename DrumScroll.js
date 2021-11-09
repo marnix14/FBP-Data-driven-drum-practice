@@ -13,11 +13,9 @@ class DrumScroll extends Bounds {
 
     subdivisions = 0;
 
-    constructor(exerciseSession, metronome) {
+    constructor(metronome) {
         super();
         this.metronome = metronome;
-        this.setExerciseSession(exerciseSession);
-        console.log("DrumScroll created with Exercise Session", exerciseSession);
     }
 
     setSubDivisions(subdivisions) {

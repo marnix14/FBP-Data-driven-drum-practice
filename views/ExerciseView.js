@@ -1,25 +1,31 @@
 class ExerciseView extends View {
-    drumScroll;
-    metronome;
+    metronome = new Metronome();
+    drumScroll = new DrumScroll(this.metronome);
     exercise;
     exerciseSession;
-    exerciseSoundPlayer;
+    exerciseSoundPlayer = new ExerciseSoundPlayer(this.metronome);
+
+    exerciseSelectionList;
 
     currentRepeat = 0;
 
     constructor(exercise = Exercise.EMPTY, repeats) {
         super();
+        this.exerciseSelectionList = new SelectionList("Exercises", Exercises.exercises, (selected) => {
+            this.setExercise(selected, repeats);
+        });
         this.setExercise(exercise, repeats);
         this.initUI();
     }
 
     setExercise(exercise, repeats = 0) {
         this.exercise = exercise;
+        this.metronome.reset();
+        this.metronome.pause();
         this.exerciseSession = new ExerciseSession(exercise, repeats);
-        this.metronome = new Metronome();
-        this.drumScroll = new DrumScroll(this.exerciseSession, this.metronome);
+        this.drumScroll.setExerciseSession(this.exerciseSession);
         this.drumScroll.setSubDivisions(this.exercise.hitNotes[0].beatDivision);
-        this.exerciseSoundPlayer = new ExerciseSoundPlayer(this.exercise, this.metronome);
+        this.exerciseSoundPlayer.setExercise(this.exercise);
     }
 
     initUI() {
@@ -68,8 +74,8 @@ class ExerciseView extends View {
         });
 
         this.tempoSlider = new Slider({
-            x: 80,
-            y: 50,
+            x: width - 220,
+            y: 20,
             min: 30,
             max: 250,
             val: 100,
@@ -209,9 +215,9 @@ class ExerciseView extends View {
         strokeWeight(0);
         fill(255);
         textSize(20);
-        text(this.metronome.beatsPerMinute, 20, 70);
+        text("BPM: " + this.metronome.beatsPerMinute, width - 150, 70);
         textSize(20);
-        text(`Repeats: ${int(this.currentRepeat)}`, 20, 100);
+        text(`Repeats: ${int(this.currentRepeat)}`, width - 150, 100);
         this.drumScroll.draw();
         if (this.metronome.isCountingDown(Settings.audioLatency)) {
             this.drawCountDown();
@@ -267,5 +273,6 @@ class ExerciseView extends View {
         this.exerciseSoundButton.remove();
         this.nextSoundButtton.remove();
         this.prevSoundButtton.remove();
+        this.exerciseSelectionList.remove();
     }
 }

@@ -114,11 +114,11 @@ class Metronome {
     }
 
     playTickSound() {
-        Metronome.sounds[Metronome.selectedSound][0].play(Settings.getMetronomeVolume(), 1, 0);
+        Metronome.sounds[Metronome.selectedSound][0].play(Settings.metronomeVolume, 1, 0);
     }
 
     playTockSound() {
-        Metronome.sounds[Metronome.selectedSound][1].play(Settings.getMetronomeVolume(), 1, 0);
+        Metronome.sounds[Metronome.selectedSound][1].play(Settings.metronomeVolume, 1, 0);
     }
 
     isCountingDown(latency = 0) {

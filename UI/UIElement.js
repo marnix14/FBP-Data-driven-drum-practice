@@ -25,7 +25,7 @@ class UIElement {
 
     applyCoreStyle() {
         if (this.disabled) {
-            this.element.style("visibility", "hidden");
+            this.element.hide();
         }
         this.applyDisabled();
         this.element.class(this.class);
@@ -40,10 +40,10 @@ class UIElement {
             this.element.attribute("disabled", "");
             this.element.style("opacity", 0);
             setTimeout(() => {
-                this.element.style("visibility", "hidden");
+                this.element.hide();
             }, 100);
         } else {
-            this.element.style("visibility", "visible");
+            this.element.show();
             this.element.style("opacity", 1);
             this.element.removeAttribute("disabled");
         }
