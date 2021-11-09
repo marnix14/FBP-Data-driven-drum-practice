@@ -1,72 +1,83 @@
-[
-    {
-        "name": "Paradiddle diddle",
-        "description": "Twice right and twice left paradiddle diddle.",
-        "beatsPerBar": 4,
-        "accentPlacement": "beat",
-        "structure": [
-            ["pdd", 3, 2, false],
-            ["pdd", 3, 2, true]
-        ]
-    },
-    {
-        "name": "Paradiddle diddle intermediate",
-        "description": "Marnix gaat dit nog invullen.",
-        "beatsPerBar": 4,
-        "accentPlacement": "rudiment",
-        "structure": [
-            ["pdd", 4, 2, false],
-            ["pd", 4, 1, false],
-            ["pdd", 4, 2, true],
-            ["pd", 4, 1, true]
-        ]
-    },
-
-    {
-        "name": "Single stroke roll",
-        "description": "",
-        "beatsPerBar": 4,
-        "accentPlacement": "rudiment",
-        "structure": [["ssr", 4, 4, false]]
-    },
-    {
-        "name": "Double stroke roll",
-        "description": "",
-        "beatsPerBar": 4,
-        "accentPlacement": "rudiment",
-        "structure": [["dsr", 4, 4, false]]
-    },
-    {
-        "name": "Double 9 + left hand lead",
-        "description": "Double stroke 9 roll, right- and left hand lead",
-        "beatsPerBar": 4,
-        "accentPlacement": "rudiment",
-        "structure": [
-            ["dsr", 4, 3, false],
-            ["r", 1, 1, false],
-            ["dsr", 4, 3, true],
-            ["r", 1, 1, true]
-        ]
-    },
-    {
-        "name": "Pyramid singles",
-        "description": "Single strokes, cycling through subdivisions",
-        "beatsPerBar": 4,
-        "accentPlacement": "beat",
-        "structure": [
-            ["ssr", 2, 2, false],
-            ["ssr", 3, 3, false],
-            ["ssr", 4, 4, false],
-            ["ssr", 5, 5, false],
-            ["ssr", 6, 6, false]
-        ]
-    },
-    {
-        "name": "Paradiddle triplets",
-        "description": "Accented paradiddles in triplets",
-        "beatsPerBar": 4,
-        "accentPlacement": "rudiment",
-        "structure": [
+{
+    "Singles": [
+        {
+            "name": "Single stroke roll",
+            "description": "",
+            "beatsPerBar": 4,
+            "accentPlacement": "rudiment",
+            "structure": [
+                ["ssr", 4, 4, false]
+            ]
+        },
+        {
+            "name": "Pyramid singles",
+            "description": "Single strokes, cycling through subdivisions",
+            "beatsPerBar": 4,
+            "accentPlacement": "beat",
+            "structure": [
+                ["ssr", 2, 2, false],
+                ["ssr", 3, 3, false],
+                ["ssr", 4, 4, false],
+                ["ssr", 5, 5, false],
+                ["ssr", 6, 6, false]
+            ]
+        },
+        {
+            "name": "Practical singles exercise",
+            "description": "develop single stroke speed & control for practical use on the drum kit",
+            "beatsPerBar":4,
+            "accentPlacement":"beat",
+            "structure":[
+                ["r", 2, 4, false],
+                ["l", 2, 4, false],
+                ["ssr", 4, 2, false],
+                ["r", 2, 4, false],
+                ["r", 2, 4, true],
+                ["l", 2, 4, true],
+                ["ssr", 4, 2, true],
+                ["r", 2, 4, true]
+                
+            ]
+        }
+    ],
+    "Doubles": [
+        {
+            "name": "Double stroke roll",
+            "description": "",
+            "beatsPerBar": 4,
+            "accentPlacement": "rudiment",
+            "structure": [["dsr", 4, 4, false]]
+        },
+        {
+            "name": "Double 9 + left hand lead",
+            "description": "Double stroke 9 roll, right- and left hand lead",
+            "beatsPerBar": 3,
+            "accentPlacement": "rudiment",
+            "structure": [
+                ["dsr", 4, 2, false],
+                ["r", 1, 1, false],
+                ["dsr", 4, 2, true],
+                ["r", 1, 1, true]
+            ]
+        }
+    ],
+    "Diddles": [
+        {
+            "name": "Single paradiddle",
+            "description": "Single paradiddle",
+            "beatsPerBar": 4,
+            "accentPlacement": "rudiment",
+            "structure": [
+            ["pd", 4,1, false],
+            ["pd", 4,1, true]
+            ]
+        },
+        {
+            "name": "Paradiddle triplets",
+            "description": "Accented paradiddles in triplets",
+            "beatsPerBar": 4,
+            "accentPlacement": "rudiment",
+            "structure": [
             ["pd",3,1, false],
             ["pd",3,1, true],
             ["pd",3,1, false],
@@ -74,22 +85,29 @@
             ["pd",3,1, false],
             ["pd",3,1, true]
         ]
+        },
+        {
+            "name": "Paradiddle diddle",
+            "description": "Twice right and twice left paradiddle diddle.",
+            "beatsPerBar": 4,
+            "accentPlacement": "beat",
+            "structure": [
+            ["pdd", 3, 2, false],
+            ["pdd", 3, 2, true]
+        ]
     },
     {
-        "name": "Practical singles exercise",
-        "description": "develop single stroke speed & control for practical use on the drum kit",
-        "beatsPerBar":4,
-        "accentPlacement":"beat",
-        "structure":[
-            ["r", 2, 4, false],
-            ["l", 2, 4, false],
-            ["ssr", 4, 2, false],
-            ["r", 2, 4, false],
-            ["r", 2, 4, true],
-            ["l", 2, 4, true],
-            ["ssr", 4, 2, true],
-            ["r", 2, 4, true]
-            
-        ]
-    }
-]
+            "name": "Paradiddle diddle intermediate",
+            "description": "Marnix gaat dit nog invullen.",
+            "beatsPerBar": 4,
+            "accentPlacement": "rudiment",
+            "structure": [
+            ["pdd", 4, 2, false],
+            ["pd", 4, 1, false],
+            ["pdd", 4, 2, true],
+            ["pd", 4, 1, true]
+            ]
+        }
+    ]
+}
+
