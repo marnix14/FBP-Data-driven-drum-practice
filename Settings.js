@@ -3,7 +3,8 @@ class Settings {
     static metronomeVolume = 1;
     static hitVolume = 1;
 
-    static audioLatency = 22;
+    static inputLatency = 0;
+    static audioLatency = 50;
 
     static recordingCountdownInBars = 1;
 

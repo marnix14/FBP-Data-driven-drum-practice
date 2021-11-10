@@ -252,7 +252,10 @@ class ExerciseView extends View {
     }
 
     padInput(hit) {
-        this.exerciseSession.padInput(TimedHit.fromHitAndMetronome(hit, this.metronome));
+        //ExerciseSoundPlayer.playHit(hit.velocity, hit.getDexteritySign(), 1, "snare");
+        this.exerciseSession.padInput(
+            TimedHit.fromHitAndMetronome(hit, this.metronome, Settings.inputLatency + Settings.audioLatency)
+        );
     }
 
     getAnalysisView() {

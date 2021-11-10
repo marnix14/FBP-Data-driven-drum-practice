@@ -8,7 +8,14 @@ class TimedHit extends Hit {
         this.barPosition = barPosition;
     }
 
-    static fromHitAndMetronome(hit, metronome) {
-        return new TimedHit(hit.dexterity, hit.velocity, metronome.getBeatPosition(), metronome.getBarPosition());
+    static fromHitAndMetronome(hit, metronome, latencyInMs = 0) {
+        const barLatency = metronome.millisecondsToBars(latencyInMs);
+        const beatLatency = barLatency * metronome.beatsPerBar;
+        return new TimedHit(
+            hit.dexterity,
+            hit.velocity,
+            metronome.getBeatPosition() - beatLatency,
+            metronome.getBarPosition() - barLatency
+        );
     }
 }
