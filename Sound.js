@@ -19,7 +19,7 @@ class Sound {
         if (!this.buffer) throw Error("Tried to play an audio file which wasn't loaded");
         const panner = new StereoPannerNode(window.audioCTX, { pan: pan });
         const gainNode = window.audioCTX.createGain();
-        gainNode.gain.value = volume * Settings.audioVolume;
+        gainNode.gain.value = volume * settings.audioVolume;
         const bufferedSound = window.audioCTX.createBufferSource();
         bufferedSound.buffer = this.buffer;
         bufferedSound.playbackRate.value = rate;

@@ -114,15 +114,15 @@ class Metronome {
     }
 
     playTickSound() {
-        Metronome.sounds[Metronome.selectedSound][0].play(Settings.metronomeVolume, 1, 0);
+        Metronome.sounds[Metronome.selectedSound][0].play(settings.metronomeVolume, 1, 0);
     }
 
     playTockSound() {
-        Metronome.sounds[Metronome.selectedSound][1].play(Settings.metronomeVolume, 1, 0);
+        Metronome.sounds[Metronome.selectedSound][1].play(settings.metronomeVolume, 1, 0);
     }
 
     isCountingDown(latency = 0) {
-        return this.getBarPosition() < 0 && this.getBarPosition(latency) > -Settings.recordingCountdownInBars;
+        return this.getBarPosition() < 0 && this.getBarPosition(latency) > -settings.recordingCountdownInBars;
     }
 
     getWrappedBeatPositionOf(barPosition = this.barPosition) {

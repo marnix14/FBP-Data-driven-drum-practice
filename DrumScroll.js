@@ -38,7 +38,7 @@ class DrumScroll extends Bounds {
     }
 
     drawExercise() {
-        const currentRepeat = this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars;
+        const currentRepeat = this.metronome.getBarPosition(settings.audioLatency) / this.exerciseSession.exercise.bars;
         this.drawMovingRules(this.subdivisions);
         const currentTimeRuleWidth = this.width * this.currentTimeRuleWidthRatio;
         this.drawRule(this.bottom, currentTimeRuleWidth, 150, 6);
@@ -80,11 +80,11 @@ class DrumScroll extends Bounds {
         // calculate on the level of beats
         for (let i = 0; i < this.metronome.beatsPerBar; i++) {
             const yNorm =
-                (i + this.metronome.getWrappedBeatPosition(Settings.audioLatency)) / this.metronome.beatsPerBar;
+                (i + this.metronome.getWrappedBeatPosition(settings.audioLatency)) / this.metronome.beatsPerBar;
             this.drawSubdivisions(yNorm, subdivisions);
             this.drawBeat(yNorm);
         }
-        this.drawBar(this.metronome.getWrappedBarPosition(Settings.audioLatency));
+        this.drawBar(this.metronome.getWrappedBarPosition(settings.audioLatency));
     }
 
     drawRule(y, w, color = 255, thickness = 2) {
@@ -94,16 +94,16 @@ class DrumScroll extends Bounds {
     }
 
     drawHitNote(hitNote, globalBarPosition) {
-        let y = this.y + this.h * (this.metronome.getBarPosition(Settings.audioLatency) + 1 - globalBarPosition);
+        let y = this.y + this.h * (this.metronome.getBarPosition(settings.audioLatency) + 1 - globalBarPosition);
         const maxSize = this.noteSizeRatio * this.w;
         let size = sqrt(hitNote.velocity) * maxSize;
         if (y < -size || y > height + size) return;
 
         const dexterityWidth = this.dexterityWidthRatio * this.w;
         let xOffset = hitNote.isLeftHand() ? -dexterityWidth / 2 : dexterityWidth / 2;
-        const notePassed = this.metronome.getBarPosition(Settings.audioLatency) > globalBarPosition;
+        const notePassed = this.metronome.getBarPosition(settings.audioLatency) > globalBarPosition;
         const distanceFromMetronomeInBars = abs(
-            this.metronome.getBarPosition(Settings.audioLatency) - globalBarPosition
+            this.metronome.getBarPosition(settings.audioLatency) - globalBarPosition
         );
         if (!notePassed) {
             const fade = 1 - min(1, distanceFromMetronomeInBars);

@@ -1,13 +1,29 @@
 class Settings {
-    static audioVolume = 1;
-    static metronomeVolume = 1;
-    static hitVolume = 1;
+    constructor() {}
+    audioVolume = 1;
+    metronomeVolume = 1;
+    hitVolume = 1;
 
-    static inputLatency = 0;
-    static audioLatency = 50;
+    inputLatency = 20;
+    audioLatency = 80;
 
-    static recordingCountdownInBars = 1;
+    recordingCountdownInBars = 1;
 
-    static maxErrorInBeats = 0.2;
-    static maxErrorInVelocity = 0.5;
+    maxErrorInBeats = 0.2;
+    maxErrorInVelocity = 0.5;
+
+    store() {
+        console.log("Storing", this);
+        window.localStorage.setItem("settings", JSON.stringify(this));
+    }
+
+    static load() {
+        const settings = window.localStorage.getItem("settings");
+        if (settings) {
+            console.log("Loading stored settings:", JSON.parse(settings));
+            return Object.assign(new Settings(), JSON.parse(settings));
+        } else {
+            return new Settings();
+        }
+    }
 }

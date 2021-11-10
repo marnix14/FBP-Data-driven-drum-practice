@@ -86,7 +86,7 @@ class ExerciseSoundPlayer {
         rate *= randomPitch;
         const sound = ExerciseSoundPlayer.hitSounds[soundName][soundNumber][dexterityABSeleciton];
         const pan = dext * ExerciseSoundPlayer.panningAmount;
-        sound.play(vel * gain * Settings.hitVolume, rate, pan);
+        sound.play(vel * gain * settings.hitVolume, rate, pan);
     }
 
     setFocus(focus) {

@@ -9,12 +9,14 @@ class ExerciseView extends View {
 
     currentRepeat = 0;
 
-    constructor(exercise = Exercise.EMPTY, repeats) {
+    repeats = 10;
+
+    constructor(exercise = Exercise.EMPTY) {
         super();
         this.exerciseSelectionList = new SelectionList("Exercises", Exercises.exercises, (selected) => {
-            this.setExercise(selected, repeats);
+            this.setExercise(selected, this.repeats);
         });
-        this.setExercise(exercise, repeats);
+        this.setExercise(exercise, this.repeats);
         this.initUI();
     }
 
@@ -147,7 +149,7 @@ class ExerciseView extends View {
         this.metronome.reset();
         const timestamp = Date.now();
         this.exerciseSession.startRecording(timestamp, this.metronome.beatsPerMinute);
-        this.metronome.play(-Settings.recordingCountdownInBars * this.metronome.beatsPerBar);
+        this.metronome.play(-settings.recordingCountdownInBars * this.metronome.beatsPerBar);
     }
 
     stopRecording() {
@@ -203,7 +205,7 @@ class ExerciseView extends View {
         this.drumScroll.update();
         this.exerciseSoundPlayer.update();
 
-        this.currentRepeat = this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars;
+        this.currentRepeat = this.metronome.getBarPosition(settings.audioLatency) / this.exerciseSession.exercise.bars;
         if (this.currentRepeat >= this.exerciseSession.repeats) {
             this.metronome.pause();
             this.metronome.reset();
@@ -217,9 +219,9 @@ class ExerciseView extends View {
         textSize(20);
         text("BPM: " + this.metronome.beatsPerMinute, width - 150, 70);
         textSize(20);
-        text(`Repeats: ${int(this.currentRepeat)}`, width - 150, 100);
+        text(`repeats: ${int(this.currentRepeat)}`, width - 150, 100);
         this.drumScroll.draw();
-        if (this.metronome.isCountingDown(Settings.audioLatency)) {
+        if (this.metronome.isCountingDown(settings.audioLatency)) {
             this.drawCountDown();
         }
     }
@@ -229,7 +231,7 @@ class ExerciseView extends View {
         fill(255, pow(min(1, abs(this.metronome.getBeatPosition() / 2)), 2) * 255);
         textSize(100);
         text(
-            abs(floor(this.metronome.getBeatPosition(Settings.audioLatency))),
+            abs(floor(this.metronome.getBeatPosition(settings.audioLatency))),
             this.drumScroll.centerX - 25,
             this.drumScroll.bottom + 100
         );
@@ -254,7 +256,7 @@ class ExerciseView extends View {
     padInput(hit) {
         //ExerciseSoundPlayer.playHit(hit.velocity, hit.getDexteritySign(), 1, "snare");
         this.exerciseSession.padInput(
-            TimedHit.fromHitAndMetronome(hit, this.metronome, Settings.inputLatency + Settings.audioLatency)
+            TimedHit.fromHitAndMetronome(hit, this.metronome, settings.inputLatency + settings.audioLatency)
         );
     }
 
@@ -264,7 +266,7 @@ class ExerciseView extends View {
 
     // value between 0 (start) and 1 (exercise done)
     getExercisePosition() {
-        return (this.metronome.getBarPosition(Settings.audioLatency) / this.exerciseSession.exercise.bars) % 1;
+        return (this.metronome.getBarPosition(settings.audioLatency) / this.exerciseSession.exercise.bars) % 1;
     }
 
     destroy() {

@@ -4,6 +4,8 @@ input = new Input();
 // TODO: save and load exercise history;
 exerciseHistory = new ExerciseSessionHistory();
 
+settings = Settings.load();
+
 const transitionTimeMs = 200;
 window.audioCTX = new (AudioContext || webkitAudioContext)({ latencyHint: 0 });
 
@@ -20,10 +22,10 @@ function setup() {
     canvas.parent("sketch");
     this.overlay = select(".overlay");
     hideOverlay(1000);
-    frameRate(240);
+    frameRate(500);
     textFont("Roboto");
     input.setup();
-    view = new ExerciseView(Exercises.exercises[7], 20);
+    view = new ExerciseView(Exercises.exercises[7]);
 }
 
 function windowResized() {
@@ -67,6 +69,9 @@ function keyPressed() {
             break;
         case 65: // a
             changeView(new AnalysisView(ExerciseSessionHistory.testExerciseSession));
+            break;
+        case 67:
+            changeView(new CalibrationView());
             break;
         case 80: // p
             changeView(new ProgressView());

@@ -60,11 +60,11 @@ class HitAnalysis extends TimedHitNote {
         this.velocityDeviation = sqrt(squareDifferenceVelocitySum / this.recordedHits.length);
 
         this.positionAccuracy =
-            1 - min(1, (abs(this.relativePositionMean) * exercise.beatsPerBar) / Settings.maxErrorInBeats);
-        this.positionPrecision = 1 - min(1, (this.positionDeviation * exercise.beatsPerBar) / Settings.maxErrorInBeats);
+            1 - min(1, (abs(this.relativePositionMean) * exercise.beatsPerBar) / settings.maxErrorInBeats);
+        this.positionPrecision = 1 - min(1, (this.positionDeviation * exercise.beatsPerBar) / settings.maxErrorInBeats);
 
-        this.velocityAccuracy = max(0, 1 - abs(this.velocity - this.velocityMean) / Settings.maxErrorInVelocity);
-        this.velocityPrecision = max(0, 1 - this.velocityDeviation / Settings.maxErrorInVelocity);
+        this.velocityAccuracy = max(0, 1 - abs(this.velocity - this.velocityMean) / settings.maxErrorInVelocity);
+        this.velocityPrecision = max(0, 1 - this.velocityDeviation / settings.maxErrorInVelocity);
 
         this.dexterityAccuracy = this.recordedHits.length / (this.recordedHits.length + this.wrongHits.length);
     }
