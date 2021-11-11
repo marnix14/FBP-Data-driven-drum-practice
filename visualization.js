@@ -54,7 +54,7 @@ class Visualization {
         noStroke();
         fill(255);
 
-        text(this.metronome.bpm, 20, 100);
+        //text(this.metronome.bpm, width/2-450, 500);
     }
 
 
@@ -70,9 +70,9 @@ class Visualization {
         for (let i = 0; i < this.metronome.beatsPerBar; i++) {
             let y = this.startY + ((i / this.metronome.beatsPerBar - offset + 1) % 1) * lineLength;
             if (i == 0) {
-                line(width / 2 - 50, y, width / 2 + 50, y)
+                                line(width / 2 - 20, y, width / 2 + 20, y)
             } else {
-                line(width / 2 - 20, y, width / 2 + 20, y)
+                line(width / 2 - 5, y, width / 2 + 5, y)
             }
         }
 
