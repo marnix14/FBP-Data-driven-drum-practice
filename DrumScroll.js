@@ -47,9 +47,10 @@ class DrumScroll extends Bounds {
             r < min(int(currentRepeat) + 2, this.exerciseSession.repeats);
             r++
         ) {
-            for (const hitNote of this.exerciseSession.exercise.hitNotes) {
+            for (const i in this.exerciseSession.exercise.hitNotes) {
+                const hitNote = this.exerciseSession.exercise.hitNotes[i];
                 const globalNoteBarPosition = hitNote.barPosition + r * this.exerciseSession.exercise.bars;
-                this.drawHitNote(hitNote, globalNoteBarPosition);
+                this.drawHitNote(i, hitNote, globalNoteBarPosition);
             }
         }
     }
@@ -93,7 +94,7 @@ class DrumScroll extends Bounds {
         line(this.centerX - w / 2, y, this.centerX + w / 2, y);
     }
 
-    drawHitNote(hitNote, globalBarPosition) {
+    drawHitNote(index, hitNote, globalBarPosition) {
         let y = this.y + this.h * (this.metronome.getBarPosition(settings.audioLatency) + 1 - globalBarPosition);
         const maxSize = this.noteSizeRatio * this.w;
         let size = sqrt(hitNote.velocity) * maxSize;
@@ -113,6 +114,7 @@ class DrumScroll extends Bounds {
             size *= fade * 1.5;
             fill(22 + hitNote.velocity * fade * 233);
         }
+
         strokeWeight(0);
         circle(this.centerX + xOffset, y, size);
         return true;

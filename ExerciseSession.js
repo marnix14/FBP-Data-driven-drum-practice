@@ -6,12 +6,18 @@ class ExerciseSession {
     beatsPerMinute;
 
     recording = [];
+    analysis = [];
 
     isRecording = false;
 
     constructor(exercise, repeats) {
         this.exercise = exercise;
         this.repeats = repeats;
+        if (this.exercise) {
+            for (const exerciseHit of exercise.hitNotes) {
+                this.analysis.push(new HitAnalysis(exerciseHit));
+            }
+        }
     }
 
     resetRecording() {
@@ -39,18 +45,9 @@ class ExerciseSession {
         this.isRecording = false;
         console.log("Recording session stopped");
         if (this.recording.length > 0) {
-            this.analyse();
             this.save();
         } else {
             this.resetRecording();
-        }
-    }
-
-    analyse() {
-        console.log("Analysing recording session");
-        const barsPerSecond = this.beatsPerMinute / this.exercise.beatsPerBar / 60;
-        for (const timedHit of this.recording) {
-            const second = timedHit.barPosition / barsPerSecond;
         }
     }
 
@@ -59,10 +56,11 @@ class ExerciseSession {
     }
 
     padInput(timedHit) {
-        console.log(timedHit);
-
         if (this.isRecording) {
             this.recording.push(timedHit);
+            const exerciseHitAnalysis = this.getClosestExerciseHit(timedHit);
+            exerciseHitAnalysis.addHit(timedHit);
+            exerciseHitAnalysis.analyse(this.exercise);
         }
     }
 
@@ -77,5 +75,23 @@ class ExerciseSession {
 
     hasRecorded() {
         return this.recording.length > 0;
+    }
+
+    getClosestExerciseHit(recordedHit) {
+        let closestExerciseHit = null;
+        let closestExerciseHitDistance = Number.POSITIVE_INFINITY;
+        for (const i in this.analysis) {
+            const exerciseHit = this.analysis[i];
+            const distance = abs(
+                getWrappedOffset(recordedHit.barPosition, exerciseHit.barPosition, this.exercise.bars)
+            );
+
+            if (distance < closestExerciseHitDistance) {
+                closestExerciseHitDistance = distance;
+                closestExerciseHit = exerciseHit;
+            }
+        }
+
+        return closestExerciseHit;
     }
 }

@@ -1,25 +1,10 @@
 class AnalysisView extends View {
     exerciseSession;
 
-    exerciseHitAnalysis = [];
-
     constructor(exerciseSession) {
         super();
         this.exerciseSession = exerciseSession;
         console.log("Viewing analysis of", this.exerciseSession);
-
-        for (const exerciseHit of this.exerciseSession.exercise.hitNotes) {
-            this.exerciseHitAnalysis.push(new HitAnalysis(exerciseHit));
-        }
-
-        for (const recordedHit of this.exerciseSession.recording) {
-            this.getClosestExerciseHit(recordedHit).addHit(recordedHit);
-        }
-
-        for (const exerciseHitAnalysis of this.exerciseHitAnalysis) {
-            exerciseHitAnalysis.analyse(this.exerciseSession.exercise);
-        }
-        console.log("Analysed exercise hits: ", this.exerciseHitAnalysis);
     }
 
     update() {
@@ -38,7 +23,7 @@ class AnalysisView extends View {
     }
 
     drawWrappedHitGraph() {
-        for (const exerciseHit of this.exerciseHitAnalysis) {
+        for (const exerciseHit of this.exerciseSession.analysis) {
             this.drawHit(exerciseHit.barPosition, exerciseHit.velocity, exerciseHit.getDexteritySign(), "white", 5);
 
             for (const recordedHit of exerciseHit.recordedHits) {
@@ -66,22 +51,4 @@ class AnalysisView extends View {
     }
 
     keyPressed() {}
-
-    getClosestExerciseHit(recordedHit) {
-        let closestExerciseHit = null;
-        let closestExerciseHitDistance = Number.POSITIVE_INFINITY;
-        for (const i in this.exerciseHitAnalysis) {
-            const exerciseHit = this.exerciseHitAnalysis[i];
-            const distance = abs(
-                getWrappedOffset(recordedHit.barPosition, exerciseHit.barPosition, this.exerciseSession.exercise.bars)
-            );
-
-            if (distance < closestExerciseHitDistance) {
-                closestExerciseHitDistance = distance;
-                closestExerciseHit = exerciseHit;
-            }
-        }
-
-        return closestExerciseHit;
-    }
 }
