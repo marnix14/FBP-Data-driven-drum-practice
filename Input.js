@@ -1,17 +1,18 @@
 class Input {
     serial;
     portList;
-    portName = "COM4";
+    portName = "COM36";
     data;
     portSelector;
+    maxHitVelocity = 10;
 
-    constructor() {}
+    constructor() { }
 
-    preload() {}
+    preload() { }
 
     setup() {
         this.serial = new p5.SerialPort();
-        this.serial.on("list", (ports) => console.log(ports));
+        this.serial.on("list", (ports) => console.log("Here be ports", ports));
         this.serial.list();
         this.serial.on("connected", () => console.log("connected to server."));
         this.serial.on("open", () => console.log("the serial port opened."));
@@ -22,8 +23,19 @@ class Input {
     }
 
     serialEvent() {
-        this.data = Number(this.serial.read());
-        console.log("Received serial data:", this.data);
-        ExerciseSoundPlayer.playHit(this.data / 127, 0);
+        
+        var inData = this.serial.readLine();
+        //this.serial.serialBuffer.length =0;
+        if (inData.length>0) {
+            let splitString = split(inData, ' ');
+            let dext = splitString[0];
+            let velocity = Number(splitString[1]);
+            view.padInput(new Hit(dext, velocity / this.maxHitVelocity));
+            console.log("Serial data: " + inData);
+
+        }
+        //inData = null;
+
+
     }
 }

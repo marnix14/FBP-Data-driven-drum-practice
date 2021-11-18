@@ -4,12 +4,12 @@ class ExerciseView extends View {
     exercise;
     exerciseSession;
     exerciseSoundPlayer = new ExerciseSoundPlayer(this.metronome);
-
+    
     exerciseSelectionList;
 
     currentRepeat = 0;
 
-    repeats = 10;
+    repeats = 2;
 
     constructor(exercise = Exercise.EMPTY) {
         super();
@@ -17,7 +17,8 @@ class ExerciseView extends View {
             this.setExercise(selected, this.repeats);
         });
         this.setExercise(exercise, this.repeats);
-        this.initUI();
+                this.initUI();
+
     }
 
     setExercise(exercise, repeats = 0) {
