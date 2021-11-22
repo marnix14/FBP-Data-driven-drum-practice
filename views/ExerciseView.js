@@ -4,7 +4,7 @@ class ExerciseView extends View {
     exercise;
     exerciseSession;
     exerciseSoundPlayer = new ExerciseSoundPlayer(this.metronome);
-
+    waitForRecording = false;
     exerciseSelectionList;
 
     currentRepeat = 0;
@@ -70,7 +70,9 @@ class ExerciseView extends View {
             classOn: "recordOn",
             classOff: "recordOff",
             clickedOn: () => {
-                this.startRecording();
+                this.waitForRecording = true;
+                console.log("waiting for recording");
+                
             },
             clickedOff: () => {
                 this.stopRecording();
@@ -212,7 +214,7 @@ class ExerciseView extends View {
             this.metronome.pause();
             this.metronome.reset();
             this.stopRecording();
-            
+
         }
     }
 
@@ -223,13 +225,15 @@ class ExerciseView extends View {
         text("BPM: " + this.metronome.beatsPerMinute, width - 150, 70);
         textSize(20);
         text(`repeats: ${int(this.currentRepeat)}`, width - 150, 100);
+        
         this.drumScroll.draw();
         if (this.metronome.isCountingDown(settings.audioLatency)) {
             this.drawCountDown();
         }
-        if (millis() - this.serialMillis < 200) {
-            fill(255, 255, 255, 255);
-            ellipse(width / 2 - 200, height / 2 + 150, 50, 50)
+        if (this.waitForRecording){
+            fill(255);
+            text("strike pad to start recording",width/2-120, height/2+250);
+                       
         }
 
     }

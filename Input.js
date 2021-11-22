@@ -23,27 +23,31 @@ class Input {
     }
 
     serialEvent() {
-        this.data = Number(this.serial.read());
-        //console.log("Received serial data:", this.data);
-        let dext;
-        let velocity;
-        if (this.data < 128) {
-            dext = "r";
-            velocity = (this.data / 127);
+        if (view.waitForRecording) {
+            view.waitForRecording = false;
+            view.startRecording();
         } else {
-            dext = "l";
-            velocity = ((this.data-127 )/ 127);
+            this.data = Number(this.serial.read());
+            //console.log("Received serial data:", this.data);
+            let dext;
+            let velocity;
+            if (this.data < 128) {
+                dext = "r";
+                velocity = (this.data / 127);
+            } else {
+                dext = "l";
+                velocity = ((this.data - 127) / 127);
 
+            }
+            velocity = sqrt(velocity)
+            console.log(dext, velocity.toFixed(2));
+            //ExerciseSoundPlayer.playHit(velocity, 0);
+
+
+
+
+            view.padInput(new Hit(dext, velocity));
         }
-        velocity = sqrt(velocity)
-        console.log(dext, velocity.toFixed(2));
-        //ExerciseSoundPlayer.playHit(velocity, 0);
-
-
-
-
-        view.padInput(new Hit(dext, velocity));
-
     }
 
 
