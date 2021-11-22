@@ -234,9 +234,10 @@ class ExerciseView extends View {
             this.drawCountDown();
         }
         if (this.waitForRecording) {
-            fill(255);
+            fill(200);
             strokeWeight(0);
-            text("strike pad to start recording", width / 2 - 120, height / 2 + 250);
+            textAlign(CENTER, CENTER);
+            text("strike the pad to start recording", width / 2, height / 2 + 300);
         }
     }
 
@@ -244,9 +245,10 @@ class ExerciseView extends View {
         strokeWeight(0);
         fill(255, pow(min(1, abs(this.metronome.getBeatPosition() / 2)), 2) * 255);
         textSize(100);
+        textAlign(CENTER, CENTER);
         text(
             abs(floor(this.metronome.getBeatPosition(settings.audioLatency))),
-            this.drumScroll.centerX - 25,
+            this.drumScroll.centerX,
             this.drumScroll.bottom + 100
         );
     }

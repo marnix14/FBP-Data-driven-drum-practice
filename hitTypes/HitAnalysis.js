@@ -68,4 +68,14 @@ class HitAnalysis extends TimedHitNote {
 
         this.dexterityAccuracy = this.recordedHits.length / (this.recordedHits.length + this.wrongHits.length);
     }
+
+    normalize(maxVelocity, exercise) {
+        for (const hit of this.recordedHits) {
+            hit.velocity /= maxVelocity;
+        }
+        for (const hit of this.wrongHits) {
+            hit.velocity /= maxVelocity;
+        }
+        this.analyse(exercise);
+    }
 }
