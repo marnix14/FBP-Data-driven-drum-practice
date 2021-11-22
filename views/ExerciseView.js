@@ -69,11 +69,17 @@ class ExerciseView extends View {
             classOn: "recordOn",
             classOff: "recordOff",
             clickedOn: () => {
+                this.metronome.pause();
+                this.metronome.reset();
                 this.waitForRecording = true;
                 console.log("waiting for recording");
             },
             clickedOff: () => {
-                this.stopRecording();
+                if (this.waitForRecording) {
+                    this.waitForRecording = false;
+                } else {
+                    this.stopRecording();
+                }
             },
         });
 
