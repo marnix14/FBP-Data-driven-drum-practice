@@ -1,0 +1,3268 @@
+[
+  {
+    "exercise": {
+      "name": "Single paradiddle",
+      "description": "Single paradiddle",
+      "structure": [
+        [
+          "pd",
+          4,
+          1,
+          false
+        ],
+        [
+          "pd",
+          4,
+          1,
+          true
+        ]
+      ],
+      "hitNotes": [
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0,
+          "barPosition": 0
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.25,
+          "barPosition": 0.0625
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.5,
+          "barPosition": 0.125
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.75,
+          "barPosition": 0.1875
+        },
+        {
+          "dexterity": "l",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1,
+          "barPosition": 0.25
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.25,
+          "barPosition": 0.3125
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.5,
+          "barPosition": 0.375
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.75,
+          "barPosition": 0.4375
+        }
+      ],
+      "accentPlacement": "rudiment",
+      "beatsPerBar": 4,
+      "beats": 2,
+      "bars": 0.5
+    },
+    "repeats": 8,
+    "startTimestamp": 1637413914477,
+    "beatsPerMinute": 100,
+    "recording": [
+      {
+        "dexterity": "r",
+        "velocity": 0.788699717316095,
+        "beatPosition": -0.020166666656738358,
+        "barPosition": -0.0050416666641845895
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 0.23033333333829462,
+        "barPosition": 0.057583333334573654
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.6018344659534288,
+        "beatPosition": 0.4801666666567267,
+        "barPosition": 0.12004166666418167
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.554153962516942,
+        "beatPosition": 0.674999999999994,
+        "barPosition": 0.1687499999999985
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7476998850543153,
+        "beatPosition": 0.9251666666567265,
+        "barPosition": 0.23129166666418163
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5681853972686127,
+        "beatPosition": 1.1198333333432613,
+        "barPosition": 0.2799583333358153
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 1.3978333333382944,
+        "barPosition": 0.3494583333345736
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 1.6203333333382945,
+        "barPosition": 0.40508333333457364
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.822900573781978,
+        "beatPosition": 1.8706666666765945,
+        "barPosition": 0.46766666666914863
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.45246481570263436,
+        "beatPosition": 2.120499999995026,
+        "barPosition": 0.5301249999987565
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 2.370999999990059,
+        "barPosition": 0.5927499999975148
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 2.5929999999950253,
+        "barPosition": 0.6482499999987563
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7786521769046981,
+        "beatPosition": 2.8433333333333253,
+        "barPosition": 0.7108333333333313
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 3.065666666676592,
+        "barPosition": 0.766416666669148
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 3.621666666666656,
+        "barPosition": 0.905416666666664
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8276710518549868,
+        "beatPosition": 3.899833333343256,
+        "barPosition": 0.974958333335814
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 4.149833333343255,
+        "barPosition": 1.0374583333358138
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 4.400666666676588,
+        "barPosition": 1.100166666669147
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 4.650499999995019,
+        "barPosition": 1.1626249999987548
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7633329321824984,
+        "beatPosition": 4.900666666676586,
+        "barPosition": 1.2251666666691465
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 5.150666666676585,
+        "barPosition": 1.2876666666691463
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 5.400833333333317,
+        "barPosition": 1.3502083333333292
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 5.651333333328349,
+        "barPosition": 1.4128333333320873
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.7370936756031579,
+        "beatPosition": 5.929333333323381,
+        "barPosition": 1.4823333333308453
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 6.0963333333283485,
+        "barPosition": 1.5240833333320871
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 6.310499999995015,
+        "barPosition": 1.5776249999987537
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 6.653333333333315,
+        "barPosition": 1.6633333333333287
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7529469661657903,
+        "beatPosition": 6.903499999990047,
+        "barPosition": 1.7258749999975118
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 7.181666666666647,
+        "barPosition": 1.7954166666666618
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 7.4595000000049465,
+        "barPosition": 1.8648750000012366
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 7.73783333333828,
+        "barPosition": 1.93445833333457
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.7476998850543153,
+        "beatPosition": 8.015499999995011,
+        "barPosition": 2.003874999998753
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.45246481570263436,
+        "beatPosition": 8.265666666676578,
+        "barPosition": 2.0664166666691446
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 8.544000000009914,
+        "barPosition": 2.1360000000024786
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 8.766500000009916,
+        "barPosition": 2.191625000002479
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7043173944508145,
+        "beatPosition": 9.017000000004952,
+        "barPosition": 2.254250000001238
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 9.238499999990053,
+        "barPosition": 2.309624999997513
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 9.516333333328355,
+        "barPosition": 2.3790833333320887
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4255612320274539,
+        "beatPosition": 9.767000000004959,
+        "barPosition": 2.4417500000012398
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8371304567239225,
+        "beatPosition": 9.990166666656727,
+        "barPosition": 2.4975416666641816
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 10.212833333338294,
+        "barPosition": 2.5532083333345734
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.48602517675625084,
+        "beatPosition": 10.462166666661693,
+        "barPosition": 2.615541666665423
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.48602517675625084,
+        "beatPosition": 10.712999999995029,
+        "barPosition": 2.6782499999987572
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.709885207532891,
+        "beatPosition": 10.934833333343265,
+        "barPosition": 2.7337083333358163
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.48602517675625084,
+        "beatPosition": 11.184999999999997,
+        "barPosition": 2.7962499999999992
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4255612320274539,
+        "beatPosition": 11.685,
+        "barPosition": 2.92125
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.9598228182949627,
+        "beatPosition": 11.935499999995036,
+        "barPosition": 2.983874999998759
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5470032892270364,
+        "beatPosition": 12.43616666667164,
+        "barPosition": 3.10904166666791
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 12.686333333328374,
+        "barPosition": 3.1715833333320935
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7786521769046981,
+        "beatPosition": 12.908499999990076,
+        "barPosition": 3.227124999997519
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 13.158833333328376,
+        "barPosition": 3.289708333332094
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5324139056496683,
+        "beatPosition": 13.409166666666676,
+        "barPosition": 3.352291666666669
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 13.686500000009946,
+        "barPosition": 3.4216250000024866
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.9639158979224881,
+        "beatPosition": 13.937166666661714,
+        "barPosition": 3.4842916666654284
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46108396762070397,
+        "beatPosition": 14.159000000009948,
+        "barPosition": 3.539750000002487
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 14.410000000000016,
+        "barPosition": 3.602500000000004
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 14.659666666661716,
+        "barPosition": 3.664916666665429
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7529469661657903,
+        "beatPosition": 14.909333333323415,
+        "barPosition": 3.727333333330854
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 15.159833333343284,
+        "barPosition": 3.789958333335821
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 15.438833333328386,
+        "barPosition": 3.8597083333320965
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 15.688666666671656,
+        "barPosition": 3.922166666667914
+      }
+    ],
+    "analysis": [
+      {
+        "dexterity": "r",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0,
+        "barPosition": 0,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.788699717316095,
+            "beatPosition": -0.020166666656738358,
+            "barPosition": -0.0050416666641845895
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8276710518549868,
+            "beatPosition": 3.899833333343256,
+            "barPosition": 0.974958333335814
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.7370936756031579,
+            "beatPosition": 5.929333333323381,
+            "barPosition": 1.4823333333308453
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.7476998850543153,
+            "beatPosition": 8.015499999995011,
+            "barPosition": 2.003874999998753
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8371304567239225,
+            "beatPosition": 9.990166666656727,
+            "barPosition": 2.4975416666641816
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.9598228182949627,
+            "beatPosition": 11.935499999995036,
+            "barPosition": 2.983874999998759
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.9639158979224881,
+            "beatPosition": 13.937166666661714,
+            "barPosition": 3.4842916666654284
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.45246481570263436,
+            "beatPosition": 2.120499999995026,
+            "barPosition": 0.5301249999987565
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 6.0963333333283485,
+            "barPosition": 1.5240833333320871
+          }
+        ],
+        "dexterityAccuracy": 0.7777777777777778,
+        "relativePositionMean": -0.011166666667200469,
+        "positionDeviation": 0.009408050208258393,
+        "positionAccuracy": 0.7766666666559906,
+        "positionPrecision": 0.8118389958348322,
+        "velocityMean": 0.8374333575385612,
+        "velocityDeviation": 0.08583000060891889,
+        "velocityAccuracy": 0.6748667150771224,
+        "velocityPrecision": 0.8283399987821622
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.25,
+        "barPosition": 0.0625,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 0.23033333333829462,
+            "barPosition": 0.057583333334573654
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 4.149833333343255,
+            "barPosition": 1.0374583333358138
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.45246481570263436,
+            "beatPosition": 8.265666666676578,
+            "barPosition": 2.0664166666691446
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 10.212833333338294,
+            "barPosition": 2.5532083333345734
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.46108396762070397,
+            "beatPosition": 14.159000000009948,
+            "barPosition": 3.539750000002487
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 2.370999999990059,
+            "barPosition": 0.5927499999975148
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 6.310499999995015,
+            "barPosition": 1.5776249999987537
+          }
+        ],
+        "dexterityAccuracy": 0.7142857142857143,
+        "relativePositionMean": -0.011616666664681486,
+        "positionDeviation": 0.01091569334062608,
+        "positionAccuracy": 0.7676666667063703,
+        "positionPrecision": 0.7816861331874784,
+        "velocityMean": 0.4554072491102457,
+        "velocityDeviation": 0.021869001025883652,
+        "velocityAccuracy": 0.9108144982204914,
+        "velocityPrecision": 0.9562619979482327
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.5,
+        "barPosition": 0.125,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.6018344659534288,
+            "beatPosition": 0.4801666666567267,
+            "barPosition": 0.12004166666418167
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 2.5929999999950253,
+            "barPosition": 0.6482499999987563
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 4.400666666676588,
+            "barPosition": 1.100166666669147
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 8.544000000009914,
+            "barPosition": 2.1360000000024786
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.48602517675625084,
+            "beatPosition": 10.462166666661693,
+            "barPosition": 2.615541666665423
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5470032892270364,
+            "beatPosition": 12.43616666667164,
+            "barPosition": 3.10904166666791
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 14.410000000000016,
+            "barPosition": 3.602500000000004
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.006208333333157008,
+        "positionDeviation": 0.016403033981395886,
+        "positionAccuracy": 0.8758333333368599,
+        "positionPrecision": 0.6719393203720823,
+        "velocityMean": 0.5247691898812329,
+        "velocityDeviation": 0.03650627240725481,
+        "velocityAccuracy": 0.9504616202375342,
+        "velocityPrecision": 0.9269874551854904
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.75,
+        "barPosition": 0.1875,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.554153962516942,
+            "beatPosition": 0.674999999999994,
+            "barPosition": 0.1687499999999985
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 4.650499999995019,
+            "barPosition": 1.1626249999987548
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 6.653333333333315,
+            "barPosition": 1.6633333333333287
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 8.766500000009916,
+            "barPosition": 2.191625000002479
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.48602517675625084,
+            "beatPosition": 10.712999999995029,
+            "barPosition": 2.6782499999987572
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 12.686333333328374,
+            "barPosition": 3.1715833333320935
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 14.659666666661716,
+            "barPosition": 3.664916666665429
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.7786521769046981,
+            "beatPosition": 2.8433333333333253,
+            "barPosition": 0.7108333333333313
+          }
+        ],
+        "dexterityAccuracy": 0.875,
+        "relativePositionMean": -0.015916666667022756,
+        "positionDeviation": 0.0096132297655534,
+        "positionAccuracy": 0.6816666666595449,
+        "positionPrecision": 0.807735404688932,
+        "velocityMean": 0.4848870866730719,
+        "velocityDeviation": 0.03324132396048315,
+        "velocityAccuracy": 0.9697741733461438,
+        "velocityPrecision": 0.9335173520790337
+      },
+      {
+        "dexterity": "l",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1,
+        "barPosition": 0.25,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.7476998850543153,
+            "beatPosition": 0.9251666666567265,
+            "barPosition": 0.23129166666418163
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.7633329321824984,
+            "beatPosition": 4.900666666676586,
+            "barPosition": 1.2251666666691465
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.7529469661657903,
+            "beatPosition": 6.903499999990047,
+            "barPosition": 1.7258749999975118
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.7043173944508145,
+            "beatPosition": 9.017000000004952,
+            "barPosition": 2.254250000001238
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.709885207532891,
+            "beatPosition": 10.934833333343265,
+            "barPosition": 2.7337083333358163
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.7786521769046981,
+            "beatPosition": 12.908499999990076,
+            "barPosition": 3.227124999997519
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.7529469661657903,
+            "beatPosition": 14.909333333323415,
+            "barPosition": 3.727333333330854
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5681853972686127,
+            "beatPosition": 1.1198333333432613,
+            "barPosition": 0.2799583333358153
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 3.065666666676592,
+            "barPosition": 0.766416666669148
+          }
+        ],
+        "dexterityAccuracy": 0.7777777777777778,
+        "relativePositionMean": -0.01789285714339043,
+        "positionDeviation": 0.009472937047038414,
+        "positionAccuracy": 0.6421428571321914,
+        "positionPrecision": 0.8105412590592318,
+        "velocityMean": 0.744254504065257,
+        "velocityDeviation": 0.02531627378804238,
+        "velocityAccuracy": 0.4885090081305139,
+        "velocityPrecision": 0.9493674524239153
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.25,
+        "barPosition": 0.3125,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 5.150666666676585,
+            "barPosition": 1.2876666666691463
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 7.181666666666647,
+            "barPosition": 1.7954166666666618
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 9.238499999990053,
+            "barPosition": 2.309624999997513
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.48602517675625084,
+            "beatPosition": 11.184999999999997,
+            "barPosition": 2.7962499999999992
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 13.158833333328376,
+            "barPosition": 3.289708333332094
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 15.159833333343284,
+            "barPosition": 3.789958333335821
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.01772916666646074,
+        "positionDeviation": 0.007331547682113169,
+        "positionAccuracy": 0.6454166666707852,
+        "positionPrecision": 0.8533690463577366,
+        "velocityMean": 0.5107174111062368,
+        "velocityDeviation": 0.01796055778609333,
+        "velocityAccuracy": 0.9785651777875264,
+        "velocityPrecision": 0.9640788844278133
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.5,
+        "barPosition": 0.375,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 1.3978333333382944,
+            "barPosition": 0.3494583333345736
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 1.6203333333382945,
+            "barPosition": 0.40508333333457364
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 3.621666666666656,
+            "barPosition": 0.905416666666664
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 5.400833333333317,
+            "barPosition": 1.3502083333333292
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 7.4595000000049465,
+            "barPosition": 1.8648750000012366
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 9.516333333328355,
+            "barPosition": 2.3790833333320887
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5324139056496683,
+            "beatPosition": 13.409166666666676,
+            "barPosition": 3.352291666666669
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 15.438833333328386,
+            "barPosition": 3.8597083333320965
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.00423437499984608,
+        "positionDeviation": 0.02185874333936639,
+        "positionAccuracy": 0.9153125000030784,
+        "positionPrecision": 0.5628251332126722,
+        "velocityMean": 0.5096601104599627,
+        "velocityDeviation": 0.032761920875947946,
+        "velocityAccuracy": 0.9806797790800745,
+        "velocityPrecision": 0.9344761582481041
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.75,
+        "barPosition": 0.4375,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 5.651333333328349,
+            "barPosition": 1.4128333333320873
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 7.73783333333828,
+            "barPosition": 1.93445833333457
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4255612320274539,
+            "beatPosition": 9.767000000004959,
+            "barPosition": 2.4417500000012398
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4255612320274539,
+            "beatPosition": 11.685,
+            "barPosition": 2.92125
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 13.686500000009946,
+            "barPosition": 3.4216250000024866
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 15.688666666671656,
+            "barPosition": 3.922166666667914
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.822900573781978,
+            "beatPosition": 1.8706666666765945,
+            "barPosition": 0.46766666666914863
+          }
+        ],
+        "dexterityAccuracy": 0.8571428571428571,
+        "relativePositionMean": -0.011819444443617044,
+        "positionDeviation": 0.009563405206649717,
+        "positionAccuracy": 0.7636111111276591,
+        "positionPrecision": 0.8087318958670057,
+        "velocityMean": 0.44333555546133585,
+        "velocityDeviation": 0.017434992531576383,
+        "velocityAccuracy": 0.8866711109226717,
+        "velocityPrecision": 0.9651300149368472
+      }
+    ],
+    "isRecording": false
+  },
+  {
+    "exercise": {
+      "name": "Single stroke roll",
+      "description": "",
+      "structure": [
+        [
+          "ssr",
+          4,
+          4,
+          false
+        ]
+      ],
+      "hitNotes": [
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0,
+          "barPosition": 0
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.25,
+          "barPosition": 0.0625
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.5,
+          "barPosition": 0.125
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.75,
+          "barPosition": 0.1875
+        },
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1,
+          "barPosition": 0.25
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.25,
+          "barPosition": 0.3125
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.5,
+          "barPosition": 0.375
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.75,
+          "barPosition": 0.4375
+        },
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 2,
+          "barPosition": 0.5
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 2.25,
+          "barPosition": 0.5625
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 2.5,
+          "barPosition": 0.625
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 2.75,
+          "barPosition": 0.6875
+        },
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 3,
+          "barPosition": 0.75
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 3.25,
+          "barPosition": 0.8125
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 3.5,
+          "barPosition": 0.875
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 3.75,
+          "barPosition": 0.9375
+        }
+      ],
+      "accentPlacement": "rudiment",
+      "beatsPerBar": 4,
+      "beats": 4,
+      "bars": 1
+    },
+    "repeats": 8,
+    "startTimestamp": 1637413936065,
+    "beatsPerMinute": 100,
+    "recording": [
+      {
+        "dexterity": "r",
+        "velocity": 0.8324141912694495,
+        "beatPosition": -0.046000000014907505,
+        "barPosition": -0.011500000003726876
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5818785759635375,
+        "beatPosition": 0.2321666666616933,
+        "barPosition": 0.058041666665423326
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5886057194025436,
+        "beatPosition": 0.4821666666616933,
+        "barPosition": 0.12054166666542332
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 0.732833333338294,
+        "barPosition": 0.1832083333345735
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7317329231804058,
+        "beatPosition": 0.9273333333184256,
+        "barPosition": 0.2318333333296064
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.26620695282483414,
+        "beatPosition": 1.0661666666716272,
+        "barPosition": 0.2665416666679068
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.48602517675625084,
+        "beatPosition": 1.178333333333327,
+        "barPosition": 0.29458333333333175
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.554153962516942,
+        "beatPosition": 1.4274999999999938,
+        "barPosition": 0.35687499999999844
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 1.677999999995027,
+        "barPosition": 0.41949999999875676
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8181022788030096,
+        "beatPosition": 1.899999999999994,
+        "barPosition": 0.4749999999999985
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 2.122666666656726,
+        "barPosition": 0.5306666666641815
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5681853972686127,
+        "beatPosition": 2.4004999999950254,
+        "barPosition": 0.6001249999987563
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5019646441105269,
+        "beatPosition": 2.622999999995025,
+        "barPosition": 0.6557499999987563
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.7936757901325451,
+        "beatPosition": 2.8728333333382916,
+        "barPosition": 0.7182083333345729
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5952568425994088,
+        "beatPosition": 3.095333333338291,
+        "barPosition": 0.7738333333345727
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5681853972686127,
+        "beatPosition": 3.3736666666716237,
+        "barPosition": 0.8434166666679059
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.45246481570263436,
+        "beatPosition": 3.6238333333283554,
+        "barPosition": 0.9059583333320889
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8132756745622273,
+        "beatPosition": 3.873999999985088,
+        "barPosition": 0.968499999996272
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 4.096166666671622,
+        "barPosition": 1.0240416666679055
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5324139056496683,
+        "beatPosition": 4.3745000000049545,
+        "barPosition": 1.0936250000012386
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 4.624500000004954,
+        "barPosition": 1.1561250000012384
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8371304567239225,
+        "beatPosition": 4.902499999999986,
+        "barPosition": 1.2256249999999964
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 5.125333333338286,
+        "barPosition": 1.2813333333345716
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 5.680833333333316,
+        "barPosition": 1.420208333333329
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8132756745622273,
+        "beatPosition": 5.931166666671616,
+        "barPosition": 1.482791666667904
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 6.181666666666648,
+        "barPosition": 1.545416666666662
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.554153962516942,
+        "beatPosition": 6.459166666666648,
+        "barPosition": 1.614791666666662
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.46108396762070397,
+        "beatPosition": 6.68183333332338,
+        "barPosition": 1.670458333330845
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8276710518549868,
+        "beatPosition": 6.959666666661679,
+        "barPosition": 1.7399166666654198
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 7.1541666666666455,
+        "barPosition": 1.7885416666666614
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 7.460333333338278,
+        "barPosition": 1.8650833333345695
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 7.682333333318409,
+        "barPosition": 1.9205833333296023
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8829085791038153,
+        "beatPosition": 7.960666666651743,
+        "barPosition": 1.9901666666629358
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 8.210666666651747,
+        "barPosition": 2.0526666666629367
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 8.488999999985085,
+        "barPosition": 2.122249999996271
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.45246481570263436,
+        "beatPosition": 8.683333333333321,
+        "barPosition": 2.1708333333333303
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8694282672026621,
+        "beatPosition": 8.933999999985087,
+        "barPosition": 2.2334999999962717
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5470032892270364,
+        "beatPosition": 9.183666666671623,
+        "barPosition": 2.295916666667906
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5324139056496683,
+        "beatPosition": 9.46166666666666,
+        "barPosition": 2.365416666666665
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4255612320274539,
+        "beatPosition": 9.684166666666664,
+        "barPosition": 2.421041666666666
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8739448080737451,
+        "beatPosition": 9.962000000004966,
+        "barPosition": 2.4905000000012416
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 10.212166666661702,
+        "barPosition": 2.5530416666654254
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5019646441105269,
+        "beatPosition": 10.49049999999504,
+        "barPosition": 2.62262499999876
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 10.685333333338308,
+        "barPosition": 2.671333333334577
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8511224640549078,
+        "beatPosition": 10.935000000000011,
+        "barPosition": 2.733750000000003
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 11.185499999995045,
+        "barPosition": 2.7963749999987613
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 11.435333333338317,
+        "barPosition": 2.8588333333345792
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4255612320274539,
+        "beatPosition": 11.685833333333353,
+        "barPosition": 2.921458333333338
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8739448080737451,
+        "beatPosition": 11.935999999990086,
+        "barPosition": 2.9839999999975215
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 12.186333333328388,
+        "barPosition": 3.046583333332097
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 12.43683333332342,
+        "barPosition": 3.109208333330855
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 12.68666666666669,
+        "barPosition": 3.1716666666666726
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.803535494759617,
+        "beatPosition": 12.908833333328392,
+        "barPosition": 3.227208333332098
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 13.187500000000028,
+        "barPosition": 3.296875000000007
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 13.40966666666173,
+        "barPosition": 3.3524166666654325
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.39683789506627254,
+        "beatPosition": 13.68783333333833,
+        "barPosition": 3.4219583333345827
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8132756745622273,
+        "beatPosition": 13.937500000000032,
+        "barPosition": 3.484375000000008
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 14.187500000000034,
+        "barPosition": 3.5468750000000084
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5818785759635375,
+        "beatPosition": 14.43799999999507,
+        "barPosition": 3.6094999999987674
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 14.632833333338338,
+        "barPosition": 3.6582083333345845
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8181022788030096,
+        "beatPosition": 14.910666666651803,
+        "barPosition": 3.7276666666629508
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 15.160833333333372,
+        "barPosition": 3.790208333333343
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5019646441105269,
+        "beatPosition": 15.438666666671672,
+        "barPosition": 3.859666666667918
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4255612320274539,
+        "beatPosition": 15.689166666666708,
+        "barPosition": 3.922291666666677
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8557356277302758,
+        "beatPosition": 15.939500000005008,
+        "barPosition": 3.984875000001252
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.48602517675625084,
+        "beatPosition": 16.16149999998514,
+        "barPosition": 4.040374999996285
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 16.467999999995072,
+        "barPosition": 4.116999999998768
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 16.662166666661737,
+        "barPosition": 4.165541666665434
+      }
+    ],
+    "analysis": [
+      {
+        "dexterity": "r",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0,
+        "barPosition": 0,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.8324141912694495,
+            "beatPosition": -0.046000000014907505,
+            "barPosition": -0.011500000003726876
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8829085791038153,
+            "beatPosition": 7.960666666651743,
+            "barPosition": 1.9901666666629358
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8739448080737451,
+            "beatPosition": 11.935999999990086,
+            "barPosition": 2.9839999999975215
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8557356277302758,
+            "beatPosition": 15.939500000005008,
+            "barPosition": 3.984875000001252
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 4.096166666671622,
+            "barPosition": 1.0240416666679055
+          }
+        ],
+        "dexterityAccuracy": 0.8,
+        "relativePositionMean": -0.013114583335504363,
+        "positionDeviation": 0.0025367738068961245,
+        "positionAccuracy": 0.7377083332899128,
+        "positionPrecision": 0.9492645238620775,
+        "velocityMean": 0.8612508015443214,
+        "velocityDeviation": 0.01931427169821289,
+        "velocityAccuracy": 0.7225016030886429,
+        "velocityPrecision": 0.9613714566035743
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.25,
+        "barPosition": 0.0625,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.5818785759635375,
+            "beatPosition": 0.2321666666616933,
+            "barPosition": 0.058041666665423326
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 8.210666666651747,
+            "barPosition": 2.0526666666629367
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 12.186333333328388,
+            "barPosition": 3.046583333332097
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.48602517675625084,
+            "beatPosition": 16.16149999998514,
+            "barPosition": 4.040374999996285
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5324139056496683,
+            "beatPosition": 4.3745000000049545,
+            "barPosition": 1.0936250000012386
+          }
+        ],
+        "dexterityAccuracy": 0.8,
+        "relativePositionMean": -0.013083333335814516,
+        "positionDeviation": 0.006609323696819996,
+        "positionAccuracy": 0.7383333332837096,
+        "positionPrecision": 0.8678135260636001,
+        "velocityMean": 0.5038261967356504,
+        "velocityDeviation": 0.045438698197827025,
+        "velocityAccuracy": 0.9923476065286991,
+        "velocityPrecision": 0.9091226036043459
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.5,
+        "barPosition": 0.125,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5886057194025436,
+            "beatPosition": 0.4821666666616933,
+            "barPosition": 0.12054166666542332
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 4.624500000004954,
+            "barPosition": 1.1561250000012384
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 8.488999999985085,
+            "barPosition": 2.122249999996271
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 12.43683333332342,
+            "barPosition": 3.109208333330855
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 16.467999999995072,
+            "barPosition": 4.116999999998768
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": 0.000024999998511221476,
+        "positionDeviation": 0.01618380964068264,
+        "positionAccuracy": 0.9995000000297756,
+        "positionPrecision": 0.6763238071863472,
+        "velocityMean": 0.5180477126933736,
+        "velocityDeviation": 0.04992703781967546,
+        "velocityAccuracy": 0.9639045746132529,
+        "velocityPrecision": 0.9001459243606491
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.75,
+        "barPosition": 0.1875,
+        "recordedHits": [],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 0.732833333338294,
+            "barPosition": 0.1832083333345735
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.45246481570263436,
+            "beatPosition": 8.683333333333321,
+            "barPosition": 2.1708333333333303
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 12.68666666666669,
+            "barPosition": 3.1716666666666726
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 16.662166666661737,
+            "barPosition": 4.165541666665434
+          }
+        ]
+      },
+      {
+        "dexterity": "r",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1,
+        "barPosition": 0.25,
+        "recordedHits": [],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.7317329231804058,
+            "beatPosition": 0.9273333333184256,
+            "barPosition": 0.2318333333296064
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.26620695282483414,
+            "beatPosition": 1.0661666666716272,
+            "barPosition": 0.2665416666679068
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.8371304567239225,
+            "beatPosition": 4.902499999999986,
+            "barPosition": 1.2256249999999964
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.8694282672026621,
+            "beatPosition": 8.933999999985087,
+            "barPosition": 2.2334999999962717
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.803535494759617,
+            "beatPosition": 12.908833333328392,
+            "barPosition": 3.227208333332098
+          }
+        ]
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.25,
+        "barPosition": 0.3125,
+        "recordedHits": [],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.48602517675625084,
+            "beatPosition": 1.178333333333327,
+            "barPosition": 0.29458333333333175
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 5.125333333338286,
+            "barPosition": 1.2813333333345716
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5470032892270364,
+            "beatPosition": 9.183666666671623,
+            "barPosition": 2.295916666667906
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 13.187500000000028,
+            "barPosition": 3.296875000000007
+          }
+        ]
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.5,
+        "barPosition": 0.375,
+        "recordedHits": [],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.554153962516942,
+            "beatPosition": 1.4274999999999938,
+            "barPosition": 0.35687499999999844
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5324139056496683,
+            "beatPosition": 9.46166666666666,
+            "barPosition": 2.365416666666665
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 13.40966666666173,
+            "barPosition": 3.3524166666654325
+          }
+        ]
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.75,
+        "barPosition": 0.4375,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 1.677999999995027,
+            "barPosition": 0.41949999999875676
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 5.680833333333316,
+            "barPosition": 1.420208333333329
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4255612320274539,
+            "beatPosition": 9.684166666666664,
+            "barPosition": 2.421041666666666
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.39683789506627254,
+            "beatPosition": 13.68783333333833,
+            "barPosition": 3.4219583333345827
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.016822916666666354,
+        "positionDeviation": 0.000919208125465518,
+        "positionAccuracy": 0.6635416666666729,
+        "positionPrecision": 0.9816158374906896,
+        "velocityMean": 0.43390557785891487,
+        "velocityDeviation": 0.026501461387573415,
+        "velocityAccuracy": 0.8678111557178297,
+        "velocityPrecision": 0.9469970772248532
+      },
+      {
+        "dexterity": "r",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 2,
+        "barPosition": 0.5,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.8181022788030096,
+            "beatPosition": 1.899999999999994,
+            "barPosition": 0.4749999999999985
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8132756745622273,
+            "beatPosition": 5.931166666671616,
+            "barPosition": 1.482791666667904
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8739448080737451,
+            "beatPosition": 9.962000000004966,
+            "barPosition": 2.4905000000012416
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8132756745622273,
+            "beatPosition": 13.937500000000032,
+            "barPosition": 3.484375000000008
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 2.122666666656726,
+            "barPosition": 0.5306666666641815
+          }
+        ],
+        "dexterityAccuracy": 0.8,
+        "relativePositionMean": -0.01683333333271199,
+        "positionDeviation": 0.005524330653662784,
+        "positionAccuracy": 0.6633333333457603,
+        "positionPrecision": 0.8895133869267443,
+        "velocityMean": 0.8296496090003023,
+        "velocityDeviation": 0.025649644020950827,
+        "velocityAccuracy": 0.6592992180006045,
+        "velocityPrecision": 0.9487007119580984
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 2.25,
+        "barPosition": 0.5625,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 6.181666666666648,
+            "barPosition": 1.545416666666662
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 10.212166666661702,
+            "barPosition": 2.5530416666654254
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 14.187500000000034,
+            "barPosition": 3.5468750000000084
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.014055555555968047,
+        "positionDeviation": 0.003304796831117134,
+        "positionAccuracy": 0.7188888888806391,
+        "positionPrecision": 0.9339040633776573,
+        "velocityMean": 0.48048674308268063,
+        "velocityDeviation": 0.010179308951102056,
+        "velocityAccuracy": 0.9609734861653613,
+        "velocityPrecision": 0.9796413820977958
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 2.5,
+        "barPosition": 0.625,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5681853972686127,
+            "beatPosition": 2.4004999999950254,
+            "barPosition": 0.6001249999987563
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5019646441105269,
+            "beatPosition": 2.622999999995025,
+            "barPosition": 0.6557499999987563
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.554153962516942,
+            "beatPosition": 6.459166666666648,
+            "barPosition": 1.614791666666662
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5019646441105269,
+            "beatPosition": 10.49049999999504,
+            "barPosition": 2.62262499999876
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5818785759635375,
+            "beatPosition": 14.43799999999507,
+            "barPosition": 3.6094999999987674
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.004441666667659638,
+        "positionDeviation": 0.01905668809390043,
+        "positionAccuracy": 0.9111666666468072,
+        "positionPrecision": 0.6188662381219914,
+        "velocityMean": 0.5416294447940292,
+        "velocityDeviation": 0.033551952379699504,
+        "velocityAccuracy": 0.9167411104119416,
+        "velocityPrecision": 0.932896095240601
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 2.75,
+        "barPosition": 0.6875,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.7936757901325451,
+            "beatPosition": 2.8728333333382916,
+            "barPosition": 0.7182083333345729
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.46108396762070397,
+            "beatPosition": 6.68183333332338,
+            "barPosition": 1.670458333330845
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 10.685333333338308,
+            "barPosition": 2.671333333334577
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 14.632833333338338,
+            "barPosition": 3.6582083333345845
+          }
+        ],
+        "dexterityAccuracy": 0.25,
+        "relativePositionMean": 0.0307083333345729,
+        "positionDeviation": 0,
+        "positionAccuracy": 0.38583333330854197,
+        "positionPrecision": 1,
+        "velocityMean": 0.7936757901325451,
+        "velocityDeviation": 0,
+        "velocityAccuracy": 0.41264841973490984,
+        "velocityPrecision": 1
+      },
+      {
+        "dexterity": "r",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 3,
+        "barPosition": 0.75,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5952568425994088,
+            "beatPosition": 3.095333333338291,
+            "barPosition": 0.7738333333345727
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.8276710518549868,
+            "beatPosition": 6.959666666661679,
+            "barPosition": 1.7399166666654198
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.8511224640549078,
+            "beatPosition": 10.935000000000011,
+            "barPosition": 2.733750000000003
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.8181022788030096,
+            "beatPosition": 14.910666666651803,
+            "barPosition": 3.7276666666629508
+          }
+        ],
+        "dexterityAccuracy": 0.25,
+        "relativePositionMean": 0.023833333334572715,
+        "positionDeviation": 0,
+        "positionAccuracy": 0.5233333333085457,
+        "positionPrecision": 1,
+        "velocityMean": 0.5952568425994088,
+        "velocityDeviation": 0,
+        "velocityAccuracy": 0.19051368519881762,
+        "velocityPrecision": 1
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 3.25,
+        "barPosition": 0.8125,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.5681853972686127,
+            "beatPosition": 3.3736666666716237,
+            "barPosition": 0.8434166666679059
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 7.1541666666666455,
+            "barPosition": 1.7885416666666614
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 11.185499999995045,
+            "barPosition": 2.7963749999987613
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 15.160833333333372,
+            "barPosition": 3.790208333333343
+          }
+        ],
+        "dexterityAccuracy": 0.25,
+        "relativePositionMean": 0.030916666667905934,
+        "positionDeviation": 0,
+        "positionAccuracy": 0.3816666666418813,
+        "positionPrecision": 1,
+        "velocityMean": 0.5681853972686127,
+        "velocityDeviation": 0,
+        "velocityAccuracy": 0.8636292054627746,
+        "velocityPrecision": 1
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 3.5,
+        "barPosition": 0.875,
+        "recordedHits": [],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.45246481570263436,
+            "beatPosition": 3.6238333333283554,
+            "barPosition": 0.9059583333320889
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 7.460333333338278,
+            "barPosition": 1.8650833333345695
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 11.435333333338317,
+            "barPosition": 2.8588333333345792
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5019646441105269,
+            "beatPosition": 15.438666666671672,
+            "barPosition": 3.859666666667918
+          }
+        ]
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 3.75,
+        "barPosition": 0.9375,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 7.682333333318409,
+            "barPosition": 1.9205833333296023
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4255612320274539,
+            "beatPosition": 11.685833333333353,
+            "barPosition": 2.921458333333338
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4255612320274539,
+            "beatPosition": 15.689166666666708,
+            "barPosition": 3.922291666666677
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.8132756745622273,
+            "beatPosition": 3.873999999985088,
+            "barPosition": 0.968499999996272
+          }
+        ],
+        "dexterityAccuracy": 0.75,
+        "relativePositionMean": -0.016055555556794204,
+        "positionDeviation": 0.0006974933087334894,
+        "positionAccuracy": 0.678888888864116,
+        "positionPrecision": 0.9860501338253302,
+        "velocityMean": 0.43160023958765487,
+        "velocityDeviation": 0.00854044639490991,
+        "velocityAccuracy": 0.8632004791753097,
+        "velocityPrecision": 0.9829191072101802
+      }
+    ],
+    "isRecording": false
+  },
+  {
+    "exercise": {
+      "name": "Single paradiddle",
+      "description": "Single paradiddle",
+      "structure": [
+        [
+          "pd",
+          4,
+          1,
+          false
+        ],
+        [
+          "pd",
+          4,
+          1,
+          true
+        ]
+      ],
+      "hitNotes": [
+        {
+          "dexterity": "r",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0,
+          "barPosition": 0
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.25,
+          "barPosition": 0.0625
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.5,
+          "barPosition": 0.125
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 0.75,
+          "barPosition": 0.1875
+        },
+        {
+          "dexterity": "l",
+          "velocity": 1,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1,
+          "barPosition": 0.25
+        },
+        {
+          "dexterity": "r",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.25,
+          "barPosition": 0.3125
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.5,
+          "barPosition": 0.375
+        },
+        {
+          "dexterity": "l",
+          "velocity": 0.5,
+          "beatDivision": 4,
+          "flag": "",
+          "beatPosition": 1.75,
+          "barPosition": 0.4375
+        }
+      ],
+      "accentPlacement": "rudiment",
+      "beatsPerBar": 4,
+      "beats": 2,
+      "bars": 0.5
+    },
+    "repeats": 8,
+    "startTimestamp": 1637413959997,
+    "beatsPerMinute": 100,
+    "recording": [
+      {
+        "dexterity": "r",
+        "velocity": 0.9049296314052687,
+        "beatPosition": -0.10066666667660801,
+        "barPosition": -0.025166666669152002
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.6640368076317485,
+        "beatPosition": 0.14933333332339202,
+        "barPosition": 0.037333333330848005
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5952568425994088,
+        "beatPosition": 0.39933333332339205,
+        "barPosition": 0.09983333333084801
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 0.62200000000496,
+        "barPosition": 0.15550000000124
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.9178887105958816,
+        "beatPosition": 0.8721666666616926,
+        "barPosition": 0.21804166666542316
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5818785759635375,
+        "beatPosition": 1.1221666666616923,
+        "barPosition": 0.2805416666654231
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5750727444570146,
+        "beatPosition": 1.3726666666567253,
+        "barPosition": 0.34316666666418133
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 1.6504999999950254,
+        "barPosition": 0.41262499999875635
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.30738931174713596,
+        "beatPosition": 1.7898333333184246,
+        "barPosition": 0.44745833332960616
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.9390898592677527,
+        "beatPosition": 1.928833333328359,
+        "barPosition": 0.48220833333208973
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 2.178999999985091,
+        "barPosition": 0.5447499999962727
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5750727444570146,
+        "beatPosition": 2.4568333333233903,
+        "barPosition": 0.6142083333308476
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.45246481570263436,
+        "beatPosition": 2.734833333318423,
+        "barPosition": 0.6837083333296058
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.9049296314052687,
+        "beatPosition": 2.928999999985089,
+        "barPosition": 0.7322499999962723
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 3.20783333333829,
+        "barPosition": 0.8019583333345724
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.6018344659534288,
+        "beatPosition": 3.457999999995022,
+        "barPosition": 0.8644999999987555
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 3.707833333338289,
+        "barPosition": 0.9269583333345722
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8917822551223932,
+        "beatPosition": 3.9856666666517535,
+        "barPosition": 0.9964166666629384
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 4.180333333338288,
+        "barPosition": 1.045083333334572
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5818785759635375,
+        "beatPosition": 4.458166666651753,
+        "barPosition": 1.1145416666629382
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 4.652833333338287,
+        "barPosition": 1.1632083333345717
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8829085791038153,
+        "beatPosition": 4.93083333333332,
+        "barPosition": 1.23270833333333
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 5.15333333333332,
+        "barPosition": 1.28833333333333
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.554153962516942,
+        "beatPosition": 5.431166666671619,
+        "barPosition": 1.3577916666679049
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4940591950252281,
+        "beatPosition": 5.653666666671619,
+        "barPosition": 1.4134166666679047
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8829085791038153,
+        "beatPosition": 5.932166666661685,
+        "barPosition": 1.4830416666654211
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5324139056496683,
+        "beatPosition": 6.182000000004952,
+        "barPosition": 1.545500000001238
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 6.459999999999984,
+        "barPosition": 1.614999999999996
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 6.682166666661683,
+        "barPosition": 1.6705416666654207
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 7.210666666651748,
+        "barPosition": 1.802666666662937
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 7.461166666671615,
+        "barPosition": 1.8652916666679038
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4436782547080569,
+        "beatPosition": 7.683166666651746,
+        "barPosition": 1.9207916666629365
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8557356277302758,
+        "beatPosition": 7.933833333328348,
+        "barPosition": 1.983458333332087
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 8.183666666671618,
+        "barPosition": 2.0459166666679045
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 8.43366666667162,
+        "barPosition": 2.108416666667905
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 8.656333333328353,
+        "barPosition": 2.1640833333320884
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.788699717316095,
+        "beatPosition": 8.934166666666655,
+        "barPosition": 2.233541666666664
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 9.184333333323389,
+        "barPosition": 2.2960833333308472
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5019646441105269,
+        "beatPosition": 9.435166666656725,
+        "barPosition": 2.3587916666641813
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.41620709563472474,
+        "beatPosition": 9.684999999999997,
+        "barPosition": 2.4212499999999992
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.8917822551223932,
+        "beatPosition": 9.934999999999995,
+        "barPosition": 2.483749999999999
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 10.157499999999997,
+        "barPosition": 2.5393749999999993
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5612135332663137,
+        "beatPosition": 10.463499999990066,
+        "barPosition": 2.6158749999975166
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5097475058154177,
+        "beatPosition": 10.657833333338303,
+        "barPosition": 2.6644583333345757
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.803535494759617,
+        "beatPosition": 10.935666666651768,
+        "barPosition": 2.733916666662942
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5397578926492556,
+        "beatPosition": 11.186166666671639,
+        "barPosition": 2.7965416666679097
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46108396762070397,
+        "beatPosition": 11.408166666651772,
+        "barPosition": 2.852041666662943
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.39683789506627254,
+        "beatPosition": 11.658999999985106,
+        "barPosition": 2.9147499999962765
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.878438127193422,
+        "beatPosition": 11.908666666671643,
+        "barPosition": 2.9771666666679106
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.46954492963387634,
+        "beatPosition": 12.158999999985108,
+        "barPosition": 3.039749999996277
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 12.409333333323412,
+        "barPosition": 3.102333333330853
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.48602517675625084,
+        "beatPosition": 12.631333333328378,
+        "barPosition": 3.1578333333320945
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.8084202540056837,
+        "beatPosition": 12.909666666661716,
+        "barPosition": 3.227416666665429
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.554153962516942,
+        "beatPosition": 13.159833333318453,
+        "barPosition": 3.289958333329613
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 13.437666666656757,
+        "barPosition": 3.359416666664189
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.39683789506627254,
+        "beatPosition": 13.68816666665179,
+        "barPosition": 3.4220416666629476
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.9557122091778746,
+        "beatPosition": 13.938333333333363,
+        "barPosition": 3.4845833333333407
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.43471413360133104,
+        "beatPosition": 14.160666666651798,
+        "barPosition": 3.5401666666629494
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5470032892270364,
+        "beatPosition": 14.438499999990102,
+        "barPosition": 3.6096249999975254
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.4778561045889373,
+        "beatPosition": 14.661166666671669,
+        "barPosition": 3.665291666667917
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5174133119983201,
+        "beatPosition": 15.189166666666711,
+        "barPosition": 3.797291666666678
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5249671905758515,
+        "beatPosition": 15.439666666661747,
+        "barPosition": 3.8599166666654368
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.41620709563472474,
+        "beatPosition": 15.71750000000005,
+        "barPosition": 3.9293750000000127
+      }
+    ],
+    "analysis": [
+      {
+        "dexterity": "r",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0,
+        "barPosition": 0,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.9049296314052687,
+            "beatPosition": -0.10066666667660801,
+            "barPosition": -0.025166666669152002
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.9390898592677527,
+            "beatPosition": 1.928833333328359,
+            "barPosition": 0.48220833333208973
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8917822551223932,
+            "beatPosition": 3.9856666666517535,
+            "barPosition": 0.9964166666629384
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8829085791038153,
+            "beatPosition": 5.932166666661685,
+            "barPosition": 1.4830416666654211
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8557356277302758,
+            "beatPosition": 7.933833333328348,
+            "barPosition": 1.983458333332087
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.8917822551223932,
+            "beatPosition": 9.934999999999995,
+            "barPosition": 2.483749999999999
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.878438127193422,
+            "beatPosition": 11.908666666671643,
+            "barPosition": 2.9771666666679106
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.9557122091778746,
+            "beatPosition": 13.938333333333363,
+            "barPosition": 3.4845833333333407
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.016817708334420707,
+        "positionDeviation": 0.005962081334293452,
+        "positionAccuracy": 0.6636458333115859,
+        "positionPrecision": 0.880758373314131,
+        "velocityMean": 0.9000473180153994,
+        "velocityDeviation": 0.030634088537616698,
+        "velocityAccuracy": 0.8000946360307988,
+        "velocityPrecision": 0.9387318229247666
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.25,
+        "barPosition": 0.0625,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.6640368076317485,
+            "beatPosition": 0.14933333332339202,
+            "barPosition": 0.037333333330848005
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 2.178999999985091,
+            "barPosition": 0.5447499999962727
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 4.180333333338288,
+            "barPosition": 1.045083333334572
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5324139056496683,
+            "beatPosition": 6.182000000004952,
+            "barPosition": 1.545500000001238
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 8.183666666671618,
+            "barPosition": 2.0459166666679045
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 10.157499999999997,
+            "barPosition": 2.5393749999999993
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 12.158999999985108,
+            "barPosition": 3.039749999996277
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 14.160666666651798,
+            "barPosition": 3.5401666666629494
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.0202656250012424,
+        "positionDeviation": 0.003188108433104462,
+        "positionAccuracy": 0.594687499975152,
+        "positionPrecision": 0.9362378313379107,
+        "velocityMean": 0.5132409230198965,
+        "velocityDeviation": 0.0655765992618977,
+        "velocityAccuracy": 0.9735181539602069,
+        "velocityPrecision": 0.8688468014762046
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.5,
+        "barPosition": 0.125,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5952568425994088,
+            "beatPosition": 0.39933333332339205,
+            "barPosition": 0.09983333333084801
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 0.62200000000496,
+            "barPosition": 0.15550000000124
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5750727444570146,
+            "beatPosition": 2.4568333333233903,
+            "barPosition": 0.6142083333308476
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5818785759635375,
+            "beatPosition": 4.458166666651753,
+            "barPosition": 1.1145416666629382
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 6.459999999999984,
+            "barPosition": 1.614999999999996
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 8.43366666667162,
+            "barPosition": 2.108416666667905
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5612135332663137,
+            "beatPosition": 10.463499999990066,
+            "barPosition": 2.6158749999975166
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 12.409333333323412,
+            "barPosition": 3.102333333330853
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5470032892270364,
+            "beatPosition": 14.438499999990102,
+            "barPosition": 3.6096249999975254
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.00996296296448115,
+        "positionDeviation": 0.015291766884792495,
+        "positionAccuracy": 0.800740740710377,
+        "positionPrecision": 0.6941646623041502,
+        "velocityMean": 0.5469347141470765,
+        "velocityDeviation": 0.030820569831245464,
+        "velocityAccuracy": 0.906130571705847,
+        "velocityPrecision": 0.938358860337509
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 0.75,
+        "barPosition": 0.1875,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.45246481570263436,
+            "beatPosition": 2.734833333318423,
+            "barPosition": 0.6837083333296058
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 4.652833333338287,
+            "barPosition": 1.1632083333345717
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 6.682166666661683,
+            "barPosition": 1.6705416666654207
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.46954492963387634,
+            "beatPosition": 8.656333333328353,
+            "barPosition": 2.1640833333320884
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5097475058154177,
+            "beatPosition": 10.657833333338303,
+            "barPosition": 2.6644583333345757
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.48602517675625084,
+            "beatPosition": 12.631333333328378,
+            "barPosition": 3.1578333333320945
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 14.661166666671669,
+            "barPosition": 3.665291666667917
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.9178887105958816,
+            "beatPosition": 0.8721666666616926,
+            "barPosition": 0.21804166666542316
+          }
+        ],
+        "dexterityAccuracy": 0.875,
+        "relativePositionMean": -0.02048214285767515,
+        "positionDeviation": 0.00763450348132921,
+        "positionAccuracy": 0.590357142846497,
+        "positionPrecision": 0.8473099303734158,
+        "velocityMean": 0.4876075042479013,
+        "velocityDeviation": 0.026629176240161596,
+        "velocityAccuracy": 0.9752150084958026,
+        "velocityPrecision": 0.9467416475196768
+      },
+      {
+        "dexterity": "l",
+        "velocity": 1,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1,
+        "barPosition": 0.25,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.9049296314052687,
+            "beatPosition": 2.928999999985089,
+            "barPosition": 0.7322499999962723
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.8829085791038153,
+            "beatPosition": 4.93083333333332,
+            "barPosition": 1.23270833333333
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.788699717316095,
+            "beatPosition": 8.934166666666655,
+            "barPosition": 2.233541666666664
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.803535494759617,
+            "beatPosition": 10.935666666651768,
+            "barPosition": 2.733916666662942
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.8084202540056837,
+            "beatPosition": 12.909666666661716,
+            "barPosition": 3.227416666665429
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5818785759635375,
+            "beatPosition": 1.1221666666616923,
+            "barPosition": 0.2805416666654231
+          }
+        ],
+        "dexterityAccuracy": 0.8333333333333334,
+        "relativePositionMean": -0.0180333333350726,
+        "positionDeviation": 0.002350147749263148,
+        "positionAccuracy": 0.639333333298548,
+        "positionPrecision": 0.952997045014737,
+        "velocityMean": 0.837698735318096,
+        "velocityDeviation": 0.04688109128932804,
+        "velocityAccuracy": 0.675397470636192,
+        "velocityPrecision": 0.9062378174213439
+      },
+      {
+        "dexterity": "r",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.25,
+        "barPosition": 0.3125,
+        "recordedHits": [
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 3.20783333333829,
+            "barPosition": 0.8019583333345724
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 5.15333333333332,
+            "barPosition": 1.28833333333333
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 7.210666666651748,
+            "barPosition": 1.802666666662937
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 9.184333333323389,
+            "barPosition": 2.2960833333308472
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 11.186166666671639,
+            "barPosition": 2.7965416666679097
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.554153962516942,
+            "beatPosition": 13.159833333318453,
+            "barPosition": 3.289958333329613
+          },
+          {
+            "dexterity": "r",
+            "velocity": 0.5174133119983201,
+            "beatPosition": 15.189166666666711,
+            "barPosition": 3.797291666666678
+          }
+        ],
+        "wrongHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.5750727444570146,
+            "beatPosition": 1.3726666666567253,
+            "barPosition": 0.34316666666418133
+          }
+        ],
+        "dexterityAccuracy": 0.875,
+        "relativePositionMean": -0.01638095238201609,
+        "positionDeviation": 0.005029842913025809,
+        "positionAccuracy": 0.6723809523596782,
+        "positionPrecision": 0.8994031417394839,
+        "velocityMean": 0.5269331848193327,
+        "velocityDeviation": 0.01347919516919088,
+        "velocityAccuracy": 0.9461336303613346,
+        "velocityPrecision": 0.9730416096616182
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.5,
+        "barPosition": 0.375,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.6018344659534288,
+            "beatPosition": 3.457999999995022,
+            "barPosition": 0.8644999999987555
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.554153962516942,
+            "beatPosition": 5.431166666671619,
+            "barPosition": 1.3577916666679049
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5397578926492556,
+            "beatPosition": 7.461166666671615,
+            "barPosition": 1.8652916666679038
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5019646441105269,
+            "beatPosition": 9.435166666656725,
+            "barPosition": 2.3587916666641813
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.46108396762070397,
+            "beatPosition": 11.408166666651772,
+            "barPosition": 2.852041666662943
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4778561045889373,
+            "beatPosition": 13.437666666656757,
+            "barPosition": 3.359416666664189
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.5249671905758515,
+            "beatPosition": 15.439666666661747,
+            "barPosition": 3.8599166666654368
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.015321428572669398,
+        "positionDeviation": 0.004097867374044889,
+        "positionAccuracy": 0.6935714285466121,
+        "positionPrecision": 0.9180426525191022,
+        "velocityMean": 0.5230883182879494,
+        "velocityDeviation": 0.044375245934949785,
+        "velocityAccuracy": 0.9538233634241011,
+        "velocityPrecision": 0.9112495081301004
+      },
+      {
+        "dexterity": "l",
+        "velocity": 0.5,
+        "beatDivision": 4,
+        "flag": "",
+        "beatPosition": 1.75,
+        "barPosition": 0.4375,
+        "recordedHits": [
+          {
+            "dexterity": "l",
+            "velocity": 0.43471413360133104,
+            "beatPosition": 1.6504999999950254,
+            "barPosition": 0.41262499999875635
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.30738931174713596,
+            "beatPosition": 1.7898333333184246,
+            "barPosition": 0.44745833332960616
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 3.707833333338289,
+            "barPosition": 0.9269583333345722
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4940591950252281,
+            "beatPosition": 5.653666666671619,
+            "barPosition": 1.4134166666679047
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.4436782547080569,
+            "beatPosition": 7.683166666651746,
+            "barPosition": 1.9207916666629365
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.41620709563472474,
+            "beatPosition": 9.684999999999997,
+            "barPosition": 2.4212499999999992
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.39683789506627254,
+            "beatPosition": 11.658999999985106,
+            "barPosition": 2.9147499999962765
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.39683789506627254,
+            "beatPosition": 13.68816666665179,
+            "barPosition": 3.4220416666629476
+          },
+          {
+            "dexterity": "l",
+            "velocity": 0.41620709563472474,
+            "beatPosition": 15.71750000000005,
+            "barPosition": 3.9293750000000127
+          }
+        ],
+        "wrongHits": [],
+        "dexterityAccuracy": 1,
+        "relativePositionMean": -0.014314814816331999,
+        "positionDeviation": 0.010168641867325951,
+        "positionAccuracy": 0.71370370367336,
+        "positionPrecision": 0.796627162653481,
+        "velocityMean": 0.41662323679908925,
+        "velocityDeviation": 0.047729413695889865,
+        "velocityAccuracy": 0.8332464735981785,
+        "velocityPrecision": 0.9045411726082203
+      }
+    ],
+    "isRecording": false
+  }
+]

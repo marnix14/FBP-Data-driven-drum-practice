@@ -4,7 +4,7 @@ class Input {
     portName = "COM36";
     data;
     portSelector;
-    maxHitVelocity = 10;
+
 
     constructor() { }
 
@@ -23,19 +23,28 @@ class Input {
     }
 
     serialEvent() {
-        
-        var inData = this.serial.readLine();
-        //this.serial.serialBuffer.length =0;
-        if (inData.length>0) {
-            let splitString = split(inData, ' ');
-            let dext = splitString[0];
-            let velocity = Number(splitString[1]);
-            view.padInput(new Hit(dext, velocity / this.maxHitVelocity));
-            console.log("Serial data: " + inData);
+        this.data = Number(this.serial.read());
+        //console.log("Received serial data:", this.data);
+        let dext;
+        let velocity;
+        if (this.data < 128) {
+            dext = "r";
+            velocity = (this.data / 127);
+        } else {
+            dext = "l";
+            velocity = ((this.data-127 )/ 127);
 
         }
-        //inData = null;
+        velocity = sqrt(velocity)
+        console.log(dext, velocity.toFixed(2));
+        //ExerciseSoundPlayer.playHit(velocity, 0);
 
+
+
+
+        view.padInput(new Hit(dext, velocity));
 
     }
+
+
 }

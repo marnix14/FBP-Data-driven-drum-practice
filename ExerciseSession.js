@@ -66,10 +66,22 @@ class ExerciseSession {
 
     static fromJSON(exerciseSessionJSON) {
         let exerciseSession = Object.assign(new ExerciseSession(), exerciseSessionJSON);
+        console.log(exerciseSession)
         for (let i = 0; i < exerciseSession.recording.length; i++) {
             exerciseSession.recording[i] = Object.assign(new TimedHitNote(), exerciseSession.recording[i]);
         }
+        for (let i = 0; i < exerciseSession.analysis.length; i++) {
+            exerciseSession.analysis[i] = Object.assign(new HitAnalysis(new TimedHitNote()), exerciseSession.analysis[i]);
+            for (let j = 0; j < exerciseSession.analysis[i].recordedHits.length; j++) {
+                exerciseSession.analysis[i].recordedHits[j] = Object.assign(new TimedHit(), exerciseSession.analysis[i].recordedHits[j] );
+            }
+            for (let j = 0; j < exerciseSession.analysis[i].wrongHits.length; j++) {
+                exerciseSession.analysis[i].wrongHits[j] = Object.assign(new TimedHit(), exerciseSession.analysis[i].wrongHits[j] );
+            }
+        }
         exerciseSession.exercise = Exercise.fromTransformedRudimentJSON(exerciseSession.exercise);
+        console.log(exerciseSession)
+
         return exerciseSession;
     }
 

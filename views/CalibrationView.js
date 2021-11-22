@@ -100,13 +100,14 @@ class CalibrationView extends View {
         if (this.calibrationState == "input") {
             this.inputLatencies.push(msOffset);
             if (this.inputLatencies.length >= CalibrationView.repeats) {
-                this.inputLatency = this.getLatencyFromInputLatencies(this.inputLatencies);
+                this.inputLatency = this.getLatencyFromLatencies(this.inputLatencies);
                 this.startAudioCalibration();
             }
         } else if (this.calibrationState == "audio") {
             this.audioLatencies.push(msOffset - this.inputLatency);
+            console.log(msOffset, this.inputLatency, msOffset - this.inputLatency)
             if (this.audioLatencies.length > CalibrationView.repeats) {
-                this.audioLatency = this.getLatencyFromInputLatencies(this.audioLatencies);
+                this.audioLatency = this.getLatencyFromLatencies(this.audioLatencies);
                 this.endCalibration();
             }
         }
@@ -132,20 +133,20 @@ class CalibrationView extends View {
 
     startAudioCalibration() {
         this.calibrationState = "audio";
-        this.metronome.beatsPerMinute = 80 * 2;
+        this.metronome.beatsPerMinute = 40 * 2;
         this.metronome.beatsPerBar = 2;
         this.metronome.reset();
         settings.metronomeVolume = 1;
     }
 
-    getLatencyFromInputLatencies(inputLatencies) {
+    getLatencyFromLatencies(latencies) {
         let latencySum = 0;
         let latencyWindowSize = 0;
-        for (let i = inputLatencies.length - 1 - CalibrationView.takeLastHitsAmount; i < inputLatencies.length; i++) {
-            latencySum += inputLatencies[i];
+        for (let i = latencies.length - 1 - CalibrationView.takeLastHitsAmount; i < latencies.length; i++) {
+            latencySum += latencies[i];
             latencyWindowSize++;
         }
-        return int(max(0, latencySum / latencyWindowSize));
+        return int(latencySum / latencyWindowSize);
     }
 
     destroy() {

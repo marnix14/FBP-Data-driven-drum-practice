@@ -4,12 +4,13 @@ class ExerciseView extends View {
     exercise;
     exerciseSession;
     exerciseSoundPlayer = new ExerciseSoundPlayer(this.metronome);
-    
+
     exerciseSelectionList;
 
     currentRepeat = 0;
 
-    repeats = 2;
+    repeats = 8;
+    serialMillis;
 
     constructor(exercise = Exercise.EMPTY) {
         super();
@@ -17,7 +18,7 @@ class ExerciseView extends View {
             this.setExercise(selected, this.repeats);
         });
         this.setExercise(exercise, this.repeats);
-                this.initUI();
+        this.initUI();
 
     }
 
@@ -210,7 +211,8 @@ class ExerciseView extends View {
         if (this.currentRepeat >= this.exerciseSession.repeats) {
             this.metronome.pause();
             this.metronome.reset();
-            changeView(new AnalysisView(this.exerciseSession));
+            this.stopRecording();
+            
         }
     }
 
@@ -225,6 +227,11 @@ class ExerciseView extends View {
         if (this.metronome.isCountingDown(settings.audioLatency)) {
             this.drawCountDown();
         }
+        if (millis() - this.serialMillis < 200) {
+            fill(255, 255, 255, 255);
+            ellipse(width / 2 - 200, height / 2 + 150, 50, 50)
+        }
+
     }
 
     drawCountDown() {

@@ -5,7 +5,7 @@ class ExerciseSessionHistory {
     static testExerciseSession;
 
     static preload() {
-        loadJSON("assets/data/testExerciseSessionHistory.json", (result) => {
+        loadJSON("assets/data/diddle diddle test job.json", (result) => {
             ExerciseSessionHistory.testExerciseSession = ExerciseSession.fromJSON(result[0]);
         });
     }
@@ -16,6 +16,6 @@ class ExerciseSessionHistory {
     }
 
     static saveToJSON() {
-        //saveJSON(this.exerciseSessions, "testExerciseSessionHistory.json");
+        saveJSON(this.exerciseSessions, "assets/data/testExerciseSessionHistory.json");
     }
 }

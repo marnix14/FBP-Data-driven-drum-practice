@@ -25,7 +25,7 @@ function setup() {
     frameRate(500);
     textFont("Roboto");
     input.setup();
-    view = new ExerciseView(Exercises.exercises[7]);
+    view = new ExerciseView(Exercises.exercises[0]);
 }
 
 function windowResized() {

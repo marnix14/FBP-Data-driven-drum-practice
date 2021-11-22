@@ -8,7 +8,7 @@ class DrumScroll extends Bounds {
     beatRuleWidthRatio = 0.3;
     subdivisionRuleWidthRatio = 0.2;
 
-    dexterityWidthRatio = 0.2;
+    dexterityWidthRatio = 0.25;
     noteSizeRatio = 0.1;
 
     subdivisions = 0;
