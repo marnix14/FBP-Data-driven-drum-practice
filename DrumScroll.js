@@ -43,8 +43,8 @@ class DrumScroll extends Bounds {
         const currentTimeRuleWidth = this.width * this.currentTimeRuleWidthRatio;
         this.drawRule(this.bottom, currentTimeRuleWidth, 150, 6);
         for (
-            let r = max(0, int(currentRepeat) - 1);
-            r < min(int(currentRepeat) + 2, this.exerciseSession.repeats);
+            let r = max(0, int(currentRepeat) - 2);
+            r < min(int(currentRepeat) + 3, this.exerciseSession.repeats);
             r++
         ) {
             for (const i in this.exerciseSession.exercise.hitNotes) {
