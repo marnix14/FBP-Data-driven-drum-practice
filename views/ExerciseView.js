@@ -157,7 +157,7 @@ class ExerciseView extends View {
         this.metronome.reset();
         const timestamp = Date.now();
         this.exerciseSession.startRecording(timestamp, this.metronome.beatsPerMinute);
-        this.metronome.play(-settings.recordingCountdownInBars * this.metronome.beatsPerBar);
+        this.metronome.play(-settings.recordingCountdownInBars * this.metronome.beatsPerBar - 0.5);
     }
 
     stopRecording() {
@@ -303,7 +303,12 @@ class ExerciseView extends View {
     }
 
     mouseDragged(dX, dY) {
-        if (mouseX > this.drumScroll.left && mouseX < this.drumScroll.right) {
+        if (
+            !this.exerciseSession.isRecording &&
+            !this.waitForRecording &&
+            mouseX > this.drumScroll.left &&
+            mouseX < this.drumScroll.right
+        ) {
             const dBar = dY / this.drumScroll.h;
             this.metronome.setBarPosition(this.metronome.barPosition + dBar);
         }
