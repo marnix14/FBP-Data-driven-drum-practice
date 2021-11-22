@@ -19,7 +19,6 @@ class ExerciseView extends View {
         });
         this.setExercise(exercise, this.repeats);
         this.initUI();
-
     }
 
     setExercise(exercise, repeats = 0) {
@@ -72,7 +71,6 @@ class ExerciseView extends View {
             clickedOn: () => {
                 this.waitForRecording = true;
                 console.log("waiting for recording");
-                
             },
             clickedOff: () => {
                 this.stopRecording();
@@ -214,7 +212,6 @@ class ExerciseView extends View {
             this.metronome.pause();
             this.metronome.reset();
             this.stopRecording();
-
         }
     }
 
@@ -225,17 +222,15 @@ class ExerciseView extends View {
         text("BPM: " + this.metronome.beatsPerMinute, width - 150, 70);
         textSize(20);
         text(`repeats: ${int(this.currentRepeat)}`, width - 150, 100);
-        
+
         this.drumScroll.draw();
         if (this.metronome.isCountingDown(settings.audioLatency)) {
             this.drawCountDown();
         }
-        if (this.waitForRecording){
+        if (this.waitForRecording) {
             fill(255);
-            text("strike pad to start recording",width/2-120, height/2+250);
-                       
+            text("strike pad to start recording", width / 2 - 120, height / 2 + 250);
         }
-
     }
 
     drawCountDown() {
@@ -267,9 +262,14 @@ class ExerciseView extends View {
 
     padInput(hit) {
         //ExerciseSoundPlayer.playHit(hit.velocity, hit.getDexteritySign(), 1, "snare");
-        this.exerciseSession.padInput(
-            TimedHit.fromHitAndMetronome(hit, this.metronome, settings.inputLatency + settings.audioLatency)
-        );
+        if (this.waitForRecording) {
+            this.waitForRecording = false;
+            this.startRecording();
+        } else {
+            this.exerciseSession.padInput(
+                TimedHit.fromHitAndMetronome(hit, this.metronome, settings.inputLatency + settings.audioLatency)
+            );
+        }
     }
 
     getAnalysisView() {
