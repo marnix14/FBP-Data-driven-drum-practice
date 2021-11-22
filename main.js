@@ -103,3 +103,22 @@ async function hideOverlay(ms) {
         }, ms);
     });
 }
+
+prevMouseY = 0;
+prevMouseX = 0;
+dragging = false;
+function mouseDragged() {
+    if (!this.dragging) {
+        prevMouseY = mouseY;
+        prevMouseX = mouseX;
+        dragging = true;
+    }
+    const dY = mouseY - this.prevMouseY;
+    const dX = mouseX - this.prevMouseX;
+    prevMouseX = mouseX;
+    prevMouseY = mouseY;
+    this.view.mouseDragged(dX, dY);
+}
+function mouseReleased() {
+    this.dragging = false;
+}

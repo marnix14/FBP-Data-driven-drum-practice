@@ -113,6 +113,10 @@ class Metronome {
         this.callEventCallbacks("tock");
     }
 
+    setBarPosition(position) {
+        this.barPosition = position;
+    }
+
     playTickSound() {
         Metronome.sounds[Metronome.selectedSound][0].play(settings.metronomeVolume, 1, 0);
     }

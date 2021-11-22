@@ -151,4 +151,6 @@ class AnalysisView extends View {
     }
 
     keyPressed() {}
+
+    mouseDragged(dX, dY) {}
 }

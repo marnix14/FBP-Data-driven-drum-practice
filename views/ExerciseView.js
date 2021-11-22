@@ -301,4 +301,11 @@ class ExerciseView extends View {
         this.prevSoundButtton.remove();
         this.exerciseSelectionList.remove();
     }
+
+    mouseDragged(dX, dY) {
+        if (mouseX > this.drumScroll.left && mouseX < this.drumScroll.right) {
+            const dBar = dY / this.drumScroll.h;
+            this.metronome.setBarPosition(this.metronome.barPosition + dBar);
+        }
+    }
 }
