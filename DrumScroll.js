@@ -52,7 +52,45 @@ class DrumScroll extends Bounds {
                 const globalNoteBarPosition = hitNote.barPosition + r * this.exerciseSession.exercise.bars;
                 this.drawHitNote(i, hitNote, globalNoteBarPosition);
             }
+
+            let rudimentBarPosition = 0;
+            for (const [abbr, subdivision, rudimentRepeats, switchHand] of this.exerciseSession.exercise.structure) {
+                const rudiment = Rudiments.getByAbbr(abbr);
+                const rudimentNoteCount = rudiment.pattern.length;
+                const rudimentLengthInBeats = rudimentNoteCount / subdivision;
+                const rudimentLengthInBars = rudimentLengthInBeats / this.exerciseSession.exercise.beatsPerBar;
+
+                for (let rr = 0; rr < rudimentRepeats; rr++) {
+                    this.drawRudimentLine(
+                        rudimentBarPosition + r * this.exerciseSession.exercise.bars,
+                        rudimentLengthInBars,
+                        switchHand ? -1 : 1,
+                        rudiment.color
+                    );
+                    rudimentBarPosition += rudimentLengthInBars;
+                }
+            }
         }
+    }
+
+    rudimentLineOffsetRatio = 0.6;
+    drawRudimentLine(barPosition, lengthInBars, dexterity, rudimentColor) {
+        strokeWeight(10);
+        const yStartNormalized = min(1, this.metronome.getBarPosition(settings.audioLatency) + 1 - barPosition);
+        const yEndNormalized =
+            this.metronome.getBarPosition(settings.audioLatency) + 1 - (barPosition + lengthInBars) + 0.04;
+        if (yEndNormalized >= yStartNormalized) return;
+
+        const yStart = this.y + this.h * yStartNormalized;
+        const yEnd = this.y + this.h * yEndNormalized;
+
+        const x = this.centerX + (dexterity * this.rudimentLineOffsetRatio * this.w) / 2;
+
+        const opacity = pow(yStartNormalized, 2);
+        const c = color(rudimentColor);
+        stroke(c.levels[0], c.levels[1], c.levels[2], opacity * 255);
+
+        line(x, yStart, x, yEnd);
     }
 
     drawSubdivisions(yNorm, amount) {

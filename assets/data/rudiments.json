@@ -3,19 +3,11 @@
         {
             "name": "Single hit Right",
             "abbr": "r",
-            "pattern": [
-                ["r", ""]
-            ]
-        },
-        {
-            "name": "Single hit Left",
-            "abbr": "l",
-            "pattern": [
-                ["l", ""]
-            ]
+            "pattern": [["r", ""]],
+            "color": "#666666"
         }
     ],
-    
+
     "Roll": [
         {
             "name": "Single Stroke Roll",
@@ -25,7 +17,8 @@
                 ["l", ""],
                 ["r", ""],
                 ["l", ""]
-            ]
+            ],
+            "color": "#9089fa"
         },
         {
             "name": "Double Stroke Roll",
@@ -35,7 +28,8 @@
                 ["r", ""],
                 ["l", ""],
                 ["l", ""]
-            ]
+            ],
+            "color": "#5144d3"
         },
         {
             "name": "Triple Stroke Roll",
@@ -47,7 +41,8 @@
                 ["l", ""],
                 ["l", ""],
                 ["l", ""]
-            ]
+            ],
+            "color": "#00c0c7"
         }
     ],
     "Paradiddle": [
@@ -59,7 +54,8 @@
                 ["l", ""],
                 ["r", ""],
                 ["r", ""]
-            ]
+            ],
+            "color": "#e8871a"
         },
         {
             "name": "Double Paradiddle",
@@ -71,7 +67,8 @@
                 ["l", ""],
                 ["r", ""],
                 ["r", ""]
-            ]
+            ],
+            "color": "#ef1111"
         },
         {
             "name": "Paradiddle Diddle",
@@ -83,14 +80,16 @@
                 ["r", ""],
                 ["l", ""],
                 ["l", ""]
-            ]
+            ],
+            "color": "#bf0032"
         }
     ],
     "Flam": [
         {
             "name": "Flam",
             "abbr": "f",
-            "pattern": [["r", "f"]]
+            "pattern": [["r", "f"]],
+            "color": "#cdd5b1"
         },
         {
             "name": "Flam Tap",
@@ -98,7 +97,8 @@
             "pattern": [
                 ["r", "f"],
                 ["r", ""]
-            ]
+            ],
+            "color": "#d5cdb1"
         },
         {
             "name": "Flam Accent",
@@ -107,7 +107,8 @@
                 ["r", "f"],
                 ["l", ""],
                 ["r", ""]
-            ]
+            ],
+            "color": "#d5b1cd"
         }
     ],
     "Drag": []
