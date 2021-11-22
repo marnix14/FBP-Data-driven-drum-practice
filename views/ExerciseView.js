@@ -235,6 +235,7 @@ class ExerciseView extends View {
         }
         if (this.waitForRecording) {
             fill(255);
+            strokeWeight(0);
             text("strike pad to start recording", width / 2 - 120, height / 2 + 250);
         }
     }
