@@ -12,7 +12,7 @@ class ExerciseSessionHistory {
 
     static addNewSession(exerciseSession) {
         this.exerciseSessions.push(exerciseSession);
-        this.saveToJSON();
+        //this.saveToJSON();
     }
 
     static saveToJSON() {

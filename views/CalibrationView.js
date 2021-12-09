@@ -74,6 +74,7 @@ class CalibrationView extends View {
             text("Audio latency:", width / 2 + 100, 250);
             text(`${this.inputLatency} ms`, width / 2 - 100, 300);
             text(`${this.audioLatency} ms`, width / 2 + 100, 300);
+            text("Strike pad to save");
         }
     }
 
@@ -94,6 +95,9 @@ class CalibrationView extends View {
         const beatOffset = getWrappedOffset(0, this.metronome.getWrappedBeatPosition(), 1);
         const msOffset = (beatOffset / this.metronome.beatsPerMinute) * 60 * 1000;
         this.calculateLatency(msOffset);
+        // if (this.calibrationState == "done"){
+        //     this.saveButton.clicked();
+        // }
     }
 
     calculateLatency(msOffset) {

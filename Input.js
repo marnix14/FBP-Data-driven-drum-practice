@@ -1,7 +1,7 @@
 class Input {
     serial;
     portList;
-    portName = "COM36";
+    portName = "COM34";
     data;
     portSelector;
 
@@ -19,6 +19,7 @@ class Input {
         this.serial.on("error", (err) => console.log("Something went wrong with the serial port. " + err));
         this.serial.on("close", () => console.log("The serial port closed."));
         this.serial.open(this.portName);
+        
     }
 
     serialEvent() {
@@ -38,5 +39,6 @@ class Input {
         //ExerciseSoundPlayer.playHit(velocity, 0);
 
         view.padInput(new Hit(dext, velocity));
+    
     }
 }

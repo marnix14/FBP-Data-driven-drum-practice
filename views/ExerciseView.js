@@ -54,6 +54,7 @@ class ExerciseView extends View {
             iconOn: "pause",
             iconOff: "play",
             clickedOn: () => {
+                //this.metronome.play(-settings.recordingCountdownInBars * this.metronome.beatsPerBar - 0.5);
                 this.metronome.play();
             },
             clickedOff: () => {
@@ -89,7 +90,7 @@ class ExerciseView extends View {
             min: 30,
             max: 250,
             val: 100,
-            step: 1,
+            step: 5,
             size: 200,
             input: (val) => {
                 this.metronome.setBeatsPerMinute(val);
@@ -144,6 +145,8 @@ class ExerciseView extends View {
                 this.exerciseSoundPlayer.setFocus(val);
             },
         });
+
+        
 
         this.metronome.addEventCallback((event) => {
             //console.log("Metronome event: ", event);
@@ -230,6 +233,7 @@ class ExerciseView extends View {
         text(`repeats: ${int(this.currentRepeat)}`, width - 150, 100);
 
         this.drumScroll.draw();
+
         if (this.metronome.isCountingDown(settings.audioLatency)) {
             this.drawCountDown();
         }
@@ -274,12 +278,16 @@ class ExerciseView extends View {
         if (this.waitForRecording) {
             this.waitForRecording = false;
             this.startRecording();
-        } else {
+        } else if (this.exerciseSession.isRecording) {
             this.exerciseSession.padInput(
                 TimedHit.fromHitAndMetronome(hit, this.metronome, settings.inputLatency + settings.audioLatency)
             );
+        } else if (!this.metronome.isPlaying) {
+           // this.playPauseButton.toggle();
         }
+        //this.playPauseButton.toggle();
     }
+
 
     getAnalysisView() {
         return new AnalysisView(this.exerciseSession);

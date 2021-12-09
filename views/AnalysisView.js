@@ -6,13 +6,42 @@ class AnalysisView extends View {
     velocityVisualized = true;
     showGrid = true;
     gridHeight = 120;
-
+    
+    leftAverageTimeOffset = 0;
+    rightAverageTimeOffset = 0;
+    leftAverageVelocityOffset = 0;
+    rightAverageVelocityOffset = 0;
+    
     constructor(exerciseSession) {
         super();
         this.exerciseSession = exerciseSession;
         this.exerciseSession.normalize();
+        
+        this.analyze()
 
         console.log("Viewing analysis of", this.exerciseSession);
+    }
+
+    analyze(){
+        let leftSum = 0;
+        let rightSum = 0;
+        
+        for(const hitAnalysis of this.exerciseSession.analysis){
+            if(hitAnalysis.isLeftHand()){
+                this.leftAverageTimeOffset += hitAnalysis.relativePositionMean;
+                this.leftAverageVelocityOffset +=  hitAnalysis.velocityMean - hitAnalysis.velocity;
+                leftSum++;
+            }else{
+                this.rightAverageTimeOffset += hitAnalysis.relativePositionMean;
+                this.rightAverageVelocityOffset += hitAnalysis.velocityMean- hitAnalysis.velocity;
+                rightSum++;
+            }
+        }
+
+        this.leftAverageTimeOffset /= leftSum;
+        this.leftAverageVelocityOffset /= leftSum;
+        this.rightAverageTimeOffset /= rightSum;
+        this.rightAverageVelocityOffset /= rightSum;
     }
 
     update() {
@@ -32,6 +61,8 @@ class AnalysisView extends View {
 
         text("R", width * 0.1 - 120, height / 2 - 80);
         text("L", width * 0.1 - 120, height / 2 + 80);
+
+        this.drawRightLeftStats();
 
         this.drawWrappedHitGraph();
     }
@@ -148,6 +179,17 @@ class AnalysisView extends View {
         stroke(color);
         strokeWeight(2);
         line(width * 0.1 + x, height / 2, width * 0.1 + x, height / 2 - y);
+    }
+
+    leftRightStatsRadius = 70;
+    drawRightLeftStats(){
+        const barPositionLeft = this.exerciseSession.exercise.bars+.1+this.leftAverageTimeOffset*5;
+        this.drawHit(this.exerciseSession.exercise.bars+.1, .5, -1, "#777", this.leftRightStatsRadius);
+        this.drawHit(barPositionLeft, .5 + this.leftAverageVelocityOffset, -1, this.getGradient(this.leftAverageTimeOffset), this.leftRightStatsRadius);
+        
+        const barPositionRight = this.exerciseSession.exercise.bars+.1+this.rightAverageTimeOffset*5;
+        this.drawHit(this.exerciseSession.exercise.bars+.1, .5, 1, "#777", this.leftRightStatsRadius);
+        this.drawHit(barPositionRight, .5 + this.rightAverageVelocityOffset, 1, this.getGradient(this.rightAverageTimeOffset), this.leftRightStatsRadius);
     }
 
     keyPressed() {}
