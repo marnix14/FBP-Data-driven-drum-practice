@@ -1,7 +1,7 @@
 class Input {
     serial;
     portList;
-    portName = "COM34";
+    portName = "COM36";
     data;
     portSelector;
 

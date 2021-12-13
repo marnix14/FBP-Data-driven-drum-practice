@@ -12,6 +12,7 @@ class DrumScroll extends Bounds {
     noteSizeRatio = 0.1;
 
     subdivisions = 0;
+    panning = 0;
 
     constructor(metronome) {
         super();
@@ -31,7 +32,7 @@ class DrumScroll extends Bounds {
         }
     }
 
-    update() {}
+    update() { }
 
     draw() {
         this.drawExercise();
@@ -131,6 +132,9 @@ class DrumScroll extends Bounds {
         strokeWeight(thickness);
         line(this.centerX - w / 2, y, this.centerX + w / 2, y);
     }
+    setPanning(val) {
+        this.panning = val;
+    }
 
     drawHitNote(index, hitNote, globalBarPosition) {
         let y = this.y + this.h * (this.metronome.getBarPosition(settings.audioLatency) + 1 - globalBarPosition);
@@ -144,13 +148,15 @@ class DrumScroll extends Bounds {
         const distanceFromMetronomeInBars = abs(
             this.metronome.getBarPosition(settings.audioLatency) - globalBarPosition
         );
+        let alpha = hitNote.getDexteritySign() !== Math.sign(this.panning) ? 255 * (1 - abs(this.panning)) : 255;
+
         if (!notePassed) {
             const fade = 1 - min(1, distanceFromMetronomeInBars);
-            fill(22 + hitNote.velocity * fade * 233);
+            fill(22 + hitNote.velocity * fade * 233, alpha);
         } else {
             const fade = 1 - min(1, distanceFromMetronomeInBars * 8);
             size *= fade * 1.5;
-            fill(22 + hitNote.velocity * fade * 233);
+            fill(22 + hitNote.velocity * fade * 233, alpha);
         }
 
         strokeWeight(0);

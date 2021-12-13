@@ -9,7 +9,7 @@ class ExerciseView extends View {
 
     currentRepeat = 0;
 
-    repeats = 8;
+    repeats = 100;
     serialMillis;
 
     constructor(exercise = Exercise.EMPTY) {
@@ -143,10 +143,12 @@ class ExerciseView extends View {
             size: this.drumScroll.width / 2,
             input: (val) => {
                 this.exerciseSoundPlayer.setFocus(val);
+                this.drumScroll.setPanning(val);
+                
             },
         });
 
-        
+
 
         this.metronome.addEventCallback((event) => {
             //console.log("Metronome event: ", event);
@@ -283,7 +285,7 @@ class ExerciseView extends View {
                 TimedHit.fromHitAndMetronome(hit, this.metronome, settings.inputLatency + settings.audioLatency)
             );
         } else if (!this.metronome.isPlaying) {
-           // this.playPauseButton.toggle();
+            // this.playPauseButton.toggle();
         }
         //this.playPauseButton.toggle();
     }

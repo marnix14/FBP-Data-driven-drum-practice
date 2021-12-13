@@ -67,6 +67,16 @@
         ]
     },
     {
+        "name": "Double paradiddle",
+        "description": "Double paradiddle",
+        "beatsPerBar": 4,
+        "accentPlacement": "rudiment",
+        "structure": [
+            ["dpd", 3, 1, false],
+            ["dpd", 3, 1, true]
+        ]
+    },
+    {
         "name": "Paradiddle triplets",
         "description": "Accented paradiddles in triplets",
         "beatsPerBar": 4,
