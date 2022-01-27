@@ -186,10 +186,17 @@ class AnalysisView extends View {
         const barPositionLeft = this.exerciseSession.exercise.bars+.1+this.leftAverageTimeOffset*5;
         this.drawHit(this.exerciseSession.exercise.bars+.1, .5, -1, "#777", this.leftRightStatsRadius);
         this.drawHit(barPositionLeft, .5 + this.leftAverageVelocityOffset, -1, this.getGradient(this.leftAverageTimeOffset), this.leftRightStatsRadius);
-        
+        const leftMsOffset = this.leftAverageTimeOffset*60000/this.exerciseSession.beatsPerMinute;
+        textSize(20);
+        text(String(round(leftMsOffset)) + " ms", width-220, height/2-60);
+       
+       
         const barPositionRight = this.exerciseSession.exercise.bars+.1+this.rightAverageTimeOffset*5;
         this.drawHit(this.exerciseSession.exercise.bars+.1, .5, 1, "#777", this.leftRightStatsRadius);
         this.drawHit(barPositionRight, .5 + this.rightAverageVelocityOffset, 1, this.getGradient(this.rightAverageTimeOffset), this.leftRightStatsRadius);
+        const rightMsOffset = this.rightAverageTimeOffset*60000/this.exerciseSession.beatsPerMinute;
+        textSize(20);
+        text(String(round(rightMsOffset)) + " ms", width-220, height/2+60);
     }
 
     keyPressed() {}

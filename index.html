@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Marnix's Drum Pad</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <title>Marnix's Drum Pad</title>
 
-        <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
 
-        <script src="libraries/p5.min.js"></script>
-        <script src="libraries/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-        <script
-            language="javascript"
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/p5.serialserver@0.0.28/lib/p5.serialport.js"
-        ></script>
-    </head>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
 
-    <body>
-        <script src="Settings.js"></script>
-        <script src="Util.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/p5.serialserver@0.0.28/lib/p5.serialport.js"></script>
+</head>
 
-        <script src="UI/UIElement.js"></script>
-        <script src="UI/IconButton.js"></script>
-        <script src="UI/ToggleButton.js"></script>
-        <script src="UI/Slider.js"></script>
-        <script src="UI/SelectionList.js"></script>
-        <script src="UI/SelectionListItem.js"></script>
+<body>
+    <script src="Settings.js"></script>
+    <script src="Util.js"></script>
 
-        <script src="UI/Bounds.js"></script>
+    <script src="UI/UIElement.js"></script>
+    <script src="UI/IconButton.js"></script>
+    <script src="UI/ToggleButton.js"></script>
+    <script src="UI/Slider.js"></script>
+    <script src="UI/SelectionList.js"></script>
+    <script src="UI/SelectionListItem.js"></script>
 
-        <script src="Input.js"></script>
+    <script src="UI/Bounds.js"></script>
 
-        <script src="hitTypes/Hit.js"></script>
-        <script src="hitTypes/TimedHit.js"></script>
-        <script src="hitTypes/HitNote.js"></script>
-        <script src="hitTypes/TimedHitNote.js"></script>
-        <script src="hitTypes/HitAnalysis.js"></script>
+    <script src="Input.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webmidi@next/dist/iife/webmidi.iife.js"></script>
 
-        <script src="Rudiments.js"></script>
-        <script src="Exercises.js"></script>
-        <script src="Exercise.js"></script>
-        <script src="ExerciseSession.js"></script>
-        <script src="ExerciseSessionHistory.js"></script>
+    <script src="hitTypes/Hit.js"></script>
+    <script src="hitTypes/TimedHit.js"></script>
+    <script src="hitTypes/HitNote.js"></script>
+    <script src="hitTypes/TimedHitNote.js"></script>
+    <script src="hitTypes/HitAnalysis.js"></script>
 
-        <script src="Sound.js"></script>
+    <script src="Rudiments.js"></script>
+    <script src="Exercises.js"></script>
+    <script src="Exercise.js"></script>
+    <script src="ExerciseSession.js"></script>
+    <script src="ExerciseSessionHistory.js"></script>
 
-        <script src="ExerciseSoundPlayer.js"></script>
-        <script src="Metronome.js"></script>
+    <script src="Sound.js"></script>
 
-        <script src="DrumScroll.js"></script>
+    <script src="ExerciseSoundPlayer.js"></script>
+    <script src="Metronome.js"></script>
 
-        <script src="views/View.js"></script>
-        <script src="views/CalibrationView.js"></script>
-        <script src="views/ExerciseView.js"></script>
-        <script src="views/AnalysisView.js"></script>
-        <script src="views/ProgressView.js"></script>
+    <script src="DrumScroll.js"></script>
 
-        <script src="main.js"></script>
-        <div id="container">
-            <div id="sketch"></div>
-        </div>
-        <div class="overlay" style="opacity: 1"></div>
-    </body>
+    <script src="views/View.js"></script>
+    <script src="views/CalibrationView.js"></script>
+    <script src="views/ExerciseView.js"></script>
+    <script src="views/AnalysisView.js"></script>
+    <script src="views/ProgressView.js"></script>
+    <script src="views/MidiView.js"></script>
+
+
+    <script src="main.js"></script>
+    <div id="container">
+        <div id="sketch"></div>
+    </div>
+    <div class="overlay" style="opacity: 1"></div>
+</body>
+
 </html>

@@ -12,6 +12,11 @@ class Settings {
     maxErrorInBeats = 0.2;
     maxErrorInVelocity = 0.5;
 
+    leftMidiNumber;
+    rightMidiNumber;
+    inputDevice = -1;
+    inputChannel;
+    
     store() {
         console.log("Storing", this);
         window.localStorage.setItem("settings", JSON.stringify(this));

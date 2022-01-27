@@ -80,6 +80,9 @@ function keyPressed() {
             changeView(new ExerciseView(Exercises.exercises[0]));
 
             break;
+        case 77: // m
+            changeView(new MidiView());
+            break;
     }
     view.keyPressed();
 }
@@ -121,4 +124,9 @@ function mouseDragged() {
 }
 function mouseReleased() {
     this.dragging = false;
+}
+
+function resetInput(){
+    input = new Input();
+    
 }
